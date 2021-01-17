@@ -197,6 +197,7 @@ def getAllPlaces(directory = "data/"):
     
     allPlaces = [x.replace(".csv", "").strip() for x in os.listdir(directory) if x[-4:] == ".csv"]
     allPlaces = [x for x in allPlaces]
+    #allPlaces = sorted(allPlaces)
     allPlaces.sort()
     return allPlaces
 

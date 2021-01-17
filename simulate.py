@@ -2,7 +2,7 @@ import numpy as np
 from scipy.stats import betabinom
 from util import *
 
-def runExperiment(data, alpha, termWhenSep = True, verbose = False, batch = 1, a = 1, b = 1):
+def runExperiment(data, alpha, batch = 1, termWhenSep = True, verbose = False, a = 1, b = 1):
     
     N0 = np.sum(data)
     K = len(data)
@@ -64,7 +64,7 @@ def runExperiment(data, alpha, termWhenSep = True, verbose = False, batch = 1, a
 
     return separated_i, int(winner)
 
-def runOracleSearch(data, alpha, termWhenSep = True, verbose = False, a = 1, b = 1):
+def runOracleSearch(data, alpha, batch = 1, a = 1, b = 1):
 
     N0 = np.sum(data)
     K = len(data)
@@ -107,8 +107,10 @@ def runOracleSearch(data, alpha, termWhenSep = True, verbose = False, a = 1, b =
 
     stoppingTime = search(0, N0)
 
-    seenVotes = np.array([np.sum(votePerm[:stoppingTime+1] == i) for i in range(int(max(votePerm) + 1))])
+    stoppingTime = min(stoppingTime + batch - stoppingTime % batch, N0)
+
+    seenVotes = [np.sum(votePerm[:stoppingTime] == i) for i in range(int(max(votePerm) + 1))]
 
     winner = np.argmax(seenVotes)
     
-    return stoppingTime, int(winner)
+    return stoppingTime, int(winner), seenVotes

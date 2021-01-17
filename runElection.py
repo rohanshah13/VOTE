@@ -3,17 +3,51 @@ import pandas as pd
 from util import *
 from simulate import *
 
-def runElection(alpha, a = 1, b = 1):
+def runElection(data, alpha, batch = 1, a = 1, b = 1):
 
-    Parties = getPartyList("partyList.json")
-    
-    constituencies = getAllPlaces()
+    constituencies = getAllPlaces(f"data/{data}/")
 
     C = len(constituencies)
-    P = len(Parties)
 
     stoppingTimes = np.zeros(C)
     winners = (np.ones(C) * -1).astype(int)
+
+    listVotes = []
+    listParties = []
+    listPartyIDs = []
+    
+    for c in range(C):
+        table = pd.read_csv(f"data/{data}/{constituencies[c]}.csv")
+
+        votes = table['Votes'].to_list()
+        parties = table['Party'].to_list()
+        
+        listVotes.append(votes)
+        listParties.append(parties)    
+    
+    indexIndi = 0
+    for i, row in enumerate(listParties):
+        for j, party in enumerate(row):
+            if party == 'Independent':
+                listParties[i][j] = f"Independent{indexIndi}"
+                indexIndi += 1
+
+                
+
+    Parties = list(set([x for y in listParties for x in y]))
+    Parties.sort()
+
+    P = len(Parties)
+    
+    listPartyIDs = [[Parties.index(k) for k in row] for row in listParties]
+            
+
+    try:
+        listVotes = [[int(inner.replace(',', ''))for inner in outer] for outer in listVotes]
+    except:
+        pass
+
+    seenVotes = [[0] * len(inner) for inner in listVotes]
     
     N = np.zeros(C+1)
     Nl = np.zeros((P, C + 1))
@@ -34,16 +68,14 @@ def runElection(alpha, a = 1, b = 1):
 
         c = np.random.choice(unseenConstituencies)
         
-        print("Constituency ", c, ": ", constituencies[c])
-
-        table = pd.read_csv("data/" + constituencies[c] + ".csv")
-
-        data = table['Votes'].to_numpy()
-        parties = table['Party'].to_list()
 
 
-##        stoppingTimes[c], winners[c] = runExperiment(data, alpha, True, True, batch = 100)
-        stoppingTimes[c], winners[c] = runOracleSearch(data, alpha / 2, True, True)
+        votes = listVotes[c]
+        parties = listParties[c]
+
+
+##        stoppingTimes[c], winners[c] = runExperiment(votes, alpha, True, True, batch = 100)
+        stoppingTimes[c], winners[c], seenVotes[c] = runOracleSearch(votes, alpha / (2 * C), batch)
         winners[c] = Parties.index(parties[winners[c]])
 
 
@@ -67,24 +99,26 @@ def runElection(alpha, a = 1, b = 1):
         winner = np.argmax(Nl[:, i])
         term = Nl[winner, i] - max(Nu[:, i][np.arange(len(Nu[:, i])) != winner])
 
-        if i % (C//100) == 0:
+        if i % (C//10) == 0:
             print(i, term, Parties[winner])
 
         if term > 0 and not separated:
             separated = True
             separated_i = i
                         
-            print("Seperated at ", separated_i)
+            print("Decided Constituencies = ", separated_i)
             print(Parties[winner], ", Seats won = ", seenWins[winner], ", Total votes counted = ", totalVotesCounted)
 
-            return separated_i, winner, totalVotesCounted 
+            return separated_i, winner, totalVotesCounted, seenVotes
 
-    return separate_i, winner, totalVotesCounted
+    return separate_i, winner, totalVotesCounted, seenVotes
 
 if __name__ == "__main__":
 
+    data = "Delhi2015"
+    
     alpha = 10**-1
 
-    stoppingC, winner, stoppingVotes = runElection(alpha)
+    stoppingC, winner, stoppingVotes, seenVotes = runElection(data, alpha)
 
     print(stoppingC, winner, stoppingVotes)
