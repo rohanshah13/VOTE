@@ -9,8 +9,11 @@ The script takes two command line arguments
 --algorithm Uniform/DCB/LUCB/TwoLevelOpinionSurvey
 
 Uniform - Baseline which samples constituencies in a round robin manner
+
 TwoLevelOpinionSurvey - Another baseline which chooses a constituency at random and resolves it completely before moving on to another constituency
+
 DCB - The main algorithm that we are proposing
+
 LUCB - An older algorithm which we are not planning to use
 
 Results are stored in the 'results/' directory.
