@@ -5,18 +5,18 @@ from util import *
 
 
 ## which elections
-data = "Delhi2015"
+data = "MyData1"
 
 ## number of runs 
 T = 10
 
 ## mistake probability
-alpha = 10**-10
+alpha = 10**-2
 
 ## batch size
-batch = 500
+batch = 200
 
-algorithm = "TwoLevelOpinionSurvey"
+algorithm = "LUCB"
 
 
 a = 1
@@ -74,8 +74,8 @@ leadingParty = np.zeros(C)
 terminated = np.zeros(C)
 
 
-t = 1
-with open(f"results/{data}/{algorithm}_seenVotes_{alpha}_{batch}_{t}.pkl", "rb") as input_file:
+t = 10
+with open(f"results/{algorithm}_{data}_votesSeen_{alpha}_{batch}_{t}.npy", "rb") as input_file:
     seenVotes = pickle.load(input_file)
 
 totalVotesCounted = 0
