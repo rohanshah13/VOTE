@@ -81,9 +81,14 @@ def scoreCandidateUB(lb, ub, N0):
     return scoreCandidate(x)
         
 
+#Calculates the prior posterior ratio of a Beta Binomial Distribution. Beta Binomial distribution - 
+#N tosses of a coin whose parameter p is a Random Variable following the Beta distribution
+#N0 - total number of votes in the constituency, a = 1, b = 1, t = Total number of votes seen from 
+#that constituency, kt = number of succeses(seen votes for a specific party), k = Value of number of party votes at which probability is being evaluated.
 def ppr(k, N0, a, b, t, kt):
-
-    return betabinom.pmf(k, N0, a, b) / betabinom.pmf(k - kt, N0 - t, a + kt, b + t - kt)
+    with np.errstate(divide='ignore', over='ignore'):
+        val = betabinom.pmf(k, N0, a, b) / betabinom.pmf(k - kt, N0 - t, a + kt, b + t - kt)
+    return val
 
 ##def pprDirMulti(v, N0, alphas, cData):
 ##
@@ -115,6 +120,11 @@ def ppr(k, N0, a, b, t, kt):
 
 
 # binary search
+# alpha = error probability
+# N0 = total votes in constituency
+# a = b = 1 (from prior)
+# t = Votes seen in that constituency 
+# kb = Votes seen for specific party in the constituency
 def binBounds(alpha, N0, a, b, t, kb):
 
     def f(c):
@@ -165,7 +175,10 @@ def binBounds(alpha, N0, a, b, t, kb):
 
         p = 1
         while True:
+            #Loop from 1:2^p+1, odd numbers only
             for i in np.arange(1, 2**p + 1, 2):
+                # l + ((h-l)*i)//2^p
+                #here (N0*i)//2^p
                 k = check(l + (h-l) * i // 2**p)
 
                 if k != -1:

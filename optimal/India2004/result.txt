@@ -1,0 +1,542 @@
+Theoretically minimum required number of samples is 582231.0000000006
+Winner of the election is Indian National Congress
+{"Constituency": "Mormugao_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Ladakh_2004", "Party": "Bharatiya Janta Party", "Position": "4"}
+{"Constituency": "Raiganj_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Anakapalli_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Murshidabad_2004", "Party": "Bahujan Samaj Party", "Position": "6"}
+{"Constituency": "Motihari_2004", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "Surendranagar_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Madhepura_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Domariaganj_2004", "Party": "Bharatiya Janta Party", "Position": "4"}
+{"Constituency": "Dumka_2004", "Party": "Jharkhand Mukti Morcha", "Position": "1"}
+{"Constituency": "Nawada_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Ropar_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Quilon_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Karimganj_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Dum Dum_2004", "Party": "Communist Party Of India (MARXIST)", "Position": "1"}
+{"Constituency": "Jagatsinghpur_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Nagaur_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Farrukhabad_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Bara Banki_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Koppal_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Pandharpur_2004", "Party": "Republican Party Of India (A)", "Position": "1"}
+{"Constituency": "Serampore_2004", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "Jhanjharpur_2004", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "Nalgonda_2004", "Party": "Pyramid Party Of India", "Position": "4"}
+{"Constituency": "Araria_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Phulpur_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Banswara_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Hissar_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Kalahandi_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Rosera_2004", "Party": "Samajwadi Party", "Position": "5"}
+{"Constituency": "Tiruppattur_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Nandyal_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Calcutta North East_2004", "Party": "Bahujan Samaj Party", "Position": "7"}
+{"Constituency": "Sarangarh_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Bulandshahr_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Deoria_2004", "Party": "Samajwadi Party", "Position": "1"}
+{"Constituency": "Sitapur_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Machhlishahr_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Sambhal_2004", "Party": "Bharatiya Janta Party", "Position": "4"}
+{"Constituency": "Siddipet_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Barrackpore_2004", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "Kolhapur_2004", "Party": "Peasants And Workers Party Of India", "Position": "3"}
+{"Constituency": "Jalna_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Kakinada_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Mathura_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Chitradurga_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Sirsa_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Dharwad South_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Ganganagar_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Calicut_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Damoh_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Jajpur_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Ferozepur_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Kolaba_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Panaji_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Singhbhum_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "South Delhi_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Kaliabor_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Tehri Garhwal_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Bastar_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Ponnani_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Badagara_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Madras South_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Sriperumbudur_2004", "Party": "Jharkhand Party", "Position": "5"}
+{"Constituency": "Shahjahanpur_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Cuttack_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Kokrajhar_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Robertsganj_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Sagar_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Jalaun_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Porbandar_2004", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "Jadavpur_2004", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "Narasapur_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Ranchi_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Dharwad North_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Bahraich_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Jalpaiguri_2004", "Party": "Bahujan Samaj Party", "Position": "7"}
+{"Constituency": "Rampur_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Mahasamund_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Rajnandgaon_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Faridkot_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Sasaram_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Tirupathi_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Kasaragod_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Srinagar_2004", "Party": "Bharatiya Janta Party", "Position": "4"}
+{"Constituency": "Mumbai North West_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Arunachal East_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Seoni_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Mizoram_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Outer Manipur_2004", "Party": "Independent412", "Position": "1"}
+{"Constituency": "Faizabad_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Moradabad_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Saidpur_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Bulsar_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Bhiwani_2004", "Party": "Bharatiya Janta Party", "Position": "4"}
+{"Constituency": "Chatra_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Hingoli_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Koraput_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Panskura_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Parbhani_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Saharanpur_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Ghatampur_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Kolar_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Pratapgarh_2004", "Party": "Bharatiya Janta Party", "Position": "5"}
+{"Constituency": "Etah_2004", "Party": "Samajwadi Party", "Position": "1"}
+{"Constituency": "Tripura East_2004", "Party": "Communist Party Of India (MARXIST)", "Position": "1"}
+{"Constituency": "Keonjhar_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Tiruchirappalli_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Trivandrum_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Sonepat_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Lalganj_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Chikkodi_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Madhubani_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Kopargaon_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Hardoi_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Mandi_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Bikramganj_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Tripura West_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Azamgarh_2004", "Party": "Bharatiya Janta Party", "Position": "5"}
+{"Constituency": "Chandni Chowk_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Bangalore North_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Vaishali_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Tenkasi_2004", "Party": "Bahujan Samaj Party", "Position": "6"}
+{"Constituency": "Nanded_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Chhindwara_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Dhanbad_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Washim_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Tonk_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Tura_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Durg_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Akbarpur_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Gobichettipalayam_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Sidhi_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Karol Bagh_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Phillaur_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Dadra & Nagar Haveli_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Mumbai North Central_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Allahabad_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Contai_2004", "Party": "Bahujan Samaj Party", "Position": "6"}
+{"Constituency": "Lakhimpur_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Kutch_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Jhargram_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Junagadh_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Hyderabad_2004", "Party": "All India Majlis-E-Ittehadul Muslimoon", "Position": "1"}
+{"Constituency": "Tirunelveli_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Almora_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Krishnagiri_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Sholapur_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Cuddapah_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Balasore_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Basirhat_2004", "Party": "Bahujan Samaj Party", "Position": "6"}
+{"Constituency": "Vijayawada_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Banda_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Medak_2004", "Party": "Telangana Rashtra Samithi", "Position": "1"}
+{"Constituency": "Chimur_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Dhule_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Amroha_2004", "Party": "Bharatiya Janta Party", "Position": "4"}
+{"Constituency": "Hanamkonda_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Sivakasi_2004", "Party": "Bahujan Samaj Party", "Position": "7"}
+{"Constituency": "Chittoor_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Udupi_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Thanjavur_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Joynagar_2004", "Party": "Revolutionary Socialist Party", "Position": "1"}
+{"Constituency": "Vandavasi_2004", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "Secunderabad_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "East Delhi_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Arunachal West_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Indore_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Kaira_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Baghpat_2004", "Party": "Rashtriya Lok Dal", "Position": "1"}
+{"Constituency": "Broach_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Samastipur_2004", "Party": "Communist Party Of India (MARXIST-LENINIST) (LIBERATION)", "Position": "6"}
+{"Constituency": "Anantapur_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Mysore_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Guna_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Trichur_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Barmer_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Dausa_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Nabadwip_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Mahendragarh_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Hassan_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Bidar_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Kendrapara_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Kottayam_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Sangrur_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Coimbatore_2004", "Party": "Communist Party Of India", "Position": "1"}
+{"Constituency": "Ratnagiri_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Shahabad_2004", "Party": "Bahujan Samaj Party", "Position": "1"}
+{"Constituency": "Hooghly_2004", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "Guntur_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Raigarh_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Cuddalore_2004", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "Hajipur_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Jammu_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Surguja_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Bhadrachalam_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Dhenkanal_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Shahdol_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Nagapattinam_2004", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "Simla_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Peddapalli_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Nagaland_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Tiruchengode_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Barh_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Godda_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Bhagalpur_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Alipurduars_2004", "Party": "Revolutionary Socialist Party", "Position": "1"}
+{"Constituency": "Bijnor_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Perambalur_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Rae Bareli_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Kanakapura_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Budaun_2004", "Party": "Samajwadi Party", "Position": "1"}
+{"Constituency": "New Delhi_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Midnapore_2004", "Party": "Communist Party Of India", "Position": "1"}
+{"Constituency": "Amethi_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Saharsa_2004", "Party": "Bahujan Samaj Party", "Position": "6"}
+{"Constituency": "Adoor_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Nainital_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Pudukkottai_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Katwa_2004", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "Erandol_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Srikakulam_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Anand_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Madras Central_2004", "Party": "Jharkhand Party", "Position": "3"}
+{"Constituency": "Hathras_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Baroda_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Vidisha_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Udaipur_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Balaghat_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Jhalawar_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Bagaha_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Hindupur_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Jalore_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Ongole_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Lakshadweep_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Mehsana_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Gorakhpur_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Bolangir_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Bhandara_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Chidambaram_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Visakhapatnam_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Balrampur_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Mandya_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Bhubaneswar_2004", "Party": "Republican Party Of India", "Position": "5"}
+{"Constituency": "Yavatmal_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Sikkim_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Khed_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Bikaner_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Bijapur_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Sangli_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Mahabubnagar_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Nagarkurnool_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Raichur_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Tindivanam_2004", "Party": "Bahujan Samaj Party", "Position": "9"}
+{"Constituency": "Jhunjhunu_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Mirzapur_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Balia_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Sitamarhi_2004", "Party": "Samata Party", "Position": "4"}
+{"Constituency": "Anantnag_2004", "Party": "Bharatiya Janta Party", "Position": "4"}
+{"Constituency": "Bharatpur_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Ajmer_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Kurukshetra_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Hapur_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Uluberia_2004", "Party": "Bahujan Samaj Party", "Position": "6"}
+{"Constituency": "Dhandhuka_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Outer Delhi_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Bangalore South_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Shillong_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Beed_2004", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "Amritsar_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Latur_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Sawai Madhopur_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Mukundapuram_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Thane_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Mandsaur_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Tezpur_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Osmanabad_2004", "Party": "Lok Rajya Party", "Position": "3"}
+{"Constituency": "Howrah_2004", "Party": "Janata Dal (Secular)", "Position": "5"}
+{"Constituency": "Karad_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Jaipur_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Jamnagar_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Jorhat_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Gaya_2004", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "Jaunpur_2004", "Party": "Bharatiya Janta Party", "Position": "4"}
+{"Constituency": "Arambagh_2004", "Party": "Communist Party Of India (MARXIST)", "Position": "1"}
+{"Constituency": "Mathurapur_2004", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "Miryalguda_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Jamshedpur_2004", "Party": "Jharkhand Mukti Morcha", "Position": "1"}
+{"Constituency": "Lucknow_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Tenali_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Ichalkaranji_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Sambalpur_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Surat_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Mumbai North_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Parvathipuram_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Bilaspur_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Gurdaspur_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Bankura_2004", "Party": "Samajwadi Party", "Position": "6"}
+{"Constituency": "Nandurbar_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Hoshiarpur_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Muzaffarpur_2004", "Party": "Communist Party Of India (MARXIST-LENINIST) (LIBERATION)", "Position": "5"}
+{"Constituency": "Vellore_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Bhilwara_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Misrikh_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Pondicherry_2004", "Party": "Pattali Makkal Katchi", "Position": "1"}
+{"Constituency": "Nowgong_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Salempur_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Palani_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Eluru_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Nellore_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Dharmapuri_2004", "Party": "Pattali Makkal Katchi", "Position": "1"}
+{"Constituency": "Banka_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Davangere_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Faridabad_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Kurnool_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Bhatinda_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Chandigarh_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Alleppey_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Nashik_2004", "Party": "Communist Party Of India", "Position": "3"}
+{"Constituency": "Cannanore_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Giridih_2004", "Party": "Jharkhand Mukti Morcha", "Position": "1"}
+{"Constituency": "Palamau_2004", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "Kairana_2004", "Party": "Rashtriya Lok Dal", "Position": "1"}
+{"Constituency": "Mayiladuturai_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Mumbai South Central_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Kapadvanj_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Nagpur_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Tumkur_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Vishnupur_2004", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "Kishanganj_2004", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "Kodarma_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Kota_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Idukki_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Tarn Taran_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Rohtak_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Katihar_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Bilhaur_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Berhampore_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Gonda_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Mavelikara_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Rajapur_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Ghazipur_2004", "Party": "Samajwadi Party", "Position": "1"}
+{"Constituency": "Madras North_2004", "Party": "Dravida Munetra Kazhagam", "Position": "1"}
+{"Constituency": "Godhra_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Cooch Behar_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Purulia_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Rajahmundry_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Wardha_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Jhabua_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Bettiah_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Karur_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Basti_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Patan_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Bansgaon_2004", "Party": "Bharatiya Janta Party", "Position": "4"}
+{"Constituency": "Garhwal_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Pilibhit_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Churu_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Padrauna_2004", "Party": "Bharatiya Janta Party", "Position": "4"}
+{"Constituency": "Gulbarga_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Malegaon_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Deogarh_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Rajampet_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Jalgaon_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Pune_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Tiruchendur_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Rajmahal_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Unnao_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Agra_2004", "Party": "Samajwadi Party", "Position": "1"}
+{"Constituency": "Fatehpur_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Bayana_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Ujjain_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Janjgir_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Nilgiris_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Mandla_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Salumber_2004", "Party": "Bahujan Samaj Party", "Position": "6"}
+{"Constituency": "Chengalpattu_2004", "Party": "Jharkhand Party", "Position": "3"}
+{"Constituency": "Nagercoil_2004", "Party": "Communist Party Of India (MARXIST)", "Position": "1"}
+{"Constituency": "Nowrangpur_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Gauhati_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Satna_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Ballia_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Delhi Sadar_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Autonomous District_2004", "Party": "Bharatiya Janta Party", "Position": "4"}
+{"Constituency": "Amreli_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Nizamabad_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Chandauli_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Bhopal_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Mainpuri_2004", "Party": "Samajwadi Party", "Position": "1"}
+{"Constituency": "Khurja_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Jalesar_2004", "Party": "Samajwadi Party", "Position": "1"}
+{"Constituency": "Monghyr_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Khargone_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Aska_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Jodhpur_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Gopalganj_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Rewa_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Tamluk_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Bareilly_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Shimoga_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Mumbai South_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Mangalore_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Arakkonam_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Kanpur_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Alwar_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Aligarh_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Khammam_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Baramati_2004", "Party": "Nationalist Congress Party", "Position": "1"}
+{"Constituency": "Sikar_2004", "Party": "Bahujan Samaj Party", "Position": "6"}
+{"Constituency": "Chandrapur_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Akola_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Manjeri_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Birbhum_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Rasipuram_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Muvattupuzha_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Darbhanga_2004", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "Malda_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Jhansi_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Diamond Harbour_2004", "Party": "Bahujan Samaj Party", "Position": "8"}
+{"Constituency": "Bellary_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Buxar_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Mangaldoi_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Ottapalam_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Ambala_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Dhubri_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Ahmedabad_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Patna_2004", "Party": "Communist Party Of India (MARXIST-LENINIST) (LIBERATION)", "Position": "4"}
+{"Constituency": "Sheohar_2004", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "Chittorgarh_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Salem_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Varanasi_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Puri_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Kanker_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Jabalpur_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Chail_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Karimnagar_2004", "Party": "Telangana Rashtra Samithi", "Position": "1"}
+{"Constituency": "Sundargarh_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Nalanda_2004", "Party": "Communist Party Of India (MARXIST-LENINIST) (LIBERATION)", "Position": "3"}
+{"Constituency": "Silchar_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Betul_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Kaiserganj_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Chhota Udaipur_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Asansol_2004", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "Jullundur_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Gwalior_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Raipur_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Calcutta South_2004", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "Hazaribagh_2004", "Party": "Communist Party Of India", "Position": "1"}
+{"Constituency": "Ramtek_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Bhadrak_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Mandvi_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Calcutta North West_2004", "Party": "Bahujan Samaj Party", "Position": "8"}
+{"Constituency": "Balurghat_2004", "Party": "Revolutionary Socialist Party", "Position": "1"}
+{"Constituency": "Aonla_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Arrah_2004", "Party": "Bahujan Samaj Party", "Position": "7"}
+{"Constituency": "Buldhana_2004", "Party": "Bharipa Bahujan Mahasangh", "Position": "3"}
+{"Constituency": "Amravati_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Aurangabad_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Dindigul_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Meerut_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Gandhinagar_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Begusarai_2004", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "Bagalkot_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Durgapur_2004", "Party": "Communist Party Of India (MARXIST)", "Position": "1"}
+{"Constituency": "Mumbai North East_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Periyakulam_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Kangra_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Khandwa_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Krishnagar_2004", "Party": "Samajwadi Party", "Position": "4"}
+{"Constituency": "Ramanathapuram_2004", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "Madurai_2004", "Party": "Bahujan Samaj Party", "Position": "7"}
+{"Constituency": "Kanara_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Kheri_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Maharajganj_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Bobbili_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Adilabad_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Khunti_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Rajkot_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Barasat_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Khagaria_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Ghosi_2004", "Party": "Bharatiya Janta Party", "Position": "4"}
+{"Constituency": "Satara_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Ludhiana_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Daman And Diu_2004", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "Sivaganga_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Rajgarh_2004", "Party": "Samajwadi Party", "Position": "3"}
+{"Constituency": "Sultanpur_2004", "Party": "Bharatiya Janta Party", "Position": "4"}
+{"Constituency": "Karnal_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Kannauj_2004", "Party": "Samajwadi Party", "Position": "1"}
+{"Constituency": "Burdwan_2004", "Party": "Communist Party Of India (MARXIST)", "Position": "1"}
+{"Constituency": "Palghat_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Mohanlalganj_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Shajapur_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Bhind_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Jangipur_2004", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "Chirayinkil_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Banaskantha_2004", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "Andaman & Nicobar Islands_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Bapatla_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Inner Manipur_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Ernakulam_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Darjeeling_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Narasaraopet_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Dahanu_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Warangal_2004", "Party": "Pyramid Party Of India", "Position": "3"}
+{"Constituency": "Barpeta_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Sabarkantha_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Chapra_2004", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "Muzaffarnagar_2004", "Party": "Samajwadi Party", "Position": "1"}
+{"Constituency": "Ahmednagar_2004", "Party": "Nationalist Congress Party", "Position": "1"}
+{"Constituency": "Dhar_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Machilipatnam_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Khalilabad_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Berhampur_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Bhavnagar_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Dibrugarh_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Morena_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Hamirpur_2004", "Party": "Bharatiya Janta Party", "Position": "4"}
+{"Constituency": "Hardwar_2004", "Party": "Bharatiya Janta Party", "Position": "3"}
+{"Constituency": "Pali_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Chamarajanagar_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Udhampur_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Hoshangabad_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Firozabad_2004", "Party": "Samajwadi Party", "Position": "1"}
+{"Constituency": "Amalapuram_2004", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "Dahod_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Siwan_2004", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "Chikballapur_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Etawah_2004", "Party": "Samajwadi Party", "Position": "1"}
+{"Constituency": "Pollachi_2004", "Party": "Bahujan Samaj Party", "Position": "6"}
+{"Constituency": "Bolpur_2004", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "Jahanabad_2004", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "Lohardaga_2004", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "Khajuraho_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Baramulla_2004", "Party": "Bharatiya Janta Party", "Position": "5"}
+{"Constituency": "Mayurbhanj_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Patiala_2004", "Party": "None", "Position": "-1"}
+{"Constituency": "Chikmagalur_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Phulbani_2004", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "Belgaum_2004", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "Purnea_2004", "Party": "None", "Position": "-1"}

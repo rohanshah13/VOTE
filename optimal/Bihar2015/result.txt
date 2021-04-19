@@ -1,0 +1,245 @@
+Theoretically minimum required number of samples is 252632.00000000247
+Winner of the election is Rashtriya Janata Dal
+{"Constituency": "49_Araria_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "233_Atri_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "218_Makhadumapur (SC)_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "68_Barari_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "34_Babubarhi_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "21_Dhaka_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "217_Ghosi_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "7"}
+{"Constituency": "121_Parsa_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "137_Mohiuddinnagar_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "50_Jokihat_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "66_Pranpur_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "219_Goh_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "32_Benipatti_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "119_Garkha (SC)_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "150_Beldaur_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "125_Vaishali_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "14_Govindganj_Bihar2015", "Party": "Shiv Sena", "Position": "3"}
+{"Constituency": "146_Begusarai_Bihar2015", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "91_Bochaha (SC)_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "14"}
+{"Constituency": "101_Gopalganj_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "69_Korha (SC)_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "6"}
+{"Constituency": "120_Amnour_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "33_Khajauli_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "230_Gaya Town_Bihar2015", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "174_Islampur_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "211_Nokha_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "241_Jamui_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "107_Darauli (SC)_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "2_Ramnagar (SC)_Bihar2015", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "195_Agiaon (SC)_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "238_Gobindpur_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "95_Kanti_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "105_Siwan_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "1_Valmiki Nagar_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "73_Madhepura_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "175_Hilsa_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "25_Parihar_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "122_Sonepur_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "26_Sursand_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "54_Kishanganj_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "8_Bettiah_Bihar2015", "Party": "Communist Party Of India (MARXIST)", "Position": "4"}
+{"Constituency": "56_Amour_Bihar2015", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "94_Muzaffarpur_Bihar2015", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "108_Raghunathpur_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "164_Tarapur_Bihar2015", "Party": "Jan Adhikar Party (Loktantrik)", "Position": "10"}
+{"Constituency": "65_Balrampur_Bihar2015", "Party": "Communist Party Of India (Marxist-Leninist) (Liberation)", "Position": "1"}
+{"Constituency": "115_Baniapur_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "186_Danapur_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "138_Bibhutipur_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "8"}
+{"Constituency": "23_Riga_Bihar2015", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "221_Nabinagar_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "167_Suryagarha_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "227_Imamganj (SC)_Bihar2015", "Party": "Sarvajan Kalyan Loktantrik Party", "Position": "4"}
+{"Constituency": "209_Kargahar_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "85_Bahadurpur_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "199_Brahampur_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "185_Fatuha_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "143_Teghra_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "190_Paliganj_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "187_Maner_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "36_Madhubani_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "6"}
+{"Constituency": "5_Lauriya_Bihar2015", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "83_Darbhanga_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "6"}
+{"Constituency": "59_Banmankhi (SC)_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "149_Khagaria_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "197_Jagdishpur_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "169_Sheikhpura_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "216_Jahanabad_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "205_Bhabua_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "156_Bhagalpur_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "194_Arrah_Bihar2015", "Party": "Samras Samaj Party", "Position": "6"}
+{"Constituency": "203_Ramgarh_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "180_Bakhtiarpur_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "124_Lalganj_Bihar2015", "Party": "Rashtravadi Janata Party", "Position": "8"}
+{"Constituency": "29_Runnisaidpur_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "41_Nirmali_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "70_Alamnagar_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "12"}
+{"Constituency": "52_Bahadurganj_Bihar2015", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "136_Sarairanjan_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "157_Sultanganj_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "75_Saharsa_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "177_Harnaut_Bihar2015", "Party": "Jan Adhikar Party (Loktantrik)", "Position": "4"}
+{"Constituency": "12_Narkatia_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "226_Sherghati_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "45_Chhatapur_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "229_Bodh Gaya (SC)_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "117_Marhaura_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "202_Rajpur (SC)_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "44_Triveniganj (SC)_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "114_Manjhi_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "88_Gaighat_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "141_Cheria Bariarpur_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "9"}
+{"Constituency": "225_Gurua_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "30_Belsand_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "99_Baikunthpur_Bihar2015", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "201_Dumraon_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "6"}
+{"Constituency": "72_Singheshwar (SC)_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "22_Sheohar_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "28_Sitamarhi_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "15_Kesaria_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "170_Barbigha_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "19_Motihari_Bihar2015", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "155_Kahalgaon_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "134_Ujiarpur_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "64_Kadwa_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "154_Pirpainti (SC)_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "242_Jhajha_Bihar2015", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "160_Dhauraiya (SC)_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "130_Patepur (SC)_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "60_Rupauli_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "3_Narkatiaganj_Bihar2015", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "215_Kurtha_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "61_Dhamdaha_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "228_Barachatti (SC)_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "89_Aurai_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "37_Rajnagar (SC)_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "3"}
+{"Constituency": "165_Munger_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "6"}
+{"Constituency": "235_Rajauli (SC)_Bihar2015", "Party": "Communist Party Of India (Marxist-Leninist) (Liberation)", "Position": "3"}
+{"Constituency": "79_Gaura Bauram_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "173_Rajgir (SC)_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "8"}
+{"Constituency": "13_Harsidhi (SC)_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "133_Samastipur_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "231_Tikari_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "47_Raniganj (SC)_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "232_Belaganj_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "147_Bakhri (SC)_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "200_Buxar_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "184_Patna Sahib_Bihar2015", "Party": "Communist Party Of India (Marxist-Leninist) (Liberation)", "Position": "5"}
+{"Constituency": "139_Rosera (SC)_Bihar2015", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "11_Sugauli_Bihar2015", "Party": "Rashtriya Jankranti Party", "Position": "7"}
+{"Constituency": "84_Hayaghat_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "42_Pipra_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "110_Barharia_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "31_Harlakhi_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "90_Minapur_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "118_Chapra_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "106_Ziradei_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "97_Paroo_Bihar2015", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "151_Parbatta_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "142_Bachhwara_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "223_Aurangabad_Bihar2015", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "126_Mahua_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "210_Dinara_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "80_Benipur_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "77_Mahishi_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "240_Sikandra (SC)_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "8"}
+{"Constituency": "6_Nautan_Bihar2015", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "58_Kasba_Bihar2015", "Party": "Nationalist Congress Party", "Position": "5"}
+{"Constituency": "152_Bihpur_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "183_Kumhrar_Bihar2015", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "48_Forbesganj_Bihar2015", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "163_Belhar_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "53_Thakurganj_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "208_Sasaram_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "62_Purnia_Bihar2015", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "191_Bikram_Bihar2015", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "161_Banka_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "92_Sakra (SC)_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "193_Barhara_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "222_Kutumba (SC)_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "27_Bajpatti_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "8"}
+{"Constituency": "82_Darbhanga Rural_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "112_Maharajganj_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "237_Nawada_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "111_Goriakothi_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "182_Bankipur_Bihar2015", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "51_Sikti_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "6"}
+{"Constituency": "189_Masaurhi (SC)_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "18_Madhuban_Bihar2015", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "87_Jale_Bihar2015", "Party": "Communist Party Of India (Marxist-Leninist) (Liberation)", "Position": "6"}
+{"Constituency": "168_Lakhisarai_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "104_Hathua_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "113_Ekma_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "102_Kuchaikote_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "6"}
+{"Constituency": "234_Wazirganj_Bihar2015", "Party": "Pragatisheel Magahi Samaj", "Position": "5"}
+{"Constituency": "135_Morwa_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "20_Chiraia_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "196_Tarari_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "57_Baisi_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "188_Phulwari (SC)_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "4"}
+{"Constituency": "24_Bathnaha (SC)_Bihar2015", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "127_Raja Pakar (SC)_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "9_Sikta_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "6"}
+{"Constituency": "98_Sahebganj_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "46_Narpatganj_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "162_Katoria (ST)_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "131_Kalyanpur (SC)_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "6"}
+{"Constituency": "128_Raghopur_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "10_Raxaul_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "7_Chanpatia_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "96_Baruraj_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "153_Gopalpur_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "10"}
+{"Constituency": "129_Mahnar_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "100_Barauli_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "116_Taraiya_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "207_Chenari (SC)_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "178_Mokama_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "220_Obra_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "239_Warsaliganj_Bihar2015", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "176_Nalanda_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "236_Hisua_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "7"}
+{"Constituency": "212_Dehri_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "93_Kurhani_Bihar2015", "Party": "Jan Adhikar Party (Loktantrik)", "Position": "11"}
+{"Constituency": "198_Shahpur_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "158_Nathnagar_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "10"}
+{"Constituency": "224_Rafiganj_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "213_Karakat_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "103_Bhorey (SC)_Bihar2015", "Party": "Indian National Congress", "Position": "1"}
+{"Constituency": "43_Supaul_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "67_Manihari (ST)_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "39_Phulparas_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "140_Hasanpur_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "11"}
+{"Constituency": "214_Arwal_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "71_Bihariganj_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "76_Simri Bakhtiarpur_Bihar2015", "Party": "Jan Adhikar Party (Loktantrik)", "Position": "9"}
+{"Constituency": "145_Sahebpur Kamal_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "144_Matihani_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "63_Katihar_Bihar2015", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "109_Daraundha_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "243_Chakai_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "16_Kalyanpur_Bihar2015", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "204_Mohania (SC)_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "55_Kochadhaman_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "166_Jamalpur_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "6"}
+{"Constituency": "17_Pipra_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "35_Bisfi_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "179_Barh_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "8"}
+{"Constituency": "78_Kusheshwar Asthan (SC)_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "206_Chainpur_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "74_Sonbarsha (SC)_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "86_Keoti_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "181_Digha_Bihar2015", "Party": "Bharatiya Janta Party", "Position": "1"}
+{"Constituency": "132_Warisnagar_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "40_Laukaha_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "81_Alinagar_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "4_Bagaha_Bihar2015", "Party": "None", "Position": "-1"}
+{"Constituency": "192_Sandesh_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}
+{"Constituency": "123_Hajipur_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "5"}
+{"Constituency": "171_Asthawan_Bihar2015", "Party": "Nationalist Congress Party", "Position": "5"}
+{"Constituency": "159_Amarpur_Bihar2015", "Party": "Janata Dal (United)", "Position": "1"}
+{"Constituency": "172_Biharsharif_Bihar2015", "Party": "Communist Party Of India (Marxist-Leninist) (Liberation)", "Position": "5"}
+{"Constituency": "38_Jhanjharpur_Bihar2015", "Party": "Bahujan Samaj Party", "Position": "12"}
+{"Constituency": "148_Alauli (SC)_Bihar2015", "Party": "Rashtriya Janata Dal", "Position": "1"}

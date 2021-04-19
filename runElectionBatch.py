@@ -2,8 +2,14 @@ import numpy as np
 from util import *
 from runElection import *
 from runBanditElection import *
+from runUniformElection import *
+from runDCBElection import *
 import pickle
+import sys
+import argparse
+import os
 
+TRACEFILE = 'results/{}/{}/trace/{}_{}_{}'
 ##def runDrawElectionBatch(T, alpha):
 ##
 ##    stoppingTimes = np.zeros(T)
@@ -32,44 +38,69 @@ import pickle
 
 def main():
 
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument('--dataset',default='India2014')
+    parser.add_argument('--algorithm', default='LUCB')
+
+    args = parser.parse_args()
     ## which elections
-    data = "India2004"
+    data = args.dataset
 
     ## number of runs 
-    T = 10
+    T = 3
 
     ## mistake probability
-    alpha = 10**-1
+    alpha = 10**-2
 
     ## batch size
-    batch = 500
+    batch = 200
 
     ## batch size for initial pulls of each constituency
     init_batch = batch
 
-    algorithm = "LUCB"    
+    algorithm = args.algorithm
 
     constituenciesDecided = np.zeros(T)
     winners = np.zeros(T)
     totalVotesCounted = np.zeros(T)
+    seenVotes = [None for i in range(T)]
+    listVotes = [None for i in range(T)]
 
-    for t in range(T):
+    if not os.path.exists('results'):
+        os.mkdir('results')
+    if not os.path.exists('results/{}'.format(data)):
+        os.mkdir('results/{}'.format(data))
+    if not os.path.exists('results/{}/{}'.format(data,algorithm)):
+        os.mkdir('results/{}/{}'.format(data,algorithm))
+    if not os.path.exists('results/{}/{}/trace'.format(data,algorithm)):
+        os.mkdir('results/{}/{}/trace'.format(data,algorithm))
 
+    for t in range(0,T):
+        np.random.seed(t)
         print("Election  ", t)
+        tracefile = TRACEFILE.format(data,algorithm,alpha,batch,t)
         if algorithm == "LUCB":
-            constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes = runBanditElectionLUCB(data, alpha, batch, init_batch)
+            constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t] = runBanditElectionLUCB(data, alpha, tracefile, batch, init_batch)
+        elif algorithm == "Uniform":
+            constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t] = runUniformElection(data, alpha, tracefile, batch, init_batch)
         elif algorithm == "TwoLevelOpinionSurvey":
-            constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes = runElection(data, alpha, batch)
-            
-        with open(f"results/{data}/{algorithm}_seenVotes_{alpha}_{batch}_{t}.pkl", "wb") as output:
-            pickle.dump(seenVotes, output)
-    
+            constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t] = runElection(data, alpha, tracefile, batch)
+        elif algorithm == "DCB":
+            constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t] = runDCBElection(data, alpha, tracefile, batch, init_batch)
+        
+    C = len(seenVotes[0])
+    constiVotes = np.zeros((T,C))
+    for t in range(T):
+        constiVotes[t,:] = np.asarray([sum(x) for x in seenVotes[t]])
 
-    np.save(f"results/{algorithm}_{data}_constituenciesPolled_{alpha}_{batch}_{T}.npy", constituenciesDecided)
+    np.save('results/{}/{}/constituenciesPolled_{}_{}_{}'.format(data,algorithm,alpha,batch,T), constituenciesDecided)
 
-    np.save(f"results/{algorithm}_{data}_winnerIDs_{alpha}_{batch}_{T}.npy", winners)
+    np.save('results/{}/{}/winnerIDs_{}_{}_{}'.format(data,algorithm,alpha,batch,T), winners)
 
-    np.save(f"results/{algorithm}_{data}_totalVotesCounted _{alpha}_{batch}_{T}.npy", totalVotesCounted)
+    np.save('results/{}/{}/totalVotesCounted_{}_{}_{}'.format(data,algorithm,alpha,batch,T), totalVotesCounted)
+
+    np.save('results/{}/{}/votesSeen_{}_{}_{}.npy'.format(data,algorithm,alpha,batch,T), constiVotes)
 
     print(f"Algorithm = {algorithm}, alpha = {alpha}, batch = {batch}, T = {T}")
     print("Constituencies decided = ", np.mean(constituenciesDecided), " +- ", np.std(constituenciesDecided)/np.sqrt(T))
