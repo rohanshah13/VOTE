@@ -1,6 +1,6 @@
 # Bandit Elections
 
-To run a full experiment, you only need to look at runElectionBatch.py
+To run a full experiment, you only need run the command `python3 runElectionBatch.py --dataset [dataset] --algorithm [algorithm]'`
 
 The script takes two command line arguments
 
@@ -22,4 +22,4 @@ Results are stored in the 'results/' directory.
 
 This computes the minimum number of samples required to decide the winner of the election given the PPR stopping rule. 
 
-Run using the command - python3 real_ip.py --dataset [India2004/India2014/..]
+Run using the command - `python3 real_ip.py --dataset [India2004/India2014/..]`
