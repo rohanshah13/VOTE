@@ -133,7 +133,7 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 
 		#Updates the lower and upper bounds for each party in constituency c
 		for k in range(K):
-			if constiTerm:
+			if sum(unseenVotes[c]) == 0:
 				break
 			if hasLost[c][k]:
 				continue
@@ -286,10 +286,10 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 			seenVotes[c] += vote
 
 		for k in range(K):
-			if constiTerm:
+			if sum(unseenVotes[c]) == 0:
 				break
 			
-			if hasLost[c][k]:
+			if hasLost[c][k]
 				continue
 			#Get A val
 			#Two cases - i) party k is first, ii) party k is not first
@@ -421,7 +421,7 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 
 			
 		for k in range(K):
-			if constiTerm:
+			if sum(unseenVotes[c]) == 0:
 				break
 
 			if hasLost[c][k]:
