@@ -277,6 +277,14 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 			# print(unseenVotes[c])
 			if sum(unseenVotes[c]) == 0:
 				constiTerm = True
+				first = np.argmax(seenVotes[c])
+				for k in range(len(seenVotes[c])):
+					if k == first or hasLost[c][k]:
+						continue
+					hasLost[c][k] = True
+					partyIndex = listPartyIDs[c][k]
+					seenLosses[partyIndex] += 1
+
 				break
 			norm = [float(i)/sum(unseenVotes[c]) for i in unseenVotes[c]]
 			# print(constituencies[c], unseenVotes[c], norm)
@@ -411,6 +419,13 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 			# print(unseenVotes[c])
 			if sum(unseenVotes[c]) == 0:
 				constiTerm = True
+				first = np.argmax(seenVotes[c])
+				for k in range(len(seenVotes[c])):
+					if k == first or hasLost[c][k]:
+						continue
+					hasLost[c][k] = True
+					partyIndex = listPartyIDs[c][k]
+					seenLosses[partyIndex] += 1
 				break
 			norm = [float(i)/sum(unseenVotes[c]) for i in unseenVotes[c]]
 			# print(constituencies[c], unseenVotes[c], norm)
