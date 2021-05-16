@@ -8,8 +8,8 @@ P1 = 'A'
 P2 = 'B'
 # P3 = 'C'
 C = 500
-POPULATION = 1000000
-PARTIES = ['A','B']
+POPULATION = 10**6
+PARTIES = ['X','Y']
 
 def main():
 	parser = argparse.ArgumentParser()
@@ -23,11 +23,11 @@ def main():
 	wins = np.zeros(2)
 	p = np.zeros((C,2))
 	for c in range(C):
-		if c < 255:
-			p[c,0] = np.random.uniform(0.55,0.65)
+		if c < 260:
+			p[c,0] = np.random.uniform(0.51,0.9)
 			p[c,1] = 1 - p[c,0]
 		else:
-			p[c,1] = np.random.uniform(0.55,0.65)
+			p[c,1] = np.random.uniform(0.51,0.9)
 			p[c,0] = 1 - p[c,1]
 
 	np.random.shuffle(p)
@@ -42,7 +42,7 @@ def main():
 			position = 1
 			wins[order[0]] += 1
 			for index in order:
-				f.write('{},{},{},{}%,{}\n'.format(str(position),'X',votes[index],p[c,index]*100,PARTIES[index]))
+				f.write('{},{},{},{}%,{}\n'.format(str(position),'NA',votes[index],p[c,index]*100,PARTIES[index]))
 				position += 1				
 	print(wins)
 if __name__ == '__main__':

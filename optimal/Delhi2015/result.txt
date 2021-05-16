@@ -1,4 +1,4 @@
-Theoretically minimum required number of samples is 12233.999999999998
+Minimum required number of samples is 16400.0
 Winner of the election is Aam Aadmi Party
 {"Constituency": "44_R K Puram_Delhi2015", "Party": "None", "Position": "-1"}
 {"Constituency": "14_Shalimar Bagh_Delhi2015", "Party": "None", "Position": "-1"}
@@ -18,20 +18,20 @@ Winner of the election is Aam Aadmi Party
 {"Constituency": "38_Delhi Cantt_Delhi2015", "Party": "None", "Position": "-1"}
 {"Constituency": "65_Seelampur_Delhi2015", "Party": "Aam Aadmi Party", "Position": "1"}
 {"Constituency": "68_Gokalpur_Delhi2015", "Party": "Aam Aadmi Party", "Position": "1"}
-{"Constituency": "56_Kondli_Delhi2015", "Party": "None", "Position": "-1"}
-{"Constituency": "13_Rohini_Delhi2015", "Party": "None", "Position": "-1"}
+{"Constituency": "56_Kondli_Delhi2015", "Party": "Aam Aadmi Party", "Position": "1"}
+{"Constituency": "13_Rohini_Delhi2015", "Party": "Indian National Congress", "Position": "3"}
 {"Constituency": "22_Ballimaran_Delhi2015", "Party": "Aam Aadmi Party", "Position": "1"}
 {"Constituency": "19_Sadar Bazar_Delhi2015", "Party": "Aam Aadmi Party", "Position": "1"}
 {"Constituency": "28_Hari Nagar_Delhi2015", "Party": "Aam Aadmi Party", "Position": "1"}
 {"Constituency": "64_Rohtas Nagar_Delhi2015", "Party": "None", "Position": "-1"}
-{"Constituency": "34_Matiala_Delhi2015", "Party": "None", "Position": "-1"}
+{"Constituency": "34_Matiala_Delhi2015", "Party": "Aam Aadmi Party", "Position": "1"}
 {"Constituency": "70_Karawal Nagar_Delhi2015", "Party": "Aam Aadmi Party", "Position": "1"}
 {"Constituency": "21_Matia Mahal_Delhi2015", "Party": "Aam Aadmi Party", "Position": "1"}
 {"Constituency": "52_Tughlakabad_Delhi2015", "Party": "Aam Aadmi Party", "Position": "1"}
 {"Constituency": "55_Trilokpuri_Delhi2015", "Party": "Aam Aadmi Party", "Position": "1"}
 {"Constituency": "7_Bawana_Delhi2015", "Party": "Aam Aadmi Party", "Position": "1"}
-{"Constituency": "4_Adarsh Nagar_Delhi2015", "Party": "None", "Position": "-1"}
-{"Constituency": "57_Patparganj_Delhi2015", "Party": "Aam Aadmi Party", "Position": "1"}
+{"Constituency": "4_Adarsh Nagar_Delhi2015", "Party": "Aam Aadmi Party", "Position": "1"}
+{"Constituency": "57_Patparganj_Delhi2015", "Party": "None", "Position": "-1"}
 {"Constituency": "53_Badarpur_Delhi2015", "Party": "Aam Aadmi Party", "Position": "1"}
 {"Constituency": "40_New Delhi_Delhi2015", "Party": "Aam Aadmi Party", "Position": "1"}
 {"Constituency": "41_Jangpura_Delhi2015", "Party": "Aam Aadmi Party", "Position": "1"}
@@ -44,7 +44,7 @@ Winner of the election is Aam Aadmi Party
 {"Constituency": "16_Tri Nagar_Delhi2015", "Party": "None", "Position": "-1"}
 {"Constituency": "51_Kalkaji_Delhi2015", "Party": "None", "Position": "-1"}
 {"Constituency": "69_Mustafabad_Delhi2015", "Party": "None", "Position": "-1"}
-{"Constituency": "30_Janakpuri_Delhi2015", "Party": "Aam Aadmi Party", "Position": "1"}
+{"Constituency": "30_Janakpuri_Delhi2015", "Party": "None", "Position": "-1"}
 {"Constituency": "59_Vishwas Nagar_Delhi2015", "Party": "None", "Position": "-1"}
 {"Constituency": "20_Chandni Chowk_Delhi2015", "Party": "Aam Aadmi Party", "Position": "1"}
 {"Constituency": "9_Kirari_Delhi2015", "Party": "Aam Aadmi Party", "Position": "1"}
@@ -64,9 +64,9 @@ Winner of the election is Aam Aadmi Party
 {"Constituency": "67_Babarpur_Delhi2015", "Party": "Aam Aadmi Party", "Position": "1"}
 {"Constituency": "46_Chhatarpur_Delhi2015", "Party": "None", "Position": "-1"}
 {"Constituency": "11_Nangloi Jat_Delhi2015", "Party": "Aam Aadmi Party", "Position": "1"}
-{"Constituency": "37_Palam_Delhi2015", "Party": "Aam Aadmi Party", "Position": "1"}
+{"Constituency": "37_Palam_Delhi2015", "Party": "None", "Position": "-1"}
 {"Constituency": "62_Shahdara_Delhi2015", "Party": "None", "Position": "-1"}
 {"Constituency": "29_Tilak Nagar_Delhi2015", "Party": "None", "Position": "-1"}
-{"Constituency": "6_Rithala_Delhi2015", "Party": "Indian National Congress", "Position": "3"}
+{"Constituency": "6_Rithala_Delhi2015", "Party": "None", "Position": "-1"}
 {"Constituency": "42_Kasturba Nagar_Delhi2015", "Party": "None", "Position": "-1"}
 {"Constituency": "36_Bijwasan_Delhi2015", "Party": "None", "Position": "-1"}

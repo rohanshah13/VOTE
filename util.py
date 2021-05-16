@@ -2,7 +2,7 @@ import os
 import json
 import numpy as np
 from math import factorial
-from scipy.stats import betabinom
+from scipy.stats import betabinom, beta
 
 
 def normalize(p):
@@ -86,8 +86,9 @@ def scoreCandidateUB(lb, ub, N0):
 #N0 - total number of votes in the constituency, a = 1, b = 1, t = Total number of votes seen from 
 #that constituency, kt = number of succeses(seen votes for a specific party), k = Value of number of party votes at which probability is being evaluated.
 def ppr(k, N0, a, b, t, kt):
+    assert(kt <= t)
     with np.errstate(divide='ignore', over='ignore'):
-        val = betabinom.pmf(k, N0, a, b) / betabinom.pmf(k - kt, N0 - t, a + kt, b + t - kt)
+            val = betabinom.pmf(k, N0, a, b) / betabinom.pmf(k - kt, N0 - t, a + kt, b + t - kt)
     return val
 
 ##def pprDirMulti(v, N0, alphas, cData):

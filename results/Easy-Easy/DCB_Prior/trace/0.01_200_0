@@ -1,0 +1,362 @@
+{"constituency_id": "0", "constituency_name": "0", "consti_winner": "X", "consti_votes": "200", "total_votes": "200", "undecided_constituencies": "499"}
+{"constituency_id": "2", "constituency_name": "10", "consti_winner": "X", "consti_votes": "200", "total_votes": "600", "undecided_constituencies": "498"}
+{"constituency_id": "3", "constituency_name": "100", "consti_winner": "X", "consti_votes": "200", "total_votes": "800", "undecided_constituencies": "497"}
+{"constituency_id": "4", "constituency_name": "101", "consti_winner": "X", "consti_votes": "200", "total_votes": "1000", "undecided_constituencies": "496"}
+{"constituency_id": "7", "constituency_name": "104", "consti_winner": "Y", "consti_votes": "200", "total_votes": "1600", "undecided_constituencies": "495"}
+{"constituency_id": "9", "constituency_name": "106", "consti_winner": "X", "consti_votes": "200", "total_votes": "2000", "undecided_constituencies": "494"}
+{"constituency_id": "10", "constituency_name": "107", "consti_winner": "X", "consti_votes": "200", "total_votes": "2200", "undecided_constituencies": "493"}
+{"constituency_id": "12", "constituency_name": "109", "consti_winner": "X", "consti_votes": "200", "total_votes": "2600", "undecided_constituencies": "492"}
+{"constituency_id": "14", "constituency_name": "110", "consti_winner": "X", "consti_votes": "200", "total_votes": "3000", "undecided_constituencies": "491"}
+{"constituency_id": "15", "constituency_name": "111", "consti_winner": "X", "consti_votes": "200", "total_votes": "3200", "undecided_constituencies": "490"}
+{"constituency_id": "16", "constituency_name": "112", "consti_winner": "Y", "consti_votes": "200", "total_votes": "3400", "undecided_constituencies": "489"}
+{"constituency_id": "18", "constituency_name": "114", "consti_winner": "X", "consti_votes": "200", "total_votes": "3800", "undecided_constituencies": "488"}
+{"constituency_id": "20", "constituency_name": "116", "consti_winner": "Y", "consti_votes": "200", "total_votes": "4200", "undecided_constituencies": "487"}
+{"constituency_id": "21", "constituency_name": "117", "consti_winner": "Y", "consti_votes": "200", "total_votes": "4400", "undecided_constituencies": "486"}
+{"constituency_id": "24", "constituency_name": "12", "consti_winner": "X", "consti_votes": "200", "total_votes": "5000", "undecided_constituencies": "485"}
+{"constituency_id": "26", "constituency_name": "121", "consti_winner": "Y", "consti_votes": "200", "total_votes": "5400", "undecided_constituencies": "484"}
+{"constituency_id": "27", "constituency_name": "122", "consti_winner": "X", "consti_votes": "200", "total_votes": "5600", "undecided_constituencies": "483"}
+{"constituency_id": "29", "constituency_name": "124", "consti_winner": "X", "consti_votes": "200", "total_votes": "6000", "undecided_constituencies": "482"}
+{"constituency_id": "30", "constituency_name": "125", "consti_winner": "X", "consti_votes": "200", "total_votes": "6200", "undecided_constituencies": "481"}
+{"constituency_id": "31", "constituency_name": "126", "consti_winner": "Y", "consti_votes": "200", "total_votes": "6400", "undecided_constituencies": "480"}
+{"constituency_id": "36", "constituency_name": "130", "consti_winner": "X", "consti_votes": "200", "total_votes": "7400", "undecided_constituencies": "479"}
+{"constituency_id": "37", "constituency_name": "131", "consti_winner": "X", "consti_votes": "200", "total_votes": "7600", "undecided_constituencies": "478"}
+{"constituency_id": "39", "constituency_name": "133", "consti_winner": "Y", "consti_votes": "200", "total_votes": "8000", "undecided_constituencies": "477"}
+{"constituency_id": "40", "constituency_name": "134", "consti_winner": "X", "consti_votes": "200", "total_votes": "8200", "undecided_constituencies": "476"}
+{"constituency_id": "42", "constituency_name": "136", "consti_winner": "X", "consti_votes": "200", "total_votes": "8600", "undecided_constituencies": "475"}
+{"constituency_id": "44", "constituency_name": "138", "consti_winner": "Y", "consti_votes": "200", "total_votes": "9000", "undecided_constituencies": "474"}
+{"constituency_id": "45", "constituency_name": "139", "consti_winner": "X", "consti_votes": "200", "total_votes": "9200", "undecided_constituencies": "473"}
+{"constituency_id": "46", "constituency_name": "14", "consti_winner": "X", "consti_votes": "200", "total_votes": "9400", "undecided_constituencies": "472"}
+{"constituency_id": "48", "constituency_name": "141", "consti_winner": "Y", "consti_votes": "200", "total_votes": "9800", "undecided_constituencies": "471"}
+{"constituency_id": "49", "constituency_name": "142", "consti_winner": "Y", "consti_votes": "200", "total_votes": "10000", "undecided_constituencies": "470"}
+{"constituency_id": "50", "constituency_name": "143", "consti_winner": "Y", "consti_votes": "200", "total_votes": "10200", "undecided_constituencies": "469"}
+{"constituency_id": "51", "constituency_name": "144", "consti_winner": "X", "consti_votes": "200", "total_votes": "10400", "undecided_constituencies": "468"}
+{"constituency_id": "55", "constituency_name": "148", "consti_winner": "Y", "consti_votes": "200", "total_votes": "11200", "undecided_constituencies": "467"}
+{"constituency_id": "56", "constituency_name": "149", "consti_winner": "X", "consti_votes": "200", "total_votes": "11400", "undecided_constituencies": "466"}
+{"constituency_id": "58", "constituency_name": "150", "consti_winner": "Y", "consti_votes": "200", "total_votes": "11800", "undecided_constituencies": "465"}
+{"constituency_id": "59", "constituency_name": "151", "consti_winner": "X", "consti_votes": "200", "total_votes": "12000", "undecided_constituencies": "464"}
+{"constituency_id": "61", "constituency_name": "153", "consti_winner": "X", "consti_votes": "200", "total_votes": "12400", "undecided_constituencies": "463"}
+{"constituency_id": "62", "constituency_name": "154", "consti_winner": "X", "consti_votes": "200", "total_votes": "12600", "undecided_constituencies": "462"}
+{"constituency_id": "66", "constituency_name": "158", "consti_winner": "X", "consti_votes": "200", "total_votes": "13400", "undecided_constituencies": "461"}
+{"constituency_id": "67", "constituency_name": "159", "consti_winner": "Y", "consti_votes": "200", "total_votes": "13600", "undecided_constituencies": "460"}
+{"constituency_id": "69", "constituency_name": "160", "consti_winner": "Y", "consti_votes": "200", "total_votes": "14000", "undecided_constituencies": "459"}
+{"constituency_id": "71", "constituency_name": "162", "consti_winner": "Y", "consti_votes": "200", "total_votes": "14400", "undecided_constituencies": "458"}
+{"constituency_id": "72", "constituency_name": "163", "consti_winner": "X", "consti_votes": "200", "total_votes": "14600", "undecided_constituencies": "457"}
+{"constituency_id": "73", "constituency_name": "164", "consti_winner": "Y", "consti_votes": "200", "total_votes": "14800", "undecided_constituencies": "456"}
+{"constituency_id": "74", "constituency_name": "165", "consti_winner": "Y", "consti_votes": "200", "total_votes": "15000", "undecided_constituencies": "455"}
+{"constituency_id": "77", "constituency_name": "168", "consti_winner": "X", "consti_votes": "200", "total_votes": "15600", "undecided_constituencies": "454"}
+{"constituency_id": "78", "constituency_name": "169", "consti_winner": "X", "consti_votes": "200", "total_votes": "15800", "undecided_constituencies": "453"}
+{"constituency_id": "79", "constituency_name": "17", "consti_winner": "X", "consti_votes": "200", "total_votes": "16000", "undecided_constituencies": "452"}
+{"constituency_id": "80", "constituency_name": "170", "consti_winner": "X", "consti_votes": "200", "total_votes": "16200", "undecided_constituencies": "451"}
+{"constituency_id": "82", "constituency_name": "172", "consti_winner": "X", "consti_votes": "200", "total_votes": "16600", "undecided_constituencies": "450"}
+{"constituency_id": "83", "constituency_name": "173", "consti_winner": "Y", "consti_votes": "200", "total_votes": "16800", "undecided_constituencies": "449"}
+{"constituency_id": "85", "constituency_name": "175", "consti_winner": "X", "consti_votes": "200", "total_votes": "17200", "undecided_constituencies": "448"}
+{"constituency_id": "86", "constituency_name": "176", "consti_winner": "Y", "consti_votes": "200", "total_votes": "17400", "undecided_constituencies": "447"}
+{"constituency_id": "88", "constituency_name": "178", "consti_winner": "X", "consti_votes": "200", "total_votes": "17800", "undecided_constituencies": "446"}
+{"constituency_id": "92", "constituency_name": "181", "consti_winner": "X", "consti_votes": "200", "total_votes": "18600", "undecided_constituencies": "445"}
+{"constituency_id": "94", "constituency_name": "183", "consti_winner": "Y", "consti_votes": "200", "total_votes": "19000", "undecided_constituencies": "444"}
+{"constituency_id": "96", "constituency_name": "185", "consti_winner": "X", "consti_votes": "200", "total_votes": "19400", "undecided_constituencies": "443"}
+{"constituency_id": "100", "constituency_name": "189", "consti_winner": "Y", "consti_votes": "200", "total_votes": "20200", "undecided_constituencies": "442"}
+{"constituency_id": "104", "constituency_name": "192", "consti_winner": "X", "consti_votes": "200", "total_votes": "21000", "undecided_constituencies": "441"}
+{"constituency_id": "105", "constituency_name": "193", "consti_winner": "Y", "consti_votes": "200", "total_votes": "21200", "undecided_constituencies": "440"}
+{"constituency_id": "109", "constituency_name": "197", "consti_winner": "Y", "consti_votes": "200", "total_votes": "22000", "undecided_constituencies": "439"}
+{"constituency_id": "110", "constituency_name": "198", "consti_winner": "X", "consti_votes": "200", "total_votes": "22200", "undecided_constituencies": "438"}
+{"constituency_id": "113", "constituency_name": "20", "consti_winner": "X", "consti_votes": "200", "total_votes": "22800", "undecided_constituencies": "437"}
+{"constituency_id": "114", "constituency_name": "200", "consti_winner": "Y", "consti_votes": "200", "total_votes": "23000", "undecided_constituencies": "436"}
+{"constituency_id": "115", "constituency_name": "201", "consti_winner": "Y", "consti_votes": "200", "total_votes": "23200", "undecided_constituencies": "435"}
+{"constituency_id": "121", "constituency_name": "207", "consti_winner": "X", "consti_votes": "200", "total_votes": "24400", "undecided_constituencies": "434"}
+{"constituency_id": "123", "constituency_name": "209", "consti_winner": "X", "consti_votes": "200", "total_votes": "24800", "undecided_constituencies": "433"}
+{"constituency_id": "124", "constituency_name": "21", "consti_winner": "Y", "consti_votes": "200", "total_votes": "25000", "undecided_constituencies": "432"}
+{"constituency_id": "128", "constituency_name": "213", "consti_winner": "X", "consti_votes": "200", "total_votes": "25800", "undecided_constituencies": "431"}
+{"constituency_id": "130", "constituency_name": "215", "consti_winner": "Y", "consti_votes": "200", "total_votes": "26200", "undecided_constituencies": "430"}
+{"constituency_id": "131", "constituency_name": "216", "consti_winner": "X", "consti_votes": "200", "total_votes": "26400", "undecided_constituencies": "429"}
+{"constituency_id": "132", "constituency_name": "217", "consti_winner": "X", "consti_votes": "200", "total_votes": "26600", "undecided_constituencies": "428"}
+{"constituency_id": "133", "constituency_name": "218", "consti_winner": "X", "consti_votes": "200", "total_votes": "26800", "undecided_constituencies": "427"}
+{"constituency_id": "134", "constituency_name": "219", "consti_winner": "Y", "consti_votes": "200", "total_votes": "27000", "undecided_constituencies": "426"}
+{"constituency_id": "135", "constituency_name": "22", "consti_winner": "X", "consti_votes": "200", "total_votes": "27200", "undecided_constituencies": "425"}
+{"constituency_id": "136", "constituency_name": "220", "consti_winner": "X", "consti_votes": "200", "total_votes": "27400", "undecided_constituencies": "424"}
+{"constituency_id": "137", "constituency_name": "221", "consti_winner": "X", "consti_votes": "200", "total_votes": "27600", "undecided_constituencies": "423"}
+{"constituency_id": "138", "constituency_name": "222", "consti_winner": "Y", "consti_votes": "200", "total_votes": "27800", "undecided_constituencies": "422"}
+{"constituency_id": "141", "constituency_name": "225", "consti_winner": "X", "consti_votes": "200", "total_votes": "28400", "undecided_constituencies": "421"}
+{"constituency_id": "143", "constituency_name": "227", "consti_winner": "X", "consti_votes": "200", "total_votes": "28800", "undecided_constituencies": "420"}
+{"constituency_id": "144", "constituency_name": "228", "consti_winner": "Y", "consti_votes": "200", "total_votes": "29000", "undecided_constituencies": "419"}
+{"constituency_id": "145", "constituency_name": "229", "consti_winner": "X", "consti_votes": "200", "total_votes": "29200", "undecided_constituencies": "418"}
+{"constituency_id": "146", "constituency_name": "23", "consti_winner": "X", "consti_votes": "200", "total_votes": "29400", "undecided_constituencies": "417"}
+{"constituency_id": "147", "constituency_name": "230", "consti_winner": "Y", "consti_votes": "200", "total_votes": "29600", "undecided_constituencies": "416"}
+{"constituency_id": "149", "constituency_name": "232", "consti_winner": "X", "consti_votes": "200", "total_votes": "30000", "undecided_constituencies": "415"}
+{"constituency_id": "151", "constituency_name": "234", "consti_winner": "Y", "consti_votes": "200", "total_votes": "30400", "undecided_constituencies": "414"}
+{"constituency_id": "152", "constituency_name": "235", "consti_winner": "Y", "consti_votes": "200", "total_votes": "30600", "undecided_constituencies": "413"}
+{"constituency_id": "153", "constituency_name": "236", "consti_winner": "X", "consti_votes": "200", "total_votes": "30800", "undecided_constituencies": "412"}
+{"constituency_id": "155", "constituency_name": "238", "consti_winner": "X", "consti_votes": "200", "total_votes": "31200", "undecided_constituencies": "411"}
+{"constituency_id": "158", "constituency_name": "240", "consti_winner": "X", "consti_votes": "200", "total_votes": "31800", "undecided_constituencies": "410"}
+{"constituency_id": "159", "constituency_name": "241", "consti_winner": "X", "consti_votes": "200", "total_votes": "32000", "undecided_constituencies": "409"}
+{"constituency_id": "163", "constituency_name": "245", "consti_winner": "Y", "consti_votes": "200", "total_votes": "32800", "undecided_constituencies": "408"}
+{"constituency_id": "164", "constituency_name": "246", "consti_winner": "X", "consti_votes": "200", "total_votes": "33000", "undecided_constituencies": "407"}
+{"constituency_id": "166", "constituency_name": "248", "consti_winner": "X", "consti_votes": "200", "total_votes": "33400", "undecided_constituencies": "406"}
+{"constituency_id": "167", "constituency_name": "249", "consti_winner": "Y", "consti_votes": "200", "total_votes": "33600", "undecided_constituencies": "405"}
+{"constituency_id": "169", "constituency_name": "250", "consti_winner": "X", "consti_votes": "200", "total_votes": "34000", "undecided_constituencies": "404"}
+{"constituency_id": "170", "constituency_name": "251", "consti_winner": "X", "consti_votes": "200", "total_votes": "34200", "undecided_constituencies": "403"}
+{"constituency_id": "171", "constituency_name": "252", "consti_winner": "X", "consti_votes": "200", "total_votes": "34400", "undecided_constituencies": "402"}
+{"constituency_id": "173", "constituency_name": "254", "consti_winner": "X", "consti_votes": "200", "total_votes": "34800", "undecided_constituencies": "401"}
+{"constituency_id": "174", "constituency_name": "255", "consti_winner": "X", "consti_votes": "200", "total_votes": "35000", "undecided_constituencies": "400"}
+{"constituency_id": "176", "constituency_name": "257", "consti_winner": "Y", "consti_votes": "200", "total_votes": "35400", "undecided_constituencies": "399"}
+{"constituency_id": "177", "constituency_name": "258", "consti_winner": "X", "consti_votes": "200", "total_votes": "35600", "undecided_constituencies": "398"}
+{"constituency_id": "179", "constituency_name": "26", "consti_winner": "Y", "consti_votes": "200", "total_votes": "36000", "undecided_constituencies": "397"}
+{"constituency_id": "180", "constituency_name": "260", "consti_winner": "Y", "consti_votes": "200", "total_votes": "36200", "undecided_constituencies": "396"}
+{"constituency_id": "183", "constituency_name": "263", "consti_winner": "Y", "consti_votes": "200", "total_votes": "36800", "undecided_constituencies": "395"}
+{"constituency_id": "184", "constituency_name": "264", "consti_winner": "X", "consti_votes": "200", "total_votes": "37000", "undecided_constituencies": "394"}
+{"constituency_id": "187", "constituency_name": "267", "consti_winner": "Y", "consti_votes": "200", "total_votes": "37600", "undecided_constituencies": "393"}
+{"constituency_id": "188", "constituency_name": "268", "consti_winner": "X", "consti_votes": "200", "total_votes": "37800", "undecided_constituencies": "392"}
+{"constituency_id": "189", "constituency_name": "269", "consti_winner": "Y", "consti_votes": "200", "total_votes": "38000", "undecided_constituencies": "391"}
+{"constituency_id": "191", "constituency_name": "270", "consti_winner": "X", "consti_votes": "200", "total_votes": "38400", "undecided_constituencies": "390"}
+{"constituency_id": "192", "constituency_name": "271", "consti_winner": "Y", "consti_votes": "200", "total_votes": "38600", "undecided_constituencies": "389"}
+{"constituency_id": "193", "constituency_name": "272", "consti_winner": "Y", "consti_votes": "200", "total_votes": "38800", "undecided_constituencies": "388"}
+{"constituency_id": "194", "constituency_name": "273", "consti_winner": "Y", "consti_votes": "200", "total_votes": "39000", "undecided_constituencies": "387"}
+{"constituency_id": "195", "constituency_name": "274", "consti_winner": "Y", "consti_votes": "200", "total_votes": "39200", "undecided_constituencies": "386"}
+{"constituency_id": "196", "constituency_name": "275", "consti_winner": "X", "consti_votes": "200", "total_votes": "39400", "undecided_constituencies": "385"}
+{"constituency_id": "197", "constituency_name": "276", "consti_winner": "X", "consti_votes": "200", "total_votes": "39600", "undecided_constituencies": "384"}
+{"constituency_id": "198", "constituency_name": "277", "consti_winner": "X", "consti_votes": "200", "total_votes": "39800", "undecided_constituencies": "383"}
+{"constituency_id": "199", "constituency_name": "278", "consti_winner": "X", "consti_votes": "200", "total_votes": "40000", "undecided_constituencies": "382"}
+{"constituency_id": "201", "constituency_name": "28", "consti_winner": "X", "consti_votes": "200", "total_votes": "40400", "undecided_constituencies": "381"}
+{"constituency_id": "202", "constituency_name": "280", "consti_winner": "X", "consti_votes": "200", "total_votes": "40600", "undecided_constituencies": "380"}
+{"constituency_id": "203", "constituency_name": "281", "consti_winner": "Y", "consti_votes": "200", "total_votes": "40800", "undecided_constituencies": "379"}
+{"constituency_id": "204", "constituency_name": "282", "consti_winner": "X", "consti_votes": "200", "total_votes": "41000", "undecided_constituencies": "378"}
+{"constituency_id": "205", "constituency_name": "283", "consti_winner": "X", "consti_votes": "200", "total_votes": "41200", "undecided_constituencies": "377"}
+{"constituency_id": "208", "constituency_name": "286", "consti_winner": "X", "consti_votes": "200", "total_votes": "41800", "undecided_constituencies": "376"}
+{"constituency_id": "209", "constituency_name": "287", "consti_winner": "X", "consti_votes": "200", "total_votes": "42000", "undecided_constituencies": "375"}
+{"constituency_id": "211", "constituency_name": "289", "consti_winner": "Y", "consti_votes": "200", "total_votes": "42400", "undecided_constituencies": "374"}
+{"constituency_id": "212", "constituency_name": "29", "consti_winner": "Y", "consti_votes": "200", "total_votes": "42600", "undecided_constituencies": "373"}
+{"constituency_id": "214", "constituency_name": "291", "consti_winner": "X", "consti_votes": "200", "total_votes": "43000", "undecided_constituencies": "372"}
+{"constituency_id": "219", "constituency_name": "296", "consti_winner": "Y", "consti_votes": "200", "total_votes": "44000", "undecided_constituencies": "371"}
+{"constituency_id": "220", "constituency_name": "297", "consti_winner": "X", "consti_votes": "200", "total_votes": "44200", "undecided_constituencies": "370"}
+{"constituency_id": "223", "constituency_name": "3", "consti_winner": "Y", "consti_votes": "200", "total_votes": "44800", "undecided_constituencies": "369"}
+{"constituency_id": "227", "constituency_name": "302", "consti_winner": "X", "consti_votes": "200", "total_votes": "45600", "undecided_constituencies": "368"}
+{"constituency_id": "230", "constituency_name": "305", "consti_winner": "Y", "consti_votes": "200", "total_votes": "46200", "undecided_constituencies": "367"}
+{"constituency_id": "231", "constituency_name": "306", "consti_winner": "X", "consti_votes": "200", "total_votes": "46400", "undecided_constituencies": "366"}
+{"constituency_id": "237", "constituency_name": "311", "consti_winner": "X", "consti_votes": "200", "total_votes": "47600", "undecided_constituencies": "365"}
+{"constituency_id": "240", "constituency_name": "314", "consti_winner": "Y", "consti_votes": "200", "total_votes": "48200", "undecided_constituencies": "364"}
+{"constituency_id": "242", "constituency_name": "316", "consti_winner": "Y", "consti_votes": "200", "total_votes": "48600", "undecided_constituencies": "363"}
+{"constituency_id": "246", "constituency_name": "32", "consti_winner": "X", "consti_votes": "200", "total_votes": "49400", "undecided_constituencies": "362"}
+{"constituency_id": "247", "constituency_name": "320", "consti_winner": "X", "consti_votes": "200", "total_votes": "49600", "undecided_constituencies": "361"}
+{"constituency_id": "248", "constituency_name": "321", "consti_winner": "X", "consti_votes": "200", "total_votes": "49800", "undecided_constituencies": "360"}
+{"constituency_id": "250", "constituency_name": "323", "consti_winner": "X", "consti_votes": "200", "total_votes": "50200", "undecided_constituencies": "359"}
+{"constituency_id": "251", "constituency_name": "324", "consti_winner": "Y", "consti_votes": "200", "total_votes": "50400", "undecided_constituencies": "358"}
+{"constituency_id": "254", "constituency_name": "327", "consti_winner": "Y", "consti_votes": "200", "total_votes": "51000", "undecided_constituencies": "357"}
+{"constituency_id": "256", "constituency_name": "329", "consti_winner": "X", "consti_votes": "200", "total_votes": "51400", "undecided_constituencies": "356"}
+{"constituency_id": "257", "constituency_name": "33", "consti_winner": "X", "consti_votes": "200", "total_votes": "51600", "undecided_constituencies": "355"}
+{"constituency_id": "260", "constituency_name": "332", "consti_winner": "X", "consti_votes": "200", "total_votes": "52200", "undecided_constituencies": "354"}
+{"constituency_id": "261", "constituency_name": "333", "consti_winner": "X", "consti_votes": "200", "total_votes": "52400", "undecided_constituencies": "353"}
+{"constituency_id": "262", "constituency_name": "334", "consti_winner": "X", "consti_votes": "200", "total_votes": "52600", "undecided_constituencies": "352"}
+{"constituency_id": "264", "constituency_name": "336", "consti_winner": "Y", "consti_votes": "200", "total_votes": "53000", "undecided_constituencies": "351"}
+{"constituency_id": "265", "constituency_name": "337", "consti_winner": "X", "consti_votes": "200", "total_votes": "53200", "undecided_constituencies": "350"}
+{"constituency_id": "266", "constituency_name": "338", "consti_winner": "X", "consti_votes": "200", "total_votes": "53400", "undecided_constituencies": "349"}
+{"constituency_id": "269", "constituency_name": "340", "consti_winner": "X", "consti_votes": "200", "total_votes": "54000", "undecided_constituencies": "348"}
+{"constituency_id": "270", "constituency_name": "341", "consti_winner": "X", "consti_votes": "200", "total_votes": "54200", "undecided_constituencies": "347"}
+{"constituency_id": "275", "constituency_name": "346", "consti_winner": "X", "consti_votes": "200", "total_votes": "55200", "undecided_constituencies": "346"}
+{"constituency_id": "276", "constituency_name": "347", "consti_winner": "Y", "consti_votes": "200", "total_votes": "55400", "undecided_constituencies": "345"}
+{"constituency_id": "277", "constituency_name": "348", "consti_winner": "X", "consti_votes": "200", "total_votes": "55600", "undecided_constituencies": "344"}
+{"constituency_id": "278", "constituency_name": "349", "consti_winner": "X", "consti_votes": "200", "total_votes": "55800", "undecided_constituencies": "343"}
+{"constituency_id": "280", "constituency_name": "350", "consti_winner": "Y", "consti_votes": "200", "total_votes": "56200", "undecided_constituencies": "342"}
+{"constituency_id": "281", "constituency_name": "351", "consti_winner": "X", "consti_votes": "200", "total_votes": "56400", "undecided_constituencies": "341"}
+{"constituency_id": "282", "constituency_name": "352", "consti_winner": "Y", "consti_votes": "200", "total_votes": "56600", "undecided_constituencies": "340"}
+{"constituency_id": "283", "constituency_name": "353", "consti_winner": "X", "consti_votes": "200", "total_votes": "56800", "undecided_constituencies": "339"}
+{"constituency_id": "285", "constituency_name": "355", "consti_winner": "Y", "consti_votes": "200", "total_votes": "57200", "undecided_constituencies": "338"}
+{"constituency_id": "286", "constituency_name": "356", "consti_winner": "X", "consti_votes": "200", "total_votes": "57400", "undecided_constituencies": "337"}
+{"constituency_id": "287", "constituency_name": "357", "consti_winner": "X", "consti_votes": "200", "total_votes": "57600", "undecided_constituencies": "336"}
+{"constituency_id": "289", "constituency_name": "359", "consti_winner": "X", "consti_votes": "200", "total_votes": "58000", "undecided_constituencies": "335"}
+{"constituency_id": "290", "constituency_name": "36", "consti_winner": "X", "consti_votes": "200", "total_votes": "58200", "undecided_constituencies": "334"}
+{"constituency_id": "291", "constituency_name": "360", "consti_winner": "Y", "consti_votes": "200", "total_votes": "58400", "undecided_constituencies": "333"}
+{"constituency_id": "292", "constituency_name": "361", "consti_winner": "Y", "consti_votes": "200", "total_votes": "58600", "undecided_constituencies": "332"}
+{"constituency_id": "293", "constituency_name": "362", "consti_winner": "X", "consti_votes": "200", "total_votes": "58800", "undecided_constituencies": "331"}
+{"constituency_id": "294", "constituency_name": "363", "consti_winner": "X", "consti_votes": "200", "total_votes": "59000", "undecided_constituencies": "330"}
+{"constituency_id": "296", "constituency_name": "365", "consti_winner": "Y", "consti_votes": "200", "total_votes": "59400", "undecided_constituencies": "329"}
+{"constituency_id": "297", "constituency_name": "366", "consti_winner": "X", "consti_votes": "200", "total_votes": "59600", "undecided_constituencies": "328"}
+{"constituency_id": "298", "constituency_name": "367", "consti_winner": "Y", "consti_votes": "200", "total_votes": "59800", "undecided_constituencies": "327"}
+{"constituency_id": "299", "constituency_name": "368", "consti_winner": "X", "consti_votes": "200", "total_votes": "60000", "undecided_constituencies": "326"}
+{"constituency_id": "301", "constituency_name": "37", "consti_winner": "Y", "consti_votes": "200", "total_votes": "60400", "undecided_constituencies": "325"}
+{"constituency_id": "302", "constituency_name": "370", "consti_winner": "Y", "consti_votes": "200", "total_votes": "60600", "undecided_constituencies": "324"}
+{"constituency_id": "305", "constituency_name": "373", "consti_winner": "X", "consti_votes": "200", "total_votes": "61200", "undecided_constituencies": "323"}
+{"constituency_id": "306", "constituency_name": "374", "consti_winner": "Y", "consti_votes": "200", "total_votes": "61400", "undecided_constituencies": "322"}
+{"constituency_id": "307", "constituency_name": "375", "consti_winner": "X", "consti_votes": "200", "total_votes": "61600", "undecided_constituencies": "321"}
+{"constituency_id": "308", "constituency_name": "376", "consti_winner": "Y", "consti_votes": "200", "total_votes": "61800", "undecided_constituencies": "320"}
+{"constituency_id": "309", "constituency_name": "377", "consti_winner": "X", "consti_votes": "200", "total_votes": "62000", "undecided_constituencies": "319"}
+{"constituency_id": "312", "constituency_name": "38", "consti_winner": "Y", "consti_votes": "200", "total_votes": "62600", "undecided_constituencies": "318"}
+{"constituency_id": "313", "constituency_name": "380", "consti_winner": "X", "consti_votes": "200", "total_votes": "62800", "undecided_constituencies": "317"}
+{"constituency_id": "314", "constituency_name": "381", "consti_winner": "X", "consti_votes": "200", "total_votes": "63000", "undecided_constituencies": "316"}
+{"constituency_id": "316", "constituency_name": "383", "consti_winner": "X", "consti_votes": "200", "total_votes": "63400", "undecided_constituencies": "315"}
+{"constituency_id": "317", "constituency_name": "384", "consti_winner": "X", "consti_votes": "200", "total_votes": "63600", "undecided_constituencies": "314"}
+{"constituency_id": "318", "constituency_name": "385", "consti_winner": "Y", "consti_votes": "200", "total_votes": "63800", "undecided_constituencies": "313"}
+{"constituency_id": "321", "constituency_name": "388", "consti_winner": "X", "consti_votes": "200", "total_votes": "64400", "undecided_constituencies": "312"}
+{"constituency_id": "322", "constituency_name": "389", "consti_winner": "Y", "consti_votes": "200", "total_votes": "64600", "undecided_constituencies": "311"}
+{"constituency_id": "323", "constituency_name": "39", "consti_winner": "Y", "consti_votes": "200", "total_votes": "64800", "undecided_constituencies": "310"}
+{"constituency_id": "326", "constituency_name": "392", "consti_winner": "Y", "consti_votes": "200", "total_votes": "65400", "undecided_constituencies": "309"}
+{"constituency_id": "329", "constituency_name": "395", "consti_winner": "X", "consti_votes": "200", "total_votes": "66000", "undecided_constituencies": "308"}
+{"constituency_id": "330", "constituency_name": "396", "consti_winner": "X", "consti_votes": "200", "total_votes": "66200", "undecided_constituencies": "307"}
+{"constituency_id": "333", "constituency_name": "399", "consti_winner": "Y", "consti_votes": "200", "total_votes": "66800", "undecided_constituencies": "306"}
+{"constituency_id": "337", "constituency_name": "401", "consti_winner": "X", "consti_votes": "200", "total_votes": "67600", "undecided_constituencies": "305"}
+{"constituency_id": "340", "constituency_name": "404", "consti_winner": "Y", "consti_votes": "200", "total_votes": "68200", "undecided_constituencies": "304"}
+{"constituency_id": "341", "constituency_name": "405", "consti_winner": "X", "consti_votes": "200", "total_votes": "68400", "undecided_constituencies": "303"}
+{"constituency_id": "342", "constituency_name": "406", "consti_winner": "X", "consti_votes": "200", "total_votes": "68600", "undecided_constituencies": "302"}
+{"constituency_id": "343", "constituency_name": "407", "consti_winner": "Y", "consti_votes": "200", "total_votes": "68800", "undecided_constituencies": "301"}
+{"constituency_id": "348", "constituency_name": "411", "consti_winner": "X", "consti_votes": "200", "total_votes": "69800", "undecided_constituencies": "300"}
+{"constituency_id": "349", "constituency_name": "412", "consti_winner": "X", "consti_votes": "200", "total_votes": "70000", "undecided_constituencies": "299"}
+{"constituency_id": "350", "constituency_name": "413", "consti_winner": "Y", "consti_votes": "200", "total_votes": "70200", "undecided_constituencies": "298"}
+{"constituency_id": "351", "constituency_name": "414", "consti_winner": "X", "consti_votes": "200", "total_votes": "70400", "undecided_constituencies": "297"}
+{"constituency_id": "355", "constituency_name": "418", "consti_winner": "X", "consti_votes": "200", "total_votes": "71200", "undecided_constituencies": "296"}
+{"constituency_id": "359", "constituency_name": "421", "consti_winner": "Y", "consti_votes": "200", "total_votes": "72000", "undecided_constituencies": "295"}
+{"constituency_id": "360", "constituency_name": "422", "consti_winner": "X", "consti_votes": "200", "total_votes": "72200", "undecided_constituencies": "294"}
+{"constituency_id": "363", "constituency_name": "425", "consti_winner": "X", "consti_votes": "200", "total_votes": "72800", "undecided_constituencies": "293"}
+{"constituency_id": "366", "constituency_name": "428", "consti_winner": "X", "consti_votes": "200", "total_votes": "73400", "undecided_constituencies": "292"}
+{"constituency_id": "367", "constituency_name": "429", "consti_winner": "X", "consti_votes": "200", "total_votes": "73600", "undecided_constituencies": "291"}
+{"constituency_id": "368", "constituency_name": "43", "consti_winner": "Y", "consti_votes": "200", "total_votes": "73800", "undecided_constituencies": "290"}
+{"constituency_id": "372", "constituency_name": "433", "consti_winner": "X", "consti_votes": "200", "total_votes": "74600", "undecided_constituencies": "289"}
+{"constituency_id": "374", "constituency_name": "435", "consti_winner": "X", "consti_votes": "200", "total_votes": "75000", "undecided_constituencies": "288"}
+{"constituency_id": "375", "constituency_name": "436", "consti_winner": "X", "consti_votes": "200", "total_votes": "75200", "undecided_constituencies": "287"}
+{"constituency_id": "376", "constituency_name": "437", "consti_winner": "X", "consti_votes": "200", "total_votes": "75400", "undecided_constituencies": "286"}
+{"constituency_id": "377", "constituency_name": "438", "consti_winner": "X", "consti_votes": "200", "total_votes": "75600", "undecided_constituencies": "285"}
+{"constituency_id": "378", "constituency_name": "439", "consti_winner": "X", "consti_votes": "200", "total_votes": "75800", "undecided_constituencies": "284"}
+{"constituency_id": "379", "constituency_name": "44", "consti_winner": "Y", "consti_votes": "200", "total_votes": "76000", "undecided_constituencies": "283"}
+{"constituency_id": "383", "constituency_name": "443", "consti_winner": "X", "consti_votes": "200", "total_votes": "76800", "undecided_constituencies": "282"}
+{"constituency_id": "385", "constituency_name": "445", "consti_winner": "X", "consti_votes": "200", "total_votes": "77200", "undecided_constituencies": "281"}
+{"constituency_id": "387", "constituency_name": "447", "consti_winner": "X", "consti_votes": "200", "total_votes": "77600", "undecided_constituencies": "280"}
+{"constituency_id": "388", "constituency_name": "448", "consti_winner": "Y", "consti_votes": "200", "total_votes": "77800", "undecided_constituencies": "279"}
+{"constituency_id": "389", "constituency_name": "449", "consti_winner": "Y", "consti_votes": "200", "total_votes": "78000", "undecided_constituencies": "278"}
+{"constituency_id": "390", "constituency_name": "45", "consti_winner": "X", "consti_votes": "200", "total_votes": "78200", "undecided_constituencies": "277"}
+{"constituency_id": "392", "constituency_name": "451", "consti_winner": "Y", "consti_votes": "200", "total_votes": "78600", "undecided_constituencies": "276"}
+{"constituency_id": "393", "constituency_name": "452", "consti_winner": "Y", "consti_votes": "200", "total_votes": "78800", "undecided_constituencies": "275"}
+{"constituency_id": "395", "constituency_name": "454", "consti_winner": "X", "consti_votes": "200", "total_votes": "79200", "undecided_constituencies": "274"}
+{"constituency_id": "397", "constituency_name": "456", "consti_winner": "Y", "consti_votes": "200", "total_votes": "79600", "undecided_constituencies": "273"}
+{"constituency_id": "398", "constituency_name": "457", "consti_winner": "X", "consti_votes": "200", "total_votes": "79800", "undecided_constituencies": "272"}
+{"constituency_id": "400", "constituency_name": "459", "consti_winner": "X", "consti_votes": "200", "total_votes": "80200", "undecided_constituencies": "271"}
+{"constituency_id": "401", "constituency_name": "46", "consti_winner": "Y", "consti_votes": "200", "total_votes": "80400", "undecided_constituencies": "270"}
+{"constituency_id": "402", "constituency_name": "460", "consti_winner": "X", "consti_votes": "200", "total_votes": "80600", "undecided_constituencies": "269"}
+{"constituency_id": "405", "constituency_name": "463", "consti_winner": "X", "consti_votes": "200", "total_votes": "81200", "undecided_constituencies": "268"}
+{"constituency_id": "406", "constituency_name": "464", "consti_winner": "X", "consti_votes": "200", "total_votes": "81400", "undecided_constituencies": "267"}
+{"constituency_id": "407", "constituency_name": "465", "consti_winner": "Y", "consti_votes": "200", "total_votes": "81600", "undecided_constituencies": "266"}
+{"constituency_id": "408", "constituency_name": "466", "consti_winner": "X", "consti_votes": "200", "total_votes": "81800", "undecided_constituencies": "265"}
+{"constituency_id": "409", "constituency_name": "467", "consti_winner": "X", "consti_votes": "200", "total_votes": "82000", "undecided_constituencies": "264"}
+{"constituency_id": "410", "constituency_name": "468", "consti_winner": "X", "consti_votes": "200", "total_votes": "82200", "undecided_constituencies": "263"}
+{"constituency_id": "411", "constituency_name": "469", "consti_winner": "X", "consti_votes": "200", "total_votes": "82400", "undecided_constituencies": "262"}
+{"constituency_id": "412", "constituency_name": "47", "consti_winner": "X", "consti_votes": "200", "total_votes": "82600", "undecided_constituencies": "261"}
+{"constituency_id": "413", "constituency_name": "470", "consti_winner": "X", "consti_votes": "200", "total_votes": "82800", "undecided_constituencies": "260"}
+{"constituency_id": "414", "constituency_name": "471", "consti_winner": "Y", "consti_votes": "200", "total_votes": "83000", "undecided_constituencies": "259"}
+{"constituency_id": "415", "constituency_name": "472", "consti_winner": "X", "consti_votes": "200", "total_votes": "83200", "undecided_constituencies": "258"}
+{"constituency_id": "416", "constituency_name": "473", "consti_winner": "X", "consti_votes": "200", "total_votes": "83400", "undecided_constituencies": "257"}
+{"constituency_id": "418", "constituency_name": "475", "consti_winner": "X", "consti_votes": "200", "total_votes": "83800", "undecided_constituencies": "256"}
+{"constituency_id": "419", "constituency_name": "476", "consti_winner": "Y", "consti_votes": "200", "total_votes": "84000", "undecided_constituencies": "255"}
+{"constituency_id": "420", "constituency_name": "477", "consti_winner": "X", "consti_votes": "200", "total_votes": "84200", "undecided_constituencies": "254"}
+{"constituency_id": "421", "constituency_name": "478", "consti_winner": "X", "consti_votes": "200", "total_votes": "84400", "undecided_constituencies": "253"}
+{"constituency_id": "422", "constituency_name": "479", "consti_winner": "X", "consti_votes": "200", "total_votes": "84600", "undecided_constituencies": "252"}
+{"constituency_id": "424", "constituency_name": "480", "consti_winner": "Y", "consti_votes": "200", "total_votes": "85000", "undecided_constituencies": "251"}
+{"constituency_id": "425", "constituency_name": "481", "consti_winner": "Y", "consti_votes": "200", "total_votes": "85200", "undecided_constituencies": "250"}
+{"constituency_id": "426", "constituency_name": "482", "consti_winner": "Y", "consti_votes": "200", "total_votes": "85400", "undecided_constituencies": "249"}
+{"constituency_id": "427", "constituency_name": "483", "consti_winner": "Y", "consti_votes": "200", "total_votes": "85600", "undecided_constituencies": "248"}
+{"constituency_id": "428", "constituency_name": "484", "consti_winner": "X", "consti_votes": "200", "total_votes": "85800", "undecided_constituencies": "247"}
+{"constituency_id": "430", "constituency_name": "486", "consti_winner": "Y", "consti_votes": "200", "total_votes": "86200", "undecided_constituencies": "246"}
+{"constituency_id": "431", "constituency_name": "487", "consti_winner": "X", "consti_votes": "200", "total_votes": "86400", "undecided_constituencies": "245"}
+{"constituency_id": "432", "constituency_name": "488", "consti_winner": "X", "consti_votes": "200", "total_votes": "86600", "undecided_constituencies": "244"}
+{"constituency_id": "433", "constituency_name": "489", "consti_winner": "Y", "consti_votes": "200", "total_votes": "86800", "undecided_constituencies": "243"}
+{"constituency_id": "435", "constituency_name": "490", "consti_winner": "Y", "consti_votes": "200", "total_votes": "87200", "undecided_constituencies": "242"}
+{"constituency_id": "438", "constituency_name": "493", "consti_winner": "X", "consti_votes": "200", "total_votes": "87800", "undecided_constituencies": "241"}
+{"constituency_id": "442", "constituency_name": "497", "consti_winner": "X", "consti_votes": "200", "total_votes": "88600", "undecided_constituencies": "240"}
+{"constituency_id": "444", "constituency_name": "499", "consti_winner": "X", "consti_votes": "200", "total_votes": "89000", "undecided_constituencies": "239"}
+{"constituency_id": "447", "constituency_name": "51", "consti_winner": "Y", "consti_votes": "200", "total_votes": "89600", "undecided_constituencies": "238"}
+{"constituency_id": "448", "constituency_name": "52", "consti_winner": "X", "consti_votes": "200", "total_votes": "89800", "undecided_constituencies": "237"}
+{"constituency_id": "449", "constituency_name": "53", "consti_winner": "X", "consti_votes": "200", "total_votes": "90000", "undecided_constituencies": "236"}
+{"constituency_id": "450", "constituency_name": "54", "consti_winner": "Y", "consti_votes": "200", "total_votes": "90200", "undecided_constituencies": "235"}
+{"constituency_id": "452", "constituency_name": "56", "consti_winner": "X", "consti_votes": "200", "total_votes": "90600", "undecided_constituencies": "234"}
+{"constituency_id": "454", "constituency_name": "58", "consti_winner": "Y", "consti_votes": "200", "total_votes": "91000", "undecided_constituencies": "233"}
+{"constituency_id": "455", "constituency_name": "59", "consti_winner": "Y", "consti_votes": "200", "total_votes": "91200", "undecided_constituencies": "232"}
+{"constituency_id": "456", "constituency_name": "6", "consti_winner": "X", "consti_votes": "200", "total_votes": "91400", "undecided_constituencies": "231"}
+{"constituency_id": "461", "constituency_name": "64", "consti_winner": "X", "consti_votes": "200", "total_votes": "92400", "undecided_constituencies": "230"}
+{"constituency_id": "462", "constituency_name": "65", "consti_winner": "Y", "consti_votes": "200", "total_votes": "92600", "undecided_constituencies": "229"}
+{"constituency_id": "465", "constituency_name": "68", "consti_winner": "X", "consti_votes": "200", "total_votes": "93200", "undecided_constituencies": "228"}
+{"constituency_id": "466", "constituency_name": "69", "consti_winner": "X", "consti_votes": "200", "total_votes": "93400", "undecided_constituencies": "227"}
+{"constituency_id": "468", "constituency_name": "70", "consti_winner": "X", "consti_votes": "200", "total_votes": "93800", "undecided_constituencies": "226"}
+{"constituency_id": "469", "constituency_name": "71", "consti_winner": "X", "consti_votes": "200", "total_votes": "94000", "undecided_constituencies": "225"}
+{"constituency_id": "470", "constituency_name": "72", "consti_winner": "Y", "consti_votes": "200", "total_votes": "94200", "undecided_constituencies": "224"}
+{"constituency_id": "473", "constituency_name": "75", "consti_winner": "Y", "consti_votes": "200", "total_votes": "94800", "undecided_constituencies": "223"}
+{"constituency_id": "475", "constituency_name": "77", "consti_winner": "Y", "consti_votes": "200", "total_votes": "95200", "undecided_constituencies": "222"}
+{"constituency_id": "476", "constituency_name": "78", "consti_winner": "Y", "consti_votes": "200", "total_votes": "95400", "undecided_constituencies": "221"}
+{"constituency_id": "478", "constituency_name": "8", "consti_winner": "X", "consti_votes": "200", "total_votes": "95800", "undecided_constituencies": "220"}
+{"constituency_id": "480", "constituency_name": "81", "consti_winner": "X", "consti_votes": "200", "total_votes": "96200", "undecided_constituencies": "219"}
+{"constituency_id": "481", "constituency_name": "82", "consti_winner": "Y", "consti_votes": "200", "total_votes": "96400", "undecided_constituencies": "218"}
+{"constituency_id": "482", "constituency_name": "83", "consti_winner": "X", "consti_votes": "200", "total_votes": "96600", "undecided_constituencies": "217"}
+{"constituency_id": "484", "constituency_name": "85", "consti_winner": "Y", "consti_votes": "200", "total_votes": "97000", "undecided_constituencies": "216"}
+{"constituency_id": "490", "constituency_name": "90", "consti_winner": "Y", "consti_votes": "200", "total_votes": "98200", "undecided_constituencies": "215"}
+{"constituency_id": "492", "constituency_name": "92", "consti_winner": "X", "consti_votes": "200", "total_votes": "98600", "undecided_constituencies": "214"}
+{"constituency_id": "493", "constituency_name": "93", "consti_winner": "X", "consti_votes": "200", "total_votes": "98800", "undecided_constituencies": "213"}
+{"constituency_id": "497", "constituency_name": "97", "consti_winner": "X", "consti_votes": "200", "total_votes": "99600", "undecided_constituencies": "212"}
+{"constituency_id": "498", "constituency_name": "98", "consti_winner": "Y", "consti_votes": "200", "total_votes": "99800", "undecided_constituencies": "211"}
+{"constituency_id": "295", "constituency": "364", "consti_winner": "X", "consti_votes": "400", "total_votes": "100400", "undecided_constituencies": "210", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "180.0", "UCB of B": "320.0", "LCB of B": "110.0"}
+{"constituency_id": "226", "constituency": "301", "consti_winner": "X", "consti_votes": "400", "total_votes": "100600", "undecided_constituencies": "209", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "181.0", "UCB of B": "319.0", "LCB of B": "110.0"}
+{"constituency_id": "63", "constituency": "155", "consti_winner": "X", "consti_votes": "400", "total_votes": "100800", "undecided_constituencies": "208", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "182.0", "UCB of B": "318.0", "LCB of B": "110.0"}
+{"constituency_id": "471", "constituency": "73", "consti_winner": "X", "consti_votes": "400", "total_votes": "101000", "undecided_constituencies": "207", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "183.0", "UCB of B": "317.0", "LCB of B": "110.0"}
+{"constituency_id": "162", "constituency": "244", "consti_winner": "X", "consti_votes": "400", "total_votes": "101200", "undecided_constituencies": "206", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "184.0", "UCB of B": "316.0", "LCB of B": "110.0"}
+{"constituency_id": "218", "constituency": "295", "consti_winner": "X", "consti_votes": "400", "total_votes": "101400", "undecided_constituencies": "205", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "185.0", "UCB of B": "315.0", "LCB of B": "110.0"}
+{"constituency_id": "70", "constituency": "161", "consti_winner": "X", "consti_votes": "400", "total_votes": "101600", "undecided_constituencies": "204", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "186.0", "UCB of B": "314.0", "LCB of B": "110.0"}
+{"constituency_id": "23", "constituency": "119", "consti_winner": "X", "consti_votes": "400", "total_votes": "101800", "undecided_constituencies": "203", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "187.0", "UCB of B": "313.0", "LCB of B": "110.0"}
+{"constituency_id": "222", "constituency": "299", "consti_winner": "X", "consti_votes": "400", "total_votes": "102000", "undecided_constituencies": "202", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "188.0", "UCB of B": "312.0", "LCB of B": "110.0"}
+{"constituency_id": "140", "constituency": "224", "consti_winner": "X", "consti_votes": "400", "total_votes": "102200", "undecided_constituencies": "201", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "189.0", "UCB of B": "311.0", "LCB of B": "110.0"}
+{"constituency_id": "68", "constituency": "16", "consti_winner": "X", "consti_votes": "400", "total_votes": "102400", "undecided_constituencies": "200", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "190.0", "UCB of B": "310.0", "LCB of B": "110.0"}
+{"constituency_id": "148", "constituency": "231", "consti_winner": "X", "consti_votes": "400", "total_votes": "102600", "undecided_constituencies": "199", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "191.0", "UCB of B": "309.0", "LCB of B": "110.0"}
+{"constituency_id": "241", "constituency": "315", "consti_winner": "X", "consti_votes": "400", "total_votes": "102800", "undecided_constituencies": "198", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "192.0", "UCB of B": "308.0", "LCB of B": "110.0"}
+{"constituency_id": "64", "constituency": "156", "consti_winner": "X", "consti_votes": "400", "total_votes": "103000", "undecided_constituencies": "197", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "193.0", "UCB of B": "307.0", "LCB of B": "110.0"}
+{"constituency_id": "228", "constituency": "303", "consti_winner": "X", "consti_votes": "400", "total_votes": "103200", "undecided_constituencies": "196", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "194.0", "UCB of B": "306.0", "LCB of B": "110.0"}
+{"constituency_id": "43", "constituency": "137", "consti_winner": "X", "consti_votes": "400", "total_votes": "103400", "undecided_constituencies": "195", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "195.0", "UCB of B": "305.0", "LCB of B": "110.0"}
+{"constituency_id": "28", "constituency": "123", "consti_winner": "X", "consti_votes": "400", "total_votes": "103800", "undecided_constituencies": "194", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "196.0", "UCB of B": "304.0", "LCB of B": "110.0"}
+{"constituency_id": "273", "constituency": "344", "consti_winner": "X", "consti_votes": "400", "total_votes": "104000", "undecided_constituencies": "193", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "197.0", "UCB of B": "303.0", "LCB of B": "110.0"}
+{"constituency_id": "483", "constituency": "84", "consti_winner": "X", "consti_votes": "400", "total_votes": "104200", "undecided_constituencies": "192", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "198.0", "UCB of B": "302.0", "LCB of B": "110.0"}
+{"constituency_id": "381", "constituency": "441", "consti_winner": "X", "consti_votes": "400", "total_votes": "104400", "undecided_constituencies": "191", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "199.0", "UCB of B": "301.0", "LCB of B": "110.0"}
+{"constituency_id": "215", "constituency": "292", "consti_winner": "X", "consti_votes": "400", "total_votes": "104600", "undecided_constituencies": "190", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "200.0", "UCB of B": "300.0", "LCB of B": "110.0"}
+{"constituency_id": "229", "constituency": "304", "consti_winner": "X", "consti_votes": "400", "total_votes": "104800", "undecided_constituencies": "189", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "201.0", "UCB of B": "299.0", "LCB of B": "110.0"}
+{"constituency_id": "328", "constituency": "394", "consti_winner": "X", "consti_votes": "400", "total_votes": "105000", "undecided_constituencies": "188", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "202.0", "UCB of B": "298.0", "LCB of B": "110.0"}
+{"constituency_id": "441", "constituency": "496", "consti_winner": "X", "consti_votes": "400", "total_votes": "105200", "undecided_constituencies": "187", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "203.0", "UCB of B": "297.0", "LCB of B": "110.0"}
+{"constituency_id": "382", "constituency": "442", "consti_winner": "X", "consti_votes": "400", "total_votes": "106200", "undecided_constituencies": "186", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "204.0", "UCB of B": "296.0", "LCB of B": "110.0"}
+{"constituency_id": "358", "constituency": "420", "consti_winner": "X", "consti_votes": "400", "total_votes": "106400", "undecided_constituencies": "185", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "205.0", "UCB of B": "295.0", "LCB of B": "110.0"}
+{"constituency_id": "263", "constituency": "335", "consti_winner": "X", "consti_votes": "400", "total_votes": "106600", "undecided_constituencies": "184", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "206.0", "UCB of B": "294.0", "LCB of B": "110.0"}
+{"constituency_id": "354", "constituency": "417", "consti_winner": "X", "consti_votes": "400", "total_votes": "106800", "undecided_constituencies": "183", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "207.0", "UCB of B": "293.0", "LCB of B": "110.0"}
+{"constituency_id": "84", "constituency": "174", "consti_winner": "X", "consti_votes": "400", "total_votes": "107400", "undecided_constituencies": "182", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "208.0", "UCB of B": "292.0", "LCB of B": "110.0"}
+{"constituency_id": "225", "constituency": "300", "consti_winner": "X", "consti_votes": "400", "total_votes": "107800", "undecided_constituencies": "181", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "209.0", "UCB of B": "291.0", "LCB of B": "110.0"}
+{"constituency_id": "353", "constituency": "416", "consti_winner": "X", "consti_votes": "400", "total_votes": "108600", "undecided_constituencies": "180", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "210.0", "UCB of B": "290.0", "LCB of B": "110.0"}
+{"constituency_id": "488", "constituency": "89", "consti_winner": "X", "consti_votes": "400", "total_votes": "111000", "undecided_constituencies": "179", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "211.0", "UCB of B": "289.0", "LCB of B": "110.0"}
+{"constituency_id": "6", "constituency": "103", "consti_winner": "X", "consti_votes": "600", "total_votes": "113200", "undecided_constituencies": "178", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "212.0", "UCB of B": "288.0", "LCB of B": "110.0"}
+{"constituency_id": "112", "constituency": "2", "consti_winner": "X", "consti_votes": "600", "total_votes": "113400", "undecided_constituencies": "177", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "213.0", "UCB of B": "287.0", "LCB of B": "110.0"}
+{"constituency_id": "319", "constituency": "386", "consti_winner": "X", "consti_votes": "600", "total_votes": "115400", "undecided_constituencies": "176", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "214.0", "UCB of B": "286.0", "LCB of B": "110.0"}
+{"constituency_id": "274", "constituency": "345", "consti_winner": "X", "consti_votes": "600", "total_votes": "116600", "undecided_constituencies": "175", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "215.0", "UCB of B": "285.0", "LCB of B": "110.0"}
+{"constituency_id": "125", "constituency": "210", "consti_winner": "X", "consti_votes": "600", "total_votes": "117400", "undecided_constituencies": "174", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "216.0", "UCB of B": "284.0", "LCB of B": "110.0"}
+{"constituency_id": "362", "constituency": "424", "consti_winner": "X", "consti_votes": "600", "total_votes": "118800", "undecided_constituencies": "173", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "217.0", "UCB of B": "283.0", "LCB of B": "110.0"}
+{"constituency_id": "81", "constituency": "171", "consti_winner": "X", "consti_votes": "600", "total_votes": "119000", "undecided_constituencies": "172", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "218.0", "UCB of B": "282.0", "LCB of B": "110.0"}
+{"constituency_id": "365", "constituency": "427", "consti_winner": "X", "consti_votes": "600", "total_votes": "120000", "undecided_constituencies": "171", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "219.0", "UCB of B": "281.0", "LCB of B": "110.0"}
+{"constituency_id": "479", "constituency": "80", "consti_winner": "X", "consti_votes": "600", "total_votes": "120800", "undecided_constituencies": "170", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "220.0", "UCB of B": "280.0", "LCB of B": "110.0"}
+{"constituency_id": "399", "constituency": "458", "consti_winner": "X", "consti_votes": "600", "total_votes": "121400", "undecided_constituencies": "169", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "221.0", "UCB of B": "279.0", "LCB of B": "110.0"}
+{"constituency_id": "347", "constituency": "410", "consti_winner": "X", "consti_votes": "600", "total_votes": "122600", "undecided_constituencies": "168", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "222.0", "UCB of B": "278.0", "LCB of B": "110.0"}
+{"constituency_id": "168", "constituency": "25", "consti_winner": "X", "consti_votes": "600", "total_votes": "123200", "undecided_constituencies": "167", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "223.0", "UCB of B": "277.0", "LCB of B": "110.0"}
+{"constituency_id": "369", "constituency": "430", "consti_winner": "X", "consti_votes": "800", "total_votes": "127200", "undecided_constituencies": "166", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "224.0", "UCB of B": "276.0", "LCB of B": "110.0"}
+{"constituency_id": "129", "constituency": "214", "consti_winner": "X", "consti_votes": "800", "total_votes": "128600", "undecided_constituencies": "165", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "225.0", "UCB of B": "275.0", "LCB of B": "110.0"}
+{"constituency_id": "327", "constituency": "393", "consti_winner": "X", "consti_votes": "800", "total_votes": "130800", "undecided_constituencies": "164", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "226.0", "UCB of B": "274.0", "LCB of B": "110.0"}
+{"constituency_id": "344", "constituency": "408", "consti_winner": "X", "consti_votes": "800", "total_votes": "131400", "undecided_constituencies": "163", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "227.0", "UCB of B": "273.0", "LCB of B": "110.0"}
+{"constituency_id": "47", "constituency": "140", "consti_winner": "X", "consti_votes": "800", "total_votes": "131600", "undecided_constituencies": "162", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "228.0", "UCB of B": "272.0", "LCB of B": "110.0"}
+{"constituency_id": "495", "constituency": "95", "consti_winner": "X", "consti_votes": "800", "total_votes": "132000", "undecided_constituencies": "161", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "229.0", "UCB of B": "271.0", "LCB of B": "110.0"}
+{"constituency_id": "252", "constituency": "325", "consti_winner": "X", "consti_votes": "800", "total_votes": "133400", "undecided_constituencies": "160", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "230.0", "UCB of B": "270.0", "LCB of B": "110.0"}
+{"constituency_id": "487", "constituency": "88", "consti_winner": "X", "consti_votes": "800", "total_votes": "134000", "undecided_constituencies": "159", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "231.0", "UCB of B": "269.0", "LCB of B": "110.0"}
+{"constituency_id": "25", "constituency": "120", "consti_winner": "X", "consti_votes": "800", "total_votes": "134400", "undecided_constituencies": "158", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "232.0", "UCB of B": "268.0", "LCB of B": "110.0"}
+{"constituency_id": "224", "constituency": "30", "consti_winner": "X", "consti_votes": "800", "total_votes": "135200", "undecided_constituencies": "157", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "233.0", "UCB of B": "267.0", "LCB of B": "110.0"}
+{"constituency_id": "345", "constituency": "409", "consti_winner": "X", "consti_votes": "1000", "total_votes": "137600", "undecided_constituencies": "156", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "234.0", "UCB of B": "266.0", "LCB of B": "110.0"}
+{"constituency_id": "436", "constituency": "491", "consti_winner": "X", "consti_votes": "800", "total_votes": "138000", "undecided_constituencies": "155", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "235.0", "UCB of B": "265.0", "LCB of B": "110.0"}
+{"constituency_id": "127", "constituency": "212", "consti_winner": "X", "consti_votes": "1000", "total_votes": "139200", "undecided_constituencies": "154", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "236.0", "UCB of B": "264.0", "LCB of B": "110.0"}
+{"constituency_id": "320", "constituency": "387", "consti_winner": "X", "consti_votes": "800", "total_votes": "140400", "undecided_constituencies": "153", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "237.0", "UCB of B": "263.0", "LCB of B": "110.0"}
+{"constituency_id": "249", "constituency": "322", "consti_winner": "X", "consti_votes": "1000", "total_votes": "141200", "undecided_constituencies": "152", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "238.0", "UCB of B": "262.0", "LCB of B": "110.0"}
+{"constituency_id": "486", "constituency": "87", "consti_winner": "X", "consti_votes": "1000", "total_votes": "141800", "undecided_constituencies": "151", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "239.0", "UCB of B": "261.0", "LCB of B": "110.0"}
+{"constituency_id": "272", "constituency": "343", "consti_winner": "X", "consti_votes": "1000", "total_votes": "142400", "undecided_constituencies": "150", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "240.0", "UCB of B": "260.0", "LCB of B": "110.0"}
+{"constituency_id": "87", "constituency": "177", "consti_winner": "X", "consti_votes": "1000", "total_votes": "142600", "undecided_constituencies": "149", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "241.0", "UCB of B": "259.0", "LCB of B": "110.0"}
+{"constituency_id": "440", "constituency": "495", "consti_winner": "X", "consti_votes": "1000", "total_votes": "142800", "undecided_constituencies": "148", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "242.0", "UCB of B": "258.0", "LCB of B": "110.0"}
+{"constituency_id": "437", "constituency": "492", "consti_winner": "X", "consti_votes": "1000", "total_votes": "143200", "undecided_constituencies": "147", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "243.0", "UCB of B": "257.0", "LCB of B": "110.0"}
+{"constituency_id": "259", "constituency": "331", "consti_winner": "X", "consti_votes": "1000", "total_votes": "144000", "undecided_constituencies": "146", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "244.0", "UCB of B": "256.0", "LCB of B": "110.0"}
+{"constituency_id": "160", "constituency": "242", "consti_winner": "X", "consti_votes": "1000", "total_votes": "144200", "undecided_constituencies": "145", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "245.0", "UCB of B": "255.0", "LCB of B": "110.0"}
+{"constituency_id": "41", "constituency": "135", "consti_winner": "X", "consti_votes": "1000", "total_votes": "145600", "undecided_constituencies": "144", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "246.0", "UCB of B": "254.0", "LCB of B": "110.0"}
+{"constituency_id": "370", "constituency": "431", "consti_winner": "X", "consti_votes": "1000", "total_votes": "147200", "undecided_constituencies": "143", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "247.0", "UCB of B": "253.0", "LCB of B": "110.0"}
+{"constituency_id": "311", "constituency": "379", "consti_winner": "X", "consti_votes": "1000", "total_votes": "150800", "undecided_constituencies": "142", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "248.0", "UCB of B": "252.0", "LCB of B": "110.0"}
+{"constituency_id": "175", "constituency": "256", "consti_winner": "X", "consti_votes": "1200", "total_votes": "151800", "undecided_constituencies": "141", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "249.0", "UCB of B": "251.0", "LCB of B": "110.0"}
+{"constituency_id": "99", "constituency": "188", "consti_winner": "X", "consti_votes": "1000", "total_votes": "153200", "undecided_constituencies": "140", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "250.0", "UCB of B": "250.0", "LCB of B": "110.0"}
+{"constituency_id": "239", "constituency": "313", "consti_winner": "X", "consti_votes": "1200", "total_votes": "154000", "undecided_constituencies": "139", "Party A": "X", "Party B": "Y", "UCB of A": "390.0", "LCB of A": "251.0", "UCB of B": "249.0", "LCB of B": "110.0"}
+{"decided_constituencies": "361.0", "winner": "X", "seats_won": "251.0", "total_votes": "154000"}

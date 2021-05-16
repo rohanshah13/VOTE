@@ -99,7 +99,6 @@ def runDCBElection(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1, b =
 
 	#Sets the leading party to party number 0 in each constituency as a default
 	leadingParty = np.zeros(C)
-
 	#The whole loop is initialization
 	for c in range(C):
 		#Number of parties in constituency c

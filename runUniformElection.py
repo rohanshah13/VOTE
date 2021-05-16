@@ -189,7 +189,7 @@ def runUniformElection(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1,
 				print_data['winner'] = Parties[winner]
 				print_data['winner_lcb'] = str(Cl[winner])
 				print_data['winner_ucb'] = str(Cu[winner])
-				print_data['second_place'] = np.delete(Parties, winner)[second_place]
+				print_data['second_place'] = Parties[second_place]
 				print_data['second_lcb'] = str(second_place_lcb)
 				print_data['second_ucb'] = str(second_place_ucb)
 				print(print_data)

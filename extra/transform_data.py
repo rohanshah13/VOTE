@@ -3,6 +3,7 @@ import pandas as pd
 import argparse
 import os
 from util import *
+import shutil
 
 DATA_DIR = 'data/{}'
 OUT_DIR = 'sample_data/{}'
@@ -38,17 +39,21 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset',default='India2014')
     parser.add_argument('--alpha', default=10**-2, type=float)
+    parser.add_argument('--batch_size', default=200, type=int)
     args = parser.parse_args()    
 
     dataset = DATA_DIR.format(args.dataset)
     output_directory = OUT_DIR.format(args.dataset)
     alpha = args.alpha
+    batch_size = args.batch_size
+
     C = len(os.listdir(dataset))
 
     counter = 0
 
-    if not os.path.exists(output_directory):
-        os.mkdir(output_directory)
+    if os.path.exists(output_directory):
+        shutil.rmtree(output_directory)
+    os.mkdir(output_directory)
 
     for filename in os.listdir(dataset):
         counter += 1
@@ -58,7 +63,7 @@ def main():
             print(filename)
             exit()
         votes = df["Votes"].tolist()
-        votes = [int(vote.replace(',','')) for vote in votes]
+        votes = [int(str(vote).replace(',','')) for vote in votes]
         winner_votes = votes[0]
         P = len(votes)
         min_sample = [None for i in range(P)]
@@ -66,6 +71,8 @@ def main():
         min_sample[0] = sum(votes)
         for p in range(1,P):
             min_sample[p] = get_val(alpha, votes, p, C, min_sample[p-1])
+            if min_sample[p] % 200 != 0:
+                min_sample[p] = (min_sample[p]//batch_size + 1)*batch_size
 
         min_sample[0] = min_sample[1]
         df.insert(3,"MinSample",min_sample)
