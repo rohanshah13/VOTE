@@ -297,7 +297,7 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 			if sum(unseenVotes[c]) == 0:
 				break
 			
-			if hasLost[c][k]
+			if hasLost[c][k]:
 				continue
 			#Get A val
 			#Two cases - i) party k is first, ii) party k is not first
