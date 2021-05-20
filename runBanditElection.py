@@ -34,8 +34,10 @@ def runBanditElectionLUCB(data, alpha, tracefile, batch = 1, init_batch = 1, a =
 	for c in range(C):
 		table = pd.read_csv(f"data/{data}/{constituencies[c]}.csv")
 
-		table['Votes'] = table['Votes'].str.replace(',','')
-
+		try:
+			table['Votes'] = table['Votes'].str.replace(',','')
+		except:
+			pass
 		#List of votes per party for the constituency c
 		votes = list(map(int,table['Votes'].to_list()))
 		#List of parties for the constituency c
