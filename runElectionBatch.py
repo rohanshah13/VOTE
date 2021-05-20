@@ -7,6 +7,7 @@ from runDCBElection import *
 from runDCBElectionPrior import *
 from runDCBElection_PPR1 import *
 from runDCBElection_PPR2 import *
+from runUniformElection_PPR2 import *
 import pickle
 import sys
 import argparse
@@ -88,6 +89,8 @@ def main():
 			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t] = runBanditElectionLUCB(data, alpha, tracefile, batch, init_batch)
 		elif algorithm == "Uniform":
 			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t] = runUniformElection(data, alpha, tracefile, batch, init_batch)
+		elif algorithm == "Uniform2":
+			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t] = runUniformElection_PPR2(data,alpha,tracefile,batch,init_batch)
 		elif algorithm == "TwoLevelOpinionSurvey":
 			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t] = runElection(data, alpha, tracefile, batch)
 		elif algorithm == "DCB":
