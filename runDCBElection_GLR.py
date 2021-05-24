@@ -9,8 +9,21 @@ def randChoice(x):
 	return np.random.choice(x)
 
 ## LUCB inspired algorithm
+
+def cValue(currIterations, numParties, deltaValue):
+
+	# We calculate the c_t value here
+
+	t = currIterations
+	k = numParties
+	delta = deltaValue
+
+	# try the original kaufmann paper
+
+	chk = np.log(2.0*t*(numParties-1) / deltaValue)
+	return chk
 			
-def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1, b = 1):
+def runDCBElection_GLR(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1, b = 1):
 	f = open(tracefile, 'w')
 	#Gets the names of all the constituencies
 	constituencies = getAllPlaces(f"data/{data}/")                              
@@ -78,8 +91,7 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 	#Vector of 0s, size = number of political parties - lower bound for number of constituencies won
 	Cl = np.zeros(P)
 	#Vector with size = number of political parties, each value = number of constituencies - upper bound for number of constituencies won
-	Cu = np.zeros(P)
-	countContested = np.zeros(P)
+	Cu = np.ones(P) * C
 
 	# labels of the people accounted
 	labels = [[set() for _ in inner] for inner in listVotes]
@@ -87,25 +99,18 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 
 	#Sets Cu[i] to the number of constituencies contested by party i - better upper bound
 	for p in range(P):
-		countContested[p] = sum(row.count(Parties[p]) for row in listParties)
-		Cu[p] = countContested[p]
+		
+		Cu[p] = sum(row.count(Parties[p]) for row in listParties)
 
 	#The total number of votes (population size) for each constituency
 	N0 = [sum(inner) for inner in listVotes]
 	#Initalizes votes to 0 for each candidate in each constituency - lower bound
-	# Nl = [[0] * len(inner) for inner in listVotes]
+	Nl = [[0] * len(inner) for inner in listVotes]
 	#Initializes votes to max possible for each candidate in each constituency - upper bound
-	# Nu = [[sum(inner)] * len(inner) for inner in listVotes]
-	
-	#This stores everything we need to sample according to the rule for the party A in DCB algo
-	Aval = [[0] * len(inner) for inner in listVotes]
-
-	#This stores everything we need to sample according to the rule for the party B in DCB algo
-	Bval = [[0] * len(inner) for inner in listVotes]
-	hasLost = [[False] * len(inner) for inner in listVotes]
+	Nu = [[sum(inner)] * len(inner) for inner in listVotes]
 	#Initializes the number of wins to 0 for each party
 	seenWins = np.zeros(P)
-	seenLosses = np.zeros(P)
+
 	#Adds all the constiuencies to undecided constituencies
 	undecidedConstituencies = np.arange(C)
 
@@ -121,11 +126,7 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 		indexC = np.where(undecidedConstituencies == c)
 
 		#Initialization
-		constiTerm = False
 		for _ in range(init_batch):
-			if sum(unseenVotes[c]) == 0:
-				constiTerm = True
-				break
 			#Calculates the fraction of unseen votes won by each candidate for constiuency c
 			norm = [float(i)/sum(unseenVotes[c]) for i in unseenVotes[c]]
 			#Samples with probabilities calculated above, returns a one hot vector
@@ -143,48 +144,41 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 				votesLabelled += 1
 
 		#Updates the lower and upper bounds for each party in constituency c
-		for k in range(K):
-			if sum(unseenVotes[c]) == 0:
-				break
-			if hasLost[c][k]:
-				continue
-			#Get A val
-			#Two cases - i) party k is first, ii) party k is not first
-			if k == np.argmax(seenVotes[c]):
-				second = np.argsort(seenVotes[c])[-2]
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][second], seenVotes[c][k])
-				#If the first party is separated from the second we can terminate
-				if lcb > 0.5:
-					constiTerm = True
-			else:
-				first = np.argmax(seenVotes[c])
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][first], seenVotes[c][k])
-			#Aval[c][k] is the difference between the ucb of k and max_i(lcb_i) such that i != k	
-			Aval[c][k] = 2*ucb - 1
-			#Get B val
-			#Two cases - i) party k is first, ii) party k is not first
-			if k == np.argmax(seenVotes[c]):
-				second = np.argsort(seenVotes[c])[-2]
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][second], seenVotes[c][second])
-			else:
-				first = np.argmax(seenVotes[c])
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][first], seenVotes[c][first])
-				partyID = listPartyIDs[c][k]
-				#we can say a party has lost if it separated from any other party
-				if lcb > 0.5:
-					hasLost[c][k] = True
-					seenLosses[partyID] += 1
-			#Bval[c][k] is the difference between max_i(ucb_i) such that i != k and lcb of k	
-			Bval[c][k] = 2*ucb - 1
+		# for k in range(K):
+			
+		# 	tempL, tempU = binBounds(alpha/(K*C), a, b, sum(seenVotes[c]), seenVotes[c][k])
+
+		# 	Nl[c][k] = max(Nl[c][k], tempL)
+		# 	Nu[c][k] = min(Nu[c][k], tempU)
 
 		
 		#Party with the most votes currently in constituency c
 		constiWinner = np.argmax(seenVotes[c])
+
+		#Difference between lower bound of current constituency winner and the greatest of the upper bounds of the remaining
+		winner_decided = True
+		samples = sum(seenVotes[c])
+		cVal = cValue(samples, len(seenVotes[c]), alpha / C)
+		for p in range(len(seenVotes[c])):
+			if (p == constiWinner): continue
+			mean = (seenVotes[c][p] + seenVotes[c][constiWinner]) / 2.0
+			zab = seenVotes[c][constiWinner] * np.log(seenVotes[c][constiWinner] / mean)
+			if (seenVotes[c][p] > 0):
+				zab += seenVotes[c][p] * np.log(seenVotes[c][p] / mean)
+			winner_decided = winner_decided and (zab > cVal)
+			if not winner_decided: break
+		
+		# constiTerm = Nl[c][constiWinner] - max([x for i,x in enumerate(Nu[c]) if i!=constiWinner])
+		# for party in range(seenVotes[c]):
+			# if party == constiWinner:
+				# continue 
+			# lcb, ucb = binBounds(alpha/(K*C), N0[c], a, b, )
+
 		#Sets the leading party of constituency c to the current winner
 		leadingParty[indexC] = Parties.index(listParties[c][constiWinner])
 
 		#Constituency is decided if the lower bound of current winner is above the upper bound of all other parties
-		if constiTerm:
+		if winner_decided:
 
 			N = N - 1
 		 
@@ -201,7 +195,33 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 			for p in range(P):
 
 				Cl[p] = seenWins[p]
-				Cu[p] = countContested[p] - seenLosses[p]
+				Cu[p] = seenWins[p]
+
+				for ci in undecidedConstituencies:
+					if p in listPartyIDs[ci]:
+						pIndex = listPartyIDs[ci].index(p)
+						#party may win a constiuency if its upper confidence bound is greater than the
+						#max of all lower confidence bounds
+						# if Nu[ci][pIndex] >= max(Nl[ci]):
+						# 	Cu[p] += 1
+						if seenVotes[ci][pIndex] == max(seenVotes[ci]):
+							Cu[p] += 1
+						else:
+							differentiated = True
+							cVal = cValue(sum(seenVotes[ci]), len(seenVotes[ci]), alpha / C)
+							for p_sub in range(len(seenVotes[ci])):
+								if p_sub == pIndex or seenVotes[ci][p_sub] < seenVotes[ci][pIndex]: continue
+								mean = (seenVotes[ci][p_sub] + seenVotes[ci][pIndex]) / 2.0
+								zab = 0
+								if seenVotes[ci][p_sub] > 0:
+									zab += seenVotes[ci][p_sub] * np.log(seenVotes[ci][p_sub] / mean)
+								if seenVotes[ci][pIndex] > 0:
+									zab += seenVotes[ci][pIndex] * np.log(seenVotes[ci][pIndex] / mean)
+								differentiated = differentiated and (zab > cVal)
+								if not differentiated: break
+							if not differentiated:
+								Cu[p] += 1
+
 
 			#winner of the election is the party with the greatest lower bound in number of constituencies won  
 			winner = np.argmax(Cl)
@@ -242,38 +262,87 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 
 		#update the upper and lower bounds for each party
 		for p in range(P):
+
 			Cl[p] = seenWins[p]
-			Cu[p] = countContested[p] - seenLosses[p]
+			Cu[p] = seenWins[p]
+
+			for ci in undecidedConstituencies:
+				if p in listPartyIDs[ci]:
+					pIndex = listPartyIDs[ci].index(p)
+					#party may win a constituency if its upper bound is greater than
+					#the maximum of all lower bounds
+					# if Nu[ci][pIndex] >= max(Nl[ci]):
+					# 	Cu[p] += 1
+					if seenVotes[ci][pIndex] == max(seenVotes[ci]):
+						Cu[p] += 1
+					else:
+						differentiated = True
+						cVal = cValue(sum(seenVotes[ci]), len(seenVotes[ci]), alpha / C)
+						for p_sub in range(len(seenVotes[ci])):
+							if p_sub == pIndex or seenVotes[ci][pIndex] > seenVotes[ci][p_sub]: continue
+							mean = (seenVotes[ci][p_sub] + seenVotes[ci][pIndex]) / 2.0
+							zab = 0
+							if seenVotes[ci][p_sub] > 0:
+								zab += seenVotes[ci][p_sub] * np.log(seenVotes[ci][p_sub] / mean)
+							if seenVotes[ci][pIndex] > 0:
+								zab += seenVotes[ci][pIndex] * np.log(seenVotes[ci][pIndex] / mean)
+							differentiated = differentiated and (zab > cVal)
+							if not differentiated: break
+						if not differentiated:
+							Cu[p] += 1
+			
 
 ##        pb, pa = np.argsort(countWinning + seenWins)[-2:]
 
 		#The winning party including both leads and decided constituencies
 		pa = np.argmax(countWinning + seenWins)
 
+		
 		idx = np.arange(P)
 		a1 = np.delete(idx, pa)
 		#Index of party with highest upper confidence bound amongst the remaining
 		a2 = np.argmax(np.delete(Cu, pa))
+		
 		#Party with highest upper confidence bound amongst the remaining
 		pb = a1[a2]
 		
 		#Array of zeros, size = number of constituencies
-		diff_a = -1*np.ones(C)
-		
+		aUCB = np.zeros(C)
+		hLCB = np.zeros(C)
+		diff_a = -1e18*np.ones(C)
+		#calculates aUCB of each constituency as the fraction of votes (upper bounded) won by the currently winning party
 		for c in undecidedConstituencies:
+
 			if pa in listPartyIDs[c]:
+
 				paIndex = listPartyIDs[c].index(pa)
-				if hasLost[c][paIndex]:
-					continue
-				diff_a[c] = Aval[c][paIndex]
+				
+				# aUCB[c] = Nu[c][paIndex]
+				# hLCB[c] = np.max(np.delete(Nl[c], paIndex))
+				# diff_a[c] = aUCB[c] - hLCB[c]
+				
+				min_zab = 1e18
+				for p_sub in range(len(seenVotes[c])):
+					if paIndex == p_sub: continue
+					mean = (seenVotes[c][p_sub] + seenVotes[c][paIndex]) / 2.0
+					zab = 0
+					if seenVotes[c][p_sub] > 0:
+						zab += seenVotes[c][p_sub] * np.log(seenVotes[c][p_sub] / mean)
+					if seenVotes[c][paIndex] > 0:
+						zab += seenVotes[c][paIndex] * np.log(seenVotes[c][paIndex] / mean)
+					if seenVotes[c][p_sub] >= seenVotes[c][paIndex]:
+						zab = -zab
+					min_zab = min(min_zab, zab)
+				diff_a[c] = min_zab
 
 		#If the party has not won any votes (upper bounded) in the remaining constituencies, choose one at random
-		if max(diff_a) == -1 :
+		if max(diff_a) == -1e18 :
 			print("Random A")
 			c = randChoice(undecidedConstituencies)
 		#Otherwise choose the constituency with highest aUCB value
 		else:
 			c = np.argmax(diff_a)
+		
 		#The index of the chosen constituency in the undecided constituencies list
 		indexC = np.where(undecidedConstituencies == c)
 
@@ -282,21 +351,9 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 
 		counter += 1
 		
-		constiTerm = False
 		#Uniformly sample a batch of voters from chosen constituency
 		for _ in range(batch):
-			# print(unseenVotes[c])
-			if sum(unseenVotes[c]) == 0:
-				constiTerm = True
-				first = np.argmax(seenVotes[c])
-				for k in range(len(seenVotes[c])):
-					if k == first or hasLost[c][k]:
-						continue
-					hasLost[c][k] = True
-					partyIndex = listPartyIDs[c][k]
-					seenLosses[partyIndex] += 1
 
-				break
 			norm = [float(i)/sum(unseenVotes[c]) for i in unseenVotes[c]]
 			# print(constituencies[c], unseenVotes[c], norm)
 			vote = np.random.multinomial(1, norm)
@@ -311,52 +368,33 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 				labels[c][party_index].add(person_label)
 				votesLabelled += 1
 
-		for k in range(K):
-			if sum(unseenVotes[c]) == 0:
-				break
+		#update lower and upper bounds for each party in constituency
+		# for k in range(K):
 			
-			if hasLost[c][k]:
-				continue
-			#Get A val
-			#Two cases - i) party k is first, ii) party k is not first
-			if k == np.argmax(seenVotes[c]):
-				second = np.argsort(seenVotes[c])[-2]
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][second], seenVotes[c][k])
-				if lcb > 0.5:
-					constiTerm = True
-				firstVotes = seenVotes[c][k]
-				secondVotes = seenVotes[c][second]
-				remainingVotes = sum(unseenVotes[c])
-				if secondVotes + remainingVotes < firstVotes:
-					constiTerm = True
-			else:
-				first = np.argmax(seenVotes[c])
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][first], seenVotes[c][k])
-			#Aval[c][k] is the difference between the ucb of k and max_i(lcb_i) such that i != k	
-			Aval[c][k] = 2*ucb - 1
-			#Get B val
-			#Two cases - i) party k is first, ii) party k is not first
-			if k == np.argmax(seenVotes[c]):
-				second = np.argsort(seenVotes[c])[-2]
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][second], seenVotes[c][second])
-			else:
-				first = np.argmax(seenVotes[c])
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][first], seenVotes[c][first])
-				partyID = listPartyIDs[c][k]
-				#we can say a party has lost if it separated from any other party
-				if lcb > 0.5:
-					hasLost[c][k] = True
-					seenLosses[partyID] += 1
-			#Bval[c][k] is the difference between max_i(ucb_i) such that i != k and lcb of k	
-			Bval[c][k] = 2*ucb - 1
+		# 	tempL, tempU = binBounds(alpha/(K*C), a, b, sum(seenVotes[c]), seenVotes[c][k])
+
+		# 	Nl[c][k] = max(Nl[c][k], tempL)
+		# 	Nu[c][k] = min(Nu[c][k], tempU)
 
 
 		constiWinner = np.argmax(seenVotes[c])
-		secondPlace = np.argsort(seenVotes[c])[-2]		
+
+		# constiTerm = Nl[c][constiWinner] - max([x for i,x in enumerate(Nu[c]) if i!=constiWinner])
+		winner_decided = True
+		samples = sum(seenVotes[c])
+		cVal = cValue(samples, len(seenVotes[c]), alpha / C)
+		for p in range(len(seenVotes[c])):
+			if (p == constiWinner): continue
+			mean = (seenVotes[c][p] + seenVotes[c][constiWinner]) / 2.0
+			zab = seenVotes[c][constiWinner] * np.log(seenVotes[c][constiWinner] / mean)
+			if (seenVotes[c][p] > 0):
+				zab += seenVotes[c][p] * np.log(seenVotes[c][p] / mean)
+			winner_decided = winner_decided and (zab > cVal)
+			if not winner_decided: break
 
 		leadingParty[indexC] = Parties.index(listParties[c][constiWinner])
 
-		if constiTerm:
+		if winner_decided:
 
 			N = N - 1
 		 
@@ -368,8 +406,32 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 			seenWins[winPartyID] += 1
 
 			for p in range(P):
+
 				Cl[p] = seenWins[p]
-				Cu[p] = countContested[p] - seenLosses[p]
+				Cu[p] = seenWins[p]
+
+				for ci in undecidedConstituencies:
+					if p in listPartyIDs[ci]:
+						pIndex = listPartyIDs[ci].index(p)
+						# if Nu[ci][pIndex] >= max(Nl[ci]):
+						# 	Cu[p] += 1
+						if seenVotes[ci][pIndex] == max(seenVotes[ci]):
+							Cu[p] += 1
+						else:
+							differentiated = True
+							cVal = cValue(sum(seenVotes[ci]), len(seenVotes[ci]), alpha / C)
+							for p_sub in range(len(seenVotes[ci])):
+								if p_sub == pIndex or seenVotes[ci][pIndex] > seenVotes[ci][p_sub]: continue
+								mean = (seenVotes[ci][p_sub] + seenVotes[ci][pIndex]) / 2.0
+								zab = 0
+								if seenVotes[ci][p_sub] > 0:
+									zab += seenVotes[ci][p_sub] * np.log(seenVotes[ci][p_sub] / mean)
+								if seenVotes[ci][pIndex] > 0:
+									zab += seenVotes[ci][pIndex] * np.log(seenVotes[ci][pIndex] / mean)
+								differentiated = differentiated and (zab > cVal)
+								if not differentiated: break
+							if not differentiated:
+								Cu[p] += 1
 
 			winner = np.argmax(Cl)
 
@@ -391,6 +453,16 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 			print(print_data)
 			f.write(json.dumps(print_data) + '\n')
 			
+			# if N % 5 == 0 and False:
+
+##                print("*")
+##                print(np.argsort(seenWins + countWinning)[-4:], sum(seenWins) + len(leadingParty))
+##                print("**")
+##                print(Cu[np.argsort(seenWins + countWinning)[-4:]], Cl[np.argsort(seenWins + countWinning)[-4:]])
+##                print("***")
+##                print(seenWins[np.argsort(seenWins + countWinning)[-4:]], countWinning[np.argsort(seenWins + countWinning)[-4:]])
+##
+
 			if term > 0:
 				totalVotesCounted = sum(map(sum, seenVotes))
 				print_data = {}
@@ -411,44 +483,63 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 		bLCB = np.ones(C)
 
 		hUCB = np.zeros(C)
-		diff_b = -1*np.ones(C)
+		diff_b = -1e18*np.ones(C)
 		#Calculates bLCB as the number of votes (lower bounded) won by the second party in each constituency
 		for c in undecidedConstituencies:
+
 			if pb in listPartyIDs[c]:
 				pbIndex = listPartyIDs[c].index(pb)
-				if hasLost[c][pbIndex]:
-					continue
-				diff_b[c] = Bval[c][pbIndex]
+
+				max_zab = -1e18
+				differentiated = not (seenVotes[c][pbIndex] == max(seenVotes[c]))
+				cVal = cValue(sum(seenVotes[c]), len(seenVotes[c]), alpha / C)
+				
+				for p_sub in range(len(seenVotes[c])):
+					if p_sub == pbIndex: continue
+					mean = (seenVotes[c][p_sub] + seenVotes[c][pbIndex]) / 2.0
+					zab = 0
+					if seenVotes[c][p_sub] > 0:
+						zab += seenVotes[c][p_sub] * np.log(seenVotes[c][p_sub] / mean)
+					if seenVotes[c][pbIndex] > 0:
+						zab += seenVotes[c][pbIndex] * np.log(seenVotes[c][pbIndex] / mean)
+					
+
+					if seenVotes[c][p_sub] >= seenVotes[c][pbIndex]:
+						differentiated = differentiated and (zab > cVal)
+						max_zab = max(max_zab, zab)
+					else:
+						max_zab = max(max_zab, -zab)
+				if not differentiated:
+					diff_b[c] = max_zab
+
+
+
+				if Nu[c][pbIndex] >= max(Nl[c]):
+					bLCB[c] = Nl[c][pbIndex] 
+
+					hUCB[c] = np.max(np.delete(Nu[c], pbIndex))
+					diff_b[c] = hUCB[c] - bLCB[c]
 
 		#In the (rare) event that party b has won all votes in the undecided constituencies choose at random
-		if max(diff_b) == -1:
+		if max(diff_b) == -1e18:
 			print("Random B")
 			c = randChoice(undecidedConstituencies)
+			
 		else:
 			c = np.argmax(diff_b)
+
 		indexC = np.where(undecidedConstituencies == c)
 
 		K = len(listParties[c])
 		
 		counter += 1
 
-		constiTerm = False
+
 		for _ in range(batch):
-			# print(unseenVotes[c])
-			if sum(unseenVotes[c]) == 0:
-				constiTerm = True
-				first = np.argmax(seenVotes[c])
-				for k in range(len(seenVotes[c])):
-					if k == first or hasLost[c][k]:
-						continue
-					hasLost[c][k] = True
-					partyIndex = listPartyIDs[c][k]
-					seenLosses[partyIndex] += 1
-				break
+
 			norm = [float(i)/sum(unseenVotes[c]) for i in unseenVotes[c]]
 			# print(constituencies[c], unseenVotes[c], norm)
 			vote = np.random.multinomial(1, norm)
-
 			# unseenVotes[c] -= vote
 			seenVotes[c] += vote
 
@@ -459,51 +550,31 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 				labels[c][party_index].add(person_label)
 				votesLabelled += 1
 
+		# for k in range(K):
 			
-		for k in range(K):
-			if sum(unseenVotes[c]) == 0:
-				break
+		# 	tempL, tempU = binBounds(alpha/(K*C), a, b, sum(seenVotes[c]), seenVotes[c][k])
 
-			if hasLost[c][k]:
-				continue
-			#Get A val
-			#Two cases - i) party k is first, ii) party k is not first
-			if k == np.argmax(seenVotes[c]):
-				second = np.argsort(seenVotes[c])[-2]
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][second], seenVotes[c][k])
-				if lcb > 0.5:
-					constiTerm = True
-				firstVotes = seenVotes[c][k]
-				secondVotes = seenVotes[c][second]
-				remainingVotes = sum(unseenVotes[c])
-				if secondVotes + remainingVotes < firstVotes:
-					constiTerm = True
-			else:
-				first = np.argmax(seenVotes[c])
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][first], seenVotes[c][k])
-			#Aval[c][k] is the difference between the ucb of k and max_i(lcb_i) such that i != k	
-			Aval[c][k] = 2*ucb - 1
-			#Get B val
-			#Two cases - i) party k is first, ii) party k is not first
-			if k == np.argmax(seenVotes[c]):
-				second = np.argsort(seenVotes[c])[-2]
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][second], seenVotes[c][second])
-			else:
-				first = np.argmax(seenVotes[c])
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][first], seenVotes[c][first])
-				partyID = listPartyIDs[c][k]
-				#we can say a party has lost if it separated from any other party
-				if lcb > 0.5:
-					hasLost[c][k] = True
-					seenLosses[partyID] += 1
-			#Bval[c][k] is the difference between max_i(ucb_i) such that i != k and lcb of k	
-			Bval[c][k] = 2*ucb - 1
+		# 	Nl[c][k] = max(Nl[c][k], tempL)
+		# 	Nu[c][k] = min(Nu[c][k], tempU)
 
 		constiWinner = np.argmax(seenVotes[c])
+
+		# constiTerm = Nl[c][constiWinner] - max([x for i,x in enumerate(Nu[c]) if i!=constiWinner])
+		winner_decided = True
+		samples = sum(seenVotes[c])
+		cVal = cValue(samples, len(seenVotes[c]), alpha / C)
+		for p in range(len(seenVotes[c])):
+			if (p == constiWinner): continue
+			mean = (seenVotes[c][p] + seenVotes[c][constiWinner]) / 2.0
+			zab = seenVotes[c][constiWinner] * np.log(seenVotes[c][constiWinner] / mean)
+			if (seenVotes[c][p] > 0):
+				zab += seenVotes[c][p] * np.log(seenVotes[c][p] / mean)
+			winner_decided = winner_decided and (zab > cVal)
+			if not winner_decided: break
 		
 		leadingParty[indexC] = Parties.index(listParties[c][constiWinner])
 
-		if constiTerm:
+		if winner_decided:
 
 			N = N - 1
 			
@@ -517,7 +588,31 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 			for p in range(P):
 
 				Cl[p] = seenWins[p]
-				Cu[p] = countContested[p] - seenLosses[p]
+				Cu[p] = seenWins[p]
+
+				for ci in undecidedConstituencies:
+					if p in listPartyIDs[ci]:
+						pIndex = listPartyIDs[ci].index(p)
+						# if Nu[ci][pIndex] >= max(Nl[ci]):
+						# 	Cu[p] += 1
+
+						if seenVotes[ci][pIndex] == max(seenVotes[ci]):
+							Cu[p] += 1
+						else:
+							differentiated = True
+							cVal = cValue(sum(seenVotes[ci]), len(seenVotes[ci]), alpha / C)
+							for p_sub in range(len(seenVotes[ci])):
+								if p_sub == pIndex or seenVotes[ci][pIndex] > seenVotes[ci][p_sub]: continue
+								mean = (seenVotes[ci][p_sub] + seenVotes[ci][pIndex]) / 2.0
+								zab = 0
+								if seenVotes[ci][p_sub] > 0:
+									zab += seenVotes[ci][p_sub] * np.log(seenVotes[ci][p_sub] / mean)
+								if seenVotes[ci][pIndex] > 0:
+									zab += seenVotes[ci][pIndex] * np.log(seenVotes[ci][pIndex] / mean)
+								differentiated = differentiated and (zab > cVal)
+								if not differentiated: break
+							if not differentiated:
+								Cu[p] += 1
 
 			winner = np.argmax(Cl)
 
@@ -538,6 +633,15 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 			print_data['LCB of B'] = str(Cl[pb])
 			print(print_data)
 			f.write(json.dumps(print_data) + '\n')
+
+			# if N % 5 == 0 and False:
+
+##                print("*")
+##                print(np.argsort(seenWins + countWinning)[-4:], sum(seenWins) + len(leadingParty))
+##                print("**")
+##                print(Cu[np.argsort(seenWins + countWinning)[-4:]], Cl[np.argsort(seenWins + countWinning)[-4:]])
+##                print("***")
+##                print(seenWins[np.argsort(seenWins + countWinning)[-4:]], countWinning[np.argsort(seenWins + countWinning)[-4:]])
 
 			if term > 0:
 				totalVotesCounted = sum(map(sum, seenVotes))

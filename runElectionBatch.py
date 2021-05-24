@@ -7,6 +7,12 @@ from runDCBElection import *
 from runDCBElectionPrior import *
 from runDCBElection_PPR1 import *
 from runDCBElection_PPR2 import *
+from runDCBElection_SE import *
+from runDCBElection_GLR import *
+from runUniformElection_SE import *
+from runUniformElection_GLR import *
+from runUniformElection1 import *
+from runUniformElection_PPR2 import *
 import pickle
 import sys
 import argparse
@@ -51,7 +57,7 @@ def main():
 	data = args.dataset
 
 	## number of runs 
-	T = 3
+	T = 10
 
 	## mistake probability
 	alpha = 10**-2
@@ -67,6 +73,7 @@ def main():
 	constituenciesDecided = np.zeros(T)
 	winners = np.zeros(T)
 	totalVotesCounted = np.zeros(T)
+	totalLabelledVotesCounted = np.zeros(T)
 	seenVotes = [None for i in range(T)]
 	listVotes = [None for i in range(T)]
 
@@ -88,6 +95,14 @@ def main():
 			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t] = runBanditElectionLUCB(data, alpha, tracefile, batch, init_batch)
 		elif algorithm == "Uniform":
 			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t] = runUniformElection(data, alpha, tracefile, batch, init_batch)
+		elif algorithm == "U1":
+			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t], totalLabelledVotesCounted[t] = runUniformElection1(data, alpha, tracefile, batch, init_batch)
+		elif algorithm == "U2":
+			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t], totalLabelledVotesCounted[t] = runUniformElection_PPR2(data, alpha, tracefile, batch, init_batch)
+		elif algorithm == "USE":
+			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t], totalLabelledVotesCounted[t] = runUniformElection_SE(data, alpha, tracefile, batch, init_batch)
+		elif algorithm == "UGLR":
+			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t], totalLabelledVotesCounted[t] = runUniformElection_GLR(data, alpha, tracefile, batch, init_batch)
 		elif algorithm == "TwoLevelOpinionSurvey":
 			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t] = runElection(data, alpha, tracefile, batch)
 		elif algorithm == "DCB":
@@ -95,10 +110,14 @@ def main():
 		elif algorithm == "DCB_Prior":
 			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t] = runDCBElectionPrior(data, alpha, tracefile, batch, init_batch)
 		elif algorithm == "DCB1":
-			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t] = runDCBElection_PPR1(data, alpha, tracefile, batch, init_batch)
+			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t], totalLabelledVotesCounted[t] = runDCBElection_PPR1(data, alpha, tracefile, batch, init_batch)
 		elif algorithm == "DCB2":
-			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t] = runDCBElection_PPR2(data, alpha, tracefile, batch, init_batch)
-		exit()
+			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t], totalLabelledVotesCounted[t] = runDCBElection_PPR2(data, alpha, tracefile, batch, init_batch)
+		elif algorithm == "DCBSE":
+			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t], totalLabelledVotesCounted[t] = runDCBElection_SE(data, alpha, tracefile, batch, init_batch)
+		elif algorithm == "DCBGLR":
+			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t], totalLabelledVotesCounted[t] = runDCBElection_GLR(data, alpha, tracefile, batch, init_batch)	
+		# exit()
 
 	C = len(seenVotes[0])
 	constiVotes = np.zeros((T,C))
@@ -115,7 +134,9 @@ def main():
 
 	print(f"Algorithm = {algorithm}, alpha = {alpha}, batch = {batch}, T = {T}")
 	print("Constituencies decided = ", np.mean(constituenciesDecided), " +- ", np.std(constituenciesDecided)/np.sqrt(T))
-	print("Votes counted = ", np.mean(totalVotesCounted), " +- ", np.std(totalVotesCounted)/np.sqrt(T))
+	print("Votes counted (unlabelled)= ", np.mean(totalVotesCounted), " +- ", np.std(totalVotesCounted)/np.sqrt(T))
+	if algorithm in ['U1', 'U2', 'USE', 'UGLR', 'DCB1', 'DCB2', 'DCBSE', 'DCBGLR']:
+		print("Votes counted (labelled)= ", np.mean(totalLabelledVotesCounted), " +- ", np.std(totalLabelledVotesCounted)/np.sqrt(T))
 	
 if __name__ == "__main__":
 
