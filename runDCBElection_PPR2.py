@@ -81,6 +81,10 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 	Cu = np.zeros(P)
 	countContested = np.zeros(P)
 
+	# labels of the people accounted
+	labels = [[set() for _ in inner] for inner in listVotes]
+	votesLabelled = 0
+
 	#Sets Cu[i] to the number of constituencies contested by party i - better upper bound
 	for p in range(P):
 		countContested[p] = sum(row.count(Parties[p]) for row in listParties)
@@ -128,8 +132,15 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 			# print(constituencies[c], unseenVotes[c], norm)
 			vote = np.random.multinomial(1, norm)
 			#Updates the seen and unseen votes accordingly
-			unseenVotes[c] -= vote
+			# unseenVotes[c] -= vote
 			seenVotes[c] += vote
+
+			# updating the labelled information
+			party_index = np.argmax(vote)
+			person_label = np.random.randint(0, unseenVotes[c][party_index])
+			if person_label not in labels[c][party_index]:
+				labels[c][party_index].add(person_label)
+				votesLabelled += 1
 
 		#Updates the lower and upper bounds for each party in constituency c
 		for k in range(K):
@@ -221,7 +232,7 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 				print(print_data)
 				f.write(json.dumps(print_data) + '\n')
 				f.close()
-				return sum(seenWins), winner, totalVotesCounted, seenVotes
+				return sum(seenWins), winner, totalVotesCounted, seenVotes, votesLabelled
 
 	counter = 0
 	#The main part of the algorithm
@@ -290,8 +301,15 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 			# print(constituencies[c], unseenVotes[c], norm)
 			vote = np.random.multinomial(1, norm)
 			
-			unseenVotes[c] -= vote
+			# unseenVotes[c] -= vote
 			seenVotes[c] += vote
+
+			# updating the labelled information
+			party_index = np.argmax(vote)
+			person_label = np.random.randint(0, unseenVotes[c][party_index])
+			if person_label not in labels[c][party_index]:
+				labels[c][party_index].add(person_label)
+				votesLabelled += 1
 
 		for k in range(K):
 			if sum(unseenVotes[c]) == 0:
@@ -385,7 +403,7 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 				f.write(json.dumps(print_data) + '\n')
 
 				f.close()
-				return sum(seenWins), winner, totalVotesCounted, seenVotes
+				return sum(seenWins), winner, totalVotesCounted, seenVotes, votesLabelled
 
 
 ##        countWinning = np.array([np.count_nonzero(np.array(leadingParty) == p) for p in range(P)])
@@ -431,8 +449,15 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 			# print(constituencies[c], unseenVotes[c], norm)
 			vote = np.random.multinomial(1, norm)
 
-			unseenVotes[c] -= vote
+			# unseenVotes[c] -= vote
 			seenVotes[c] += vote
+
+			# updating the labelled information
+			party_index = np.argmax(vote)
+			person_label = np.random.randint(0, unseenVotes[c][party_index])
+			if person_label not in labels[c][party_index]:
+				labels[c][party_index].add(person_label)
+				votesLabelled += 1
 
 			
 		for k in range(K):
@@ -525,7 +550,7 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 				print(print_data)
 				f.write(json.dumps(print_data) + '\n')
 				f.close()
-				return sum(seenWins), winner, totalVotesCounted, seenVotes
+				return sum(seenWins), winner, totalVotesCounted, seenVotes, votesLabelled
 
 if __name__ == "__main__":
 
