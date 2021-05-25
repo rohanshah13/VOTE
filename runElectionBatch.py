@@ -7,11 +7,14 @@ from runDCBElection import *
 from runDCBElectionPrior import *
 from runDCBElection_PPR1 import *
 from runDCBElection_PPR2 import *
+<<<<<<< HEAD
 from runDCBElection_SE import *
 from runDCBElection_GLR import *
 from runUniformElection_SE import *
 from runUniformElection_GLR import *
 from runUniformElection1 import *
+=======
+>>>>>>> 0bd257cbf1e3b3e5ef5a82e300779244eba9d017
 from runUniformElection_PPR2 import *
 import pickle
 import sys
