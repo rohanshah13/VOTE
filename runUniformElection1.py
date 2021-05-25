@@ -1,4 +1,3 @@
-
 import numpy as np
 import pandas as pd
 from util_ppr2 import *
@@ -235,3 +234,7 @@ if __name__ == "__main__":
 	stoppingC, winner, stoppingVotes, seenVotes = runBanditElectionLUCB(data, alpha, batch, init_batch)
 
 	print(stoppingC, winner, stoppingVotes)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8bb20034b173b963d55fea2bd5ba58fde9727b1e
