@@ -92,3 +92,9 @@ def getAllPlaces(directory = "data/"):
 def getPartyList(file):
     with open(file, 'r') as f:
         return json.load(f)
+
+def checkTerm(alpha, a, b, t, kb):
+    ppr_val = ppr2(0.5, a, b, t, kb)
+    if ppr_val - np.log(1/alpha) < 0:
+        return False
+    return True
