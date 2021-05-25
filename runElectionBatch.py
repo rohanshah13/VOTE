@@ -132,6 +132,9 @@ def main():
 
 	np.save('results/{}/{}/votesSeen_{}_{}_{}.npy'.format(data,algorithm,alpha,batch,T), constiVotes)
 
+	if algorithm in ['U1', 'U2', 'USE', 'UGLR', 'DCB1', 'DCB2', 'DCBSE', 'DCBGLR']:
+		np.save('results/{}/{}/totalLabelledVotesCounted_{}_{}_{}'.format(data,algorithm,alpha,batch,T), totalLabelledVotesCounted)		
+
 	print(f"Algorithm = {algorithm}, alpha = {alpha}, batch = {batch}, T = {T}")
 	print("Constituencies decided = ", np.mean(constituenciesDecided), " +- ", np.std(constituenciesDecided)/np.sqrt(T))
 	print("Votes counted (unlabelled)= ", np.mean(totalVotesCounted), " +- ", np.std(totalVotesCounted)/np.sqrt(T))
