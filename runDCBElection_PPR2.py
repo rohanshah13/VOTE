@@ -152,23 +152,23 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 			#Two cases - i) party k is first, ii) party k is not first
 			if k == np.argmax(seenVotes[c]):
 				second = np.argsort(seenVotes[c])[-2]
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][second], seenVotes[c][k])
+				lcb, ucb = binBounds2(alpha/((K - 1)*C), a, b, seenVotes[c][k] + seenVotes[c][second], seenVotes[c][k])
 				#If the first party is separated from the second we can terminate
 				if lcb > 0.5:
 					constiTerm = True
 			else:
 				first = np.argmax(seenVotes[c])
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][first], seenVotes[c][k])
+				lcb, ucb = binBounds2(alpha/((K - 1)*C), a, b, seenVotes[c][k] + seenVotes[c][first], seenVotes[c][k])
 			#Aval[c][k] is the difference between the ucb of k and max_i(lcb_i) such that i != k	
 			Aval[c][k] = 2*ucb - 1
 			#Get B val
 			#Two cases - i) party k is first, ii) party k is not first
 			if k == np.argmax(seenVotes[c]):
 				second = np.argsort(seenVotes[c])[-2]
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][second], seenVotes[c][second])
+				lcb, ucb = binBounds2(alpha/((K - 1)*C), a, b, seenVotes[c][k] + seenVotes[c][second], seenVotes[c][second])
 			else:
 				first = np.argmax(seenVotes[c])
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][first], seenVotes[c][first])
+				lcb, ucb = binBounds2(alpha/((K - 1)*C), a, b, seenVotes[c][k] + seenVotes[c][first], seenVotes[c][first])
 				partyID = listPartyIDs[c][k]
 				#we can say a party has lost if it separated from any other party
 				if lcb > 0.5:
@@ -321,7 +321,7 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 			#Two cases - i) party k is first, ii) party k is not first
 			if k == np.argmax(seenVotes[c]):
 				second = np.argsort(seenVotes[c])[-2]
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][second], seenVotes[c][k])
+				lcb, ucb = binBounds2(alpha/((K - 1)*C), a, b, seenVotes[c][k] + seenVotes[c][second], seenVotes[c][k])
 				if lcb > 0.5:
 					constiTerm = True
 				firstVotes = seenVotes[c][k]
@@ -331,17 +331,17 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 					constiTerm = True
 			else:
 				first = np.argmax(seenVotes[c])
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][first], seenVotes[c][k])
+				lcb, ucb = binBounds2(alpha/((K - 1)*C), a, b, seenVotes[c][k] + seenVotes[c][first], seenVotes[c][k])
 			#Aval[c][k] is the difference between the ucb of k and max_i(lcb_i) such that i != k	
 			Aval[c][k] = 2*ucb - 1
 			#Get B val
 			#Two cases - i) party k is first, ii) party k is not first
 			if k == np.argmax(seenVotes[c]):
 				second = np.argsort(seenVotes[c])[-2]
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][second], seenVotes[c][second])
+				lcb, ucb = binBounds2(alpha/((K - 1)*C), a, b, seenVotes[c][k] + seenVotes[c][second], seenVotes[c][second])
 			else:
 				first = np.argmax(seenVotes[c])
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][first], seenVotes[c][first])
+				lcb, ucb = binBounds2(alpha/((K - 1)*C), a, b, seenVotes[c][k] + seenVotes[c][first], seenVotes[c][first])
 				partyID = listPartyIDs[c][k]
 				#we can say a party has lost if it separated from any other party
 				if lcb > 0.5:
@@ -470,7 +470,7 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 			#Two cases - i) party k is first, ii) party k is not first
 			if k == np.argmax(seenVotes[c]):
 				second = np.argsort(seenVotes[c])[-2]
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][second], seenVotes[c][k])
+				lcb, ucb = binBounds2(alpha/((K - 1)*C), a, b, seenVotes[c][k] + seenVotes[c][second], seenVotes[c][k])
 				if lcb > 0.5:
 					constiTerm = True
 				firstVotes = seenVotes[c][k]
@@ -480,17 +480,17 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 					constiTerm = True
 			else:
 				first = np.argmax(seenVotes[c])
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][first], seenVotes[c][k])
+				lcb, ucb = binBounds2(alpha/((K - 1)*C), a, b, seenVotes[c][k] + seenVotes[c][first], seenVotes[c][k])
 			#Aval[c][k] is the difference between the ucb of k and max_i(lcb_i) such that i != k	
 			Aval[c][k] = 2*ucb - 1
 			#Get B val
 			#Two cases - i) party k is first, ii) party k is not first
 			if k == np.argmax(seenVotes[c]):
 				second = np.argsort(seenVotes[c])[-2]
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][second], seenVotes[c][second])
+				lcb, ucb = binBounds2(alpha/((K - 1)*C), a, b, seenVotes[c][k] + seenVotes[c][second], seenVotes[c][second])
 			else:
 				first = np.argmax(seenVotes[c])
-				lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][k] + seenVotes[c][first], seenVotes[c][first])
+				lcb, ucb = binBounds2(alpha/((K - 1)*C), a, b, seenVotes[c][k] + seenVotes[c][first], seenVotes[c][first])
 				partyID = listPartyIDs[c][k]
 				#we can say a party has lost if it separated from any other party
 				if lcb > 0.5:

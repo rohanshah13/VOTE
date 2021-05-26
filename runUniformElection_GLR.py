@@ -20,6 +20,9 @@ def cValue(currIterations, numParties, deltaValue):
 	chk = np.log(2.0*t*(numParties-1) / deltaValue)
 	return chk
 
+def divergence(a, b):
+	return a * np.log(a/b) + (1.0-a) * np.log((1.0-a)/(1.0-b))
+
 ## LUCB inspired algorithm
 			
 def runUniformElection_GLR(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1, b = 1):
@@ -164,12 +167,13 @@ def runUniformElection_GLR(data, alpha, tracefile, batch = 1, init_batch = 1, a 
 			winner_decided = True
 			samples = sum(seenVotes[c])
 			cVal = cValue(samples, len(seenVotes[c]), alpha / C)
+			sum_val = sum(seenVotes[c])
 			for p in range(len(seenVotes[c])):
 				if (p == constiWinner): continue
-				mean = (seenVotes[c][p] + seenVotes[c][constiWinner]) / 2.0
-				zab = seenVotes[c][constiWinner] * np.log(seenVotes[c][constiWinner] / mean)
+				mean = (seenVotes[c][p] + seenVotes[c][constiWinner]) / (2.0 * sum_val)
+				zab = seenVotes[c][constiWinner] * divergence(seenVotes[c][constiWinner] / sum_val, mean)
 				if (seenVotes[c][p] > 0):
-					zab += seenVotes[c][p] * np.log(seenVotes[c][p] / mean)
+					zab += seenVotes[c][p] * divergence(seenVotes[c][p] / sum_val, mean)
 				winner_decided = winner_decided and (zab > cVal)
 				if not winner_decided: break
 
@@ -207,14 +211,15 @@ def runUniformElection_GLR(data, alpha, tracefile, batch = 1, init_batch = 1, a 
 							else:
 								differentiated = True
 								cVal = cValue(sum(seenVotes[ci]), len(seenVotes[ci]), alpha / C)
+								sum_val = sum(seenVotes[ci])
 								for p_sub in range(len(seenVotes[ci])):
 									if p_sub == pIndex or seenVotes[ci][p_sub] < seenVotes[ci][pIndex]: continue
-									mean = (seenVotes[ci][p_sub] + seenVotes[ci][pIndex]) / 2.0
+									mean = (seenVotes[ci][p_sub] + seenVotes[ci][pIndex]) / (2.0 * sum_val)
 									zab = 0
 									if seenVotes[ci][p_sub] > 0:
-										zab += seenVotes[ci][p_sub] * np.log(seenVotes[ci][p_sub] / mean)
+										zab += seenVotes[ci][p_sub] * divergence(seenVotes[ci][p_sub] / sum_val, mean)
 									if seenVotes[ci][pIndex] > 0:
-										zab += seenVotes[ci][pIndex] * np.log(seenVotes[ci][pIndex] / mean)
+										zab += seenVotes[ci][pIndex] * divergence(seenVotes[ci][pIndex] / sum_val, mean)
 									differentiated = differentiated and (zab > cVal)
 									if not differentiated: break
 								if not differentiated:

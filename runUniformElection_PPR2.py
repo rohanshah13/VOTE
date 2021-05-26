@@ -139,8 +139,8 @@ def runUniformElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a
 			for p in range(K):
 				if p == constiWinner or hasLost[c][p]:
 					continue
-				partyTerm = checkTerm(alpha/(K*C), a, b, seenVotes[c][constiWinner] + seenVotes[c][p], seenVotes[c][constiWinner])
-				# lcb, ucb = binBounds2(alpha/(K*C), a, b, seenVotes[c][constiWinner] + seenVotes[c][p], seenVotes[c][constiWinner])
+				partyTerm = checkTerm(alpha/((K - 1)*C), a, b, seenVotes[c][constiWinner] + seenVotes[c][p], seenVotes[c][constiWinner])
+				# lcb, ucb = binBounds2(alpha/((K - 1)*C), a, b, seenVotes[c][constiWinner] + seenVotes[c][p], seenVotes[c][constiWinner])
 				if partyTerm:
 					hasLost[c][p] = True
 					partyID = listPartyIDs[c][p]

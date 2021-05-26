@@ -19,12 +19,13 @@ def betaValue(currIterations, communitySamples, numParties, deltaValue):
 	delta = deltaValue
 
 	# summation (Zp - Zq)^2 = cs * (cs - 1) / 2
+	# cs * (t - cs + 1) / 2
 
-	empiricalVariance = 1.0 / (t * (t - 1)) * (cs * (cs - 1) / 2.0)
+	empiricalVariance = 1.0 / (t * (t - 1)) * (cs * (t - cs))
 
-	logTerm = np.log(4 * k *  t / delta)
-	term1 = np.sqrt(2 * empiricalVariance * logTerm / t)
-	term2 = 7 * logTerm / (3 * (t - 1))
+	logTerm = np.log(4.0 * k *  t * t/ delta)
+	term1 = np.sqrt(2.0 * empiricalVariance * logTerm / t)
+	term2 = 7.0 * logTerm / (3.0 * (t - 1))
 	beta = term1 + term2
 
 	return beta
