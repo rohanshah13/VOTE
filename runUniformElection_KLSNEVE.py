@@ -1,16 +1,12 @@
 import numpy as np
 import pandas as pd
-from util import *
+from util_ppr2 import *
 from math import e
 
 
 def randChoice(x):
 	
 	return np.random.choice(x)
-
-## LUCB inspired algorithm
-
-global_delta = -1
 
 def eval_func(delta_val):
 	return 2*(e**2) * delta_val*np.exp(-1*delta_val)
@@ -116,8 +112,10 @@ def KL_div(a, b):
 				return float("inf")
 			else:
 				return a*np.log(a/b) + (1-a)*np.log((1-a)/(1-b))
+
+## LUCB inspired algorithm
 			
-def runUniformElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1, b = 1):
+def runUniformElection_KLSNEVE(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1, b = 1):
 
 	f = open(tracefile,'w')
 	#Gets the names of all the constituencies
@@ -178,35 +176,32 @@ def runUniformElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a
 	unseenVotes = listVotes.copy()
 	#Initializes the seen votes to 0 for each candidate in each constituency
 	seenVotes = [[0] * len(inner) for inner in listVotes]
-	beta_vals = [np.array([0] * len(inner)) for inner in listVotes]
 	
+	hasLost = [[False] * len(inner) for inner in listVotes]
+
 	#Number of constituencies    
 	N = C
 	
 	#Vector of 0s, size = number of political parties - lower bound for number of constituencies won
 	Cl = np.zeros(P)
 	#Vector with size = number of political parties, each value = number of constituencies - upper bound for number of constituencies won
-	Cu = np.ones(P) * C
+	Cu = np.zeros(P) 
+	countContested = np.zeros(P)
+	#Sets Cu[i] to the number of constituencies contested by party i - better upper bound
+	for p in range(P):
+		countContested[p] = sum(row.count(Parties[p]) for row in listParties)
+		Cu[p] = countContested[p]
 
 	# labels of the people accounted
 	labels = [[set() for _ in inner] for inner in listVotes]
 	votesLabelled = 0
 
-	#Sets Cu[i] to the number of constituencies contested by party i - better upper bound
-	for p in range(P):
-		
-		Cu[p] = sum(row.count(Parties[p]) for row in listParties)
-
 	#The total number of votes (population size) for each constituency
 	N0 = [sum(inner) for inner in listVotes]
-	#Initalizes votes to 0 for each candidate in each constituency - lower bound
-	Nl = [[0] * len(inner) for inner in listVotes]
-	#Initializes votes to max possible for each candidate in each constituency - upper bound
-	Nu = [[sum(inner)] * len(inner) for inner in listVotes]
 	
 	#Initializes the number of wins to 0 for each party
 	seenWins = np.zeros(P)
-
+	seenLosses = np.zeros(P)
 	#Adds all the constiuencies to undecided constituencies
 	undecidedConstituencies = np.arange(C)
 
@@ -243,33 +238,32 @@ def runUniformElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a
 					labels[c][party_index].add(person_label)
 					votesLabelled += 1
 
-			#Updates the lower and upper bounds for each party in constituency c
-			new_delta = solve_equation(alpha / (len(seenVotes[c]) * C))
-			sum_val = sum(seenVotes[c])
-			beta = exploration_rate(sum_val, new_delta)
-			for k in range(len(seenVotes[c])):
-				Nl[c][k] = get_kl_lower_bound(seenVotes[c][k] / sum_val, beta, sum_val)
-				Nu[c][k] = get_kl_upper_bound(seenVotes[c][k] / sum_val, beta, sum_val)
+			#Party placed first in c
+			constiWinner = np.argsort(seenVotes[c])[-1]
 
-			# for k in range(K):
+			constiTerm = True
+			new_delta = solve_equation(alpha / ((K - 1) * C))
+			for p in range(K):
+				if p == constiWinner or hasLost[c][p]:
+					continue
+				mean_w = seenVotes[c][constiWinner] / (seenVotes[c][constiWinner] + seenVotes[c][p])
+				mean_p = 1 - mean_w
+				beta = exploration_rate(seenVotes[c][constiWinner] + seenVotes[c][p], new_delta)
+				w_l = get_kl_lower_bound(mean_w, beta, seenVotes[c][constiWinner] + seenVotes[c][p])
+				p_h = get_kl_upper_bound(mean_p, beta, seenVotes[c][constiWinner] + seenVotes[c][p])
 
-			# 	tempL, tempU = binBounds(alpha/(K*C), N0[c], a, b, sum(seenVotes[c]), seenVotes[c][k])
-
-			# 	Nl[c][k] = max(Nl[c][k], tempL)
-			# 	Nu[c][k] = min(Nu[c][k], tempU)
-
-			
-			#Party with the most votes currently in constituency c
-			constiWinner = np.argmax(seenVotes[c])
-
-			#Differnce between lower bound of current constituency winner and the greatest of the upper bounds of the remaining
-			constiTerm = Nl[c][constiWinner] - max([x for i,x in enumerate(Nu[c]) if i!=constiWinner])
+				if p_h < w_l:
+					hasLost[c][p] = True
+					partyID = listPartyIDs[c][p]
+					seenLosses[partyID] += 1
+				else:
+					constiTerm = False
 
 			#Sets the leading party of constituency c to the current winner
 			leadingParty[indexC] = Parties.index(listParties[c][constiWinner])
 
 			#Constituency is decided if the lower bound of current winner is above the upper bound of all other parties
-			if constiTerm > 0:
+			if constiTerm:
 
 				N = N - 1
 				winPartyID = int(leadingParty[indexC])
@@ -283,17 +277,8 @@ def runUniformElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a
 
 				#update the lower and upper bounds for each party
 				for p in range(P):
-
 					Cl[p] = seenWins[p]
-					Cu[p] = seenWins[p]
-
-					for ci in undecidedConstituencies:
-						if p in listPartyIDs[ci]:
-							pIndex = listPartyIDs[ci].index(p)
-							#party may win a constiuency if its upper confidence bound is greater than the
-							#max of all lower confidence bounds
-							if Nu[ci][pIndex] >= max(Nl[ci]):
-								Cu[p] += 1
+					Cu[p] = countContested[p] - seenLosses[p]
 
 				#winner of the election is the party with the greatest lower bound in number of constituencies won  
 				winner = np.argmax(Cl)

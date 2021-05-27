@@ -9,6 +9,8 @@ def randChoice(x):
 	
 	return np.random.choice(x)
 
+## LUCB inspired algorithm
+
 global_delta = -1
 
 def eval_func(delta_val):
@@ -116,10 +118,8 @@ def KL_div(a, b):
 			else:
 				return a*np.log(a/b) + (1-a)*np.log((1-a)/(1-b))
 
-
-## LUCB inspired algorithm
 			
-def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1, b = 1):
+def runDCBElection_KLSNEVE(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1, b = 1):
 	f = open(tracefile, 'w')
 	#Gets the names of all the constituencies
 	constituencies = getAllPlaces(f"data/{data}/")                              
@@ -198,10 +198,6 @@ def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 		
 		Cu[p] = sum(row.count(Parties[p]) for row in listParties)
 
-	# initializing empirical means for each party in every constituency
-	means = [np.array([0] * len(inner)) for inner in listVotes]
-	beta_vals = [np.array([0] * len(inner)) for inner in listVotes]
-
 	#The total number of votes (population size) for each constituency
 	N0 = [sum(inner) for inner in listVotes]
 	#Initalizes votes to 0 for each candidate in each constituency - lower bound
@@ -244,12 +240,6 @@ def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 				votesLabelled += 1
 
 		#Updates the lower and upper bounds for each party in constituency c
-		new_delta = solve_equation(alpha / (len(seenVotes[c]) * C))
-		sum_val = sum(seenVotes[c])
-		beta = exploration_rate(sum_val, new_delta)
-		for k in range(len(seenVotes[c])):
-			Nl[c][k] = get_kl_lower_bound(seenVotes[c][k] / sum_val, beta, sum_val)
-			Nu[c][k] = get_kl_upper_bound(seenVotes[c][k] / sum_val, beta, sum_val)
 		# for k in range(K):
 			
 		# 	tempL, tempU = binBounds(alpha/(K*C), a, b, sum(seenVotes[c]), seenVotes[c][k])
@@ -262,7 +252,22 @@ def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 		constiWinner = np.argmax(seenVotes[c])
 
 		#Difference between lower bound of current constituency winner and the greatest of the upper bounds of the remaining
-		constiTerm = Nl[c][constiWinner] - max([x for i,x in enumerate(Nu[c]) if i!=constiWinner])
+		winner_decided = True
+		num_parties = len(seenVotes[c])
+		new_delta = solve_equation(alpha / ((num_parties - 1) * C))
+		for k in range(len(seenVotes[c])):
+			if (k == constiWinner): continue
+			mean_w = float((seenVotes[c][constiWinner] * 1.0) / (seenVotes[c][constiWinner] + seenVotes[c][k]))
+			mean_k = 1.0 - mean_w
+			beta = exploration_rate(seenVotes[c][constiWinner] + seenVotes[c][k], new_delta)
+			w_l = get_kl_lower_bound(mean_w, beta, seenVotes[c][constiWinner] + seenVotes[c][k])
+			k_h = get_kl_upper_bound(mean_k, beta, seenVotes[c][constiWinner] + seenVotes[c][k])
+			winner_decided = winner_decided and (w_l > k_h)
+			if not winner_decided:
+				break
+
+		
+		# constiTerm = Nl[c][constiWinner] - max([x for i,x in enumerate(Nu[c]) if i!=constiWinner])
 		# for party in range(seenVotes[c]):
 			# if party == constiWinner:
 				# continue 
@@ -272,7 +277,7 @@ def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 		leadingParty[indexC] = Parties.index(listParties[c][constiWinner])
 
 		#Constituency is decided if the lower bound of current winner is above the upper bound of all other parties
-		if constiTerm > 0:
+		if winner_decided:
 
 			N = N - 1
 		 
@@ -296,8 +301,27 @@ def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 						pIndex = listPartyIDs[ci].index(p)
 						#party may win a constiuency if its upper confidence bound is greater than the
 						#max of all lower confidence bounds
-						if Nu[ci][pIndex] >= max(Nl[ci]):
+						# if Nu[ci][pIndex] >= max(Nl[ci]):
+						# 	Cu[p] += 1
+						if seenVotes[ci][pIndex] == max(seenVotes[ci]):
 							Cu[p] += 1
+						else:
+							differentiated = False
+							num_parties = len(seenVotes[ci])
+							new_delta = solve_equation(alpha / ((num_parties - 1) * C))
+							for k in range(num_parties):
+								if k == pIndex: continue
+								mean_p = float((seenVotes[ci][pIndex] * 1.0) / (seenVotes[ci][pIndex] + seenVotes[ci][k]))
+								mean_k = 1.0 - mean_p
+								beta = exploration_rate(seenVotes[ci][pIndex] + seenVotes[ci][k], new_delta)
+								p_h = get_kl_upper_bound(mean_p, beta, seenVotes[ci][pIndex] + seenVotes[ci][k])
+								k_l = get_kl_lower_bound(mean_k, beta, seenVotes[ci][pIndex] + seenVotes[ci][k])
+								if (p_h < k_l):
+									differentiated = True
+									break
+							if not differentiated:
+								Cu[p] += 1
+
 
 			#winner of the election is the party with the greatest lower bound in number of constituencies won  
 			winner = np.argmax(Cl)
@@ -347,8 +371,26 @@ def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 					pIndex = listPartyIDs[ci].index(p)
 					#party may win a constituency if its upper bound is greater than
 					#the maximum of all lower bounds
-					if Nu[ci][pIndex] >= max(Nl[ci]):
+					# if Nu[ci][pIndex] >= max(Nl[ci]):
+					# 	Cu[p] += 1
+					if seenVotes[ci][pIndex] == max(seenVotes[ci]):
 						Cu[p] += 1
+					else:
+						differentiated = False
+						num_parties = len(seenVotes[ci])
+						new_delta = solve_equation(alpha / ((num_parties - 1) * C))
+						for k in range(num_parties):
+							if k == pIndex: continue
+							mean_p = float((seenVotes[ci][pIndex] * 1.0) / (seenVotes[ci][pIndex] + seenVotes[ci][k]))
+							mean_k = 1.0 - mean_p
+							beta = exploration_rate(seenVotes[ci][pIndex] + seenVotes[ci][k], new_delta)
+							p_h = get_kl_upper_bound(mean_p, beta, seenVotes[ci][pIndex] + seenVotes[ci][k])
+							k_l = get_kl_lower_bound(mean_k, beta, seenVotes[ci][pIndex] + seenVotes[ci][k])
+							if (p_h < k_l):
+								differentiated = True
+								break
+						if not differentiated:
+							Cu[p] += 1
 			
 
 ##        pb, pa = np.argsort(countWinning + seenWins)[-2:]
@@ -368,7 +410,7 @@ def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 		#Array of zeros, size = number of constituencies
 		aUCB = np.zeros(C)
 		hLCB = np.zeros(C)
-		diff_a = -1*np.ones(C)
+		diff_a = -1e18*np.ones(C)
 		#calculates aUCB of each constituency as the fraction of votes (upper bounded) won by the currently winning party
 		for c in undecidedConstituencies:
 
@@ -376,12 +418,25 @@ def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 
 				paIndex = listPartyIDs[c].index(pa)
 				
-				aUCB[c] = Nu[c][paIndex]
-				hLCB[c] = np.max(np.delete(Nl[c], paIndex))
-				diff_a[c] = aUCB[c] - hLCB[c]
+				# aUCB[c] = Nu[c][paIndex]
+				# hLCB[c] = np.max(np.delete(Nl[c], paIndex))
+				# diff_a[c] = aUCB[c] - hLCB[c]
+				
+				min_diff = 1e18
+				num_parties = len(seenVotes[c])
+				new_delta = solve_equation(alpha / ((num_parties - 1) * C))
+				for k in range(len(seenVotes[c])):
+					if k == paIndex: continue
+					mean_w = seenVotes[c][paIndex] / (seenVotes[c][paIndex] + seenVotes[c][k])
+					mean_k = 1 - mean_w
+					beta = exploration_rate(seenVotes[c][paIndex] + seenVotes[c][k], new_delta)
+					w_h = get_kl_upper_bound(mean_w, beta, seenVotes[c][paIndex] + seenVotes[c][k])
+					k_l = get_kl_lower_bound(mean_k, beta, seenVotes[c][paIndex] + seenVotes[c][k])
+					min_diff = min(min_diff, w_h - k_l)
+				diff_a[c] = min_diff
 
 		#If the party has not won any votes (upper bounded) in the remaining constituencies, choose one at random
-		if max(diff_a) == -1 :
+		if max(diff_a) == -1e18 :
 			print("Random A")
 			c = randChoice(undecidedConstituencies)
 		#Otherwise choose the constituency with highest aUCB value
@@ -414,12 +469,6 @@ def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 				votesLabelled += 1
 
 		#update lower and upper bounds for each party in constituency
-		new_delta = solve_equation(alpha / (len(seenVotes[c]) * C))
-		sum_val = sum(seenVotes[c])
-		beta = exploration_rate(sum_val, new_delta)
-		for k in range(len(seenVotes[c])):
-			Nl[c][k] = get_kl_lower_bound(seenVotes[c][k] / sum_val, beta, sum_val)
-			Nu[c][k] = get_kl_upper_bound(seenVotes[c][k] / sum_val, beta, sum_val)
 		# for k in range(K):
 			
 		# 	tempL, tempU = binBounds(alpha/(K*C), a, b, sum(seenVotes[c]), seenVotes[c][k])
@@ -430,11 +479,24 @@ def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 
 		constiWinner = np.argmax(seenVotes[c])
 
-		constiTerm = Nl[c][constiWinner] - max([x for i,x in enumerate(Nu[c]) if i!=constiWinner])
+		# constiTerm = Nl[c][constiWinner] - max([x for i,x in enumerate(Nu[c]) if i!=constiWinner])
+		winner_decided = True
+		num_parties = len(seenVotes[c])
+		new_delta = solve_equation(alpha / ((num_parties - 1) * C))
+		for k in range(len(seenVotes[c])):
+			if (k == constiWinner): continue
+			mean_w = float((seenVotes[c][constiWinner] * 1.0) / (seenVotes[c][constiWinner] + seenVotes[c][k]))
+			mean_k = 1.0 - mean_w
+			beta = exploration_rate(seenVotes[c][constiWinner] + seenVotes[c][k], new_delta)
+			w_l = get_kl_lower_bound(mean_w, beta, seenVotes[c][constiWinner] + seenVotes[c][k])
+			k_h = get_kl_upper_bound(mean_k, beta, seenVotes[c][constiWinner] + seenVotes[c][k])
+			winner_decided = winner_decided and (w_l > k_h)
+			if not winner_decided:
+				break
 
 		leadingParty[indexC] = Parties.index(listParties[c][constiWinner])
 
-		if constiTerm > 0:
+		if winner_decided:
 
 			N = N - 1
 		 
@@ -453,8 +515,26 @@ def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 				for ci in undecidedConstituencies:
 					if p in listPartyIDs[ci]:
 						pIndex = listPartyIDs[ci].index(p)
-						if Nu[ci][pIndex] >= max(Nl[ci]):
+						# if Nu[ci][pIndex] >= max(Nl[ci]):
+						# 	Cu[p] += 1
+						if seenVotes[ci][pIndex] == max(seenVotes[ci]):
 							Cu[p] += 1
+						else:
+							differentiated = False
+							num_parties = len(seenVotes[ci])
+							new_delta = solve_equation(alpha / ((num_parties - 1) * C))
+							for k in range(num_parties):
+								if k == pIndex: continue
+								mean_p = float((seenVotes[ci][pIndex] * 1.0) / (seenVotes[ci][pIndex] + seenVotes[ci][k]))
+								mean_k = 1.0 - mean_p
+								beta = exploration_rate(seenVotes[ci][pIndex] + seenVotes[ci][k], new_delta)
+								p_h = get_kl_upper_bound(mean_p, beta, seenVotes[ci][pIndex] + seenVotes[ci][k])
+								k_l = get_kl_lower_bound(mean_k, beta, seenVotes[ci][pIndex] + seenVotes[ci][k])
+								if (p_h < k_l):
+									differentiated = True
+									break
+							if not differentiated:
+								Cu[p] += 1
 
 			winner = np.argmax(Cl)
 
@@ -506,20 +586,43 @@ def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 		bLCB = np.ones(C)
 
 		hUCB = np.zeros(C)
-		diff_b = -1*np.ones(C)
+		diff_b = -1e18*np.ones(C)
 		#Calculates bLCB as the number of votes (lower bounded) won by the second party in each constituency
 		for c in undecidedConstituencies:
 
 			if pb in listPartyIDs[c]:
 				pbIndex = listPartyIDs[c].index(pb)
-				if Nu[c][pbIndex] >= max(Nl[c]):
-					bLCB[c] = Nl[c][pbIndex] 
 
-					hUCB[c] = np.max(np.delete(Nu[c], pbIndex))
-					diff_b[c] = hUCB[c] - bLCB[c]
+				max_diff = -1e18
+				num_parties = len(seenVotes[c])
+				new_delta = solve_equation(alpha / ((num_parties - 1) * C))
+				for k in range(num_parties):
+					if pbIndex == k: continue
+					mean_w = float(seenVotes[c][pbIndex] * 1.0 / (seenVotes[c][pbIndex] + seenVotes[c][k]))
+					mean_k = 1 - mean_w
+					beta = exploration_rate(seenVotes[c][pbIndex] + seenVotes[c][k], new_delta)
+					w_h = get_kl_upper_bound(mean_w, beta, seenVotes[c][pbIndex] + seenVotes[c][k])
+					k_l = get_kl_lower_bound(mean_k, beta, seenVotes[c][pbIndex] + seenVotes[c][k])
+					if (w_h < k_l):
+						max_diff = -1e18
+						break
+					w_l = get_kl_lower_bound(mean_w, beta, seenVotes[c][pbIndex] + seenVotes[c][k])
+					k_h = get_kl_upper_bound(mean_k, beta, seenVotes[c][pbIndex] + seenVotes[c][k])
+					max_diff = max(max_diff, k_h - w_l)
+
+					
+				diff_b[c] = max_diff
+
+
+
+				# if Nu[c][pbIndex] >= max(Nl[c]):
+				# 	bLCB[c] = Nl[c][pbIndex] 
+
+				# 	hUCB[c] = np.max(np.delete(Nu[c], pbIndex))
+				# 	diff_b[c] = hUCB[c] - bLCB[c]
 
 		#In the (rare) event that party b has won all votes in the undecided constituencies choose at random
-		if max(diff_b) == -1:
+		if max(diff_b) == -1e18:
 			print("Random B")
 			c = randChoice(undecidedConstituencies)
 			
@@ -548,12 +651,6 @@ def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 				labels[c][party_index].add(person_label)
 				votesLabelled += 1
 
-		new_delta = solve_equation(alpha / (len(seenVotes[c]) * C))
-		sum_val = sum(seenVotes[c])
-		beta = exploration_rate(sum_val, new_delta)
-		for k in range(len(seenVotes[c])):
-			Nl[c][k] = get_kl_lower_bound(seenVotes[c][k] / sum_val, beta, sum_val)
-			Nu[c][k] = get_kl_upper_bound(seenVotes[c][k] / sum_val, beta, sum_val)
 		# for k in range(K):
 			
 		# 	tempL, tempU = binBounds(alpha/(K*C), a, b, sum(seenVotes[c]), seenVotes[c][k])
@@ -563,11 +660,24 @@ def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 
 		constiWinner = np.argmax(seenVotes[c])
 
-		constiTerm = Nl[c][constiWinner] - max([x for i,x in enumerate(Nu[c]) if i!=constiWinner])
-
+		# constiTerm = Nl[c][constiWinner] - max([x for i,x in enumerate(Nu[c]) if i!=constiWinner])
+		winner_decided = True
+		num_parties = len(seenVotes[c])
+		new_delta = solve_equation(alpha / ((num_parties - 1) * C))
+		for k in range(len(seenVotes[c])):
+			if (k == constiWinner): continue
+			mean_w = float((seenVotes[c][constiWinner] * 1.0) / (seenVotes[c][constiWinner] + seenVotes[c][k]))
+			mean_k = 1.0 - mean_w
+			beta = exploration_rate(seenVotes[c][constiWinner] + seenVotes[c][k], new_delta)
+			w_l = get_kl_lower_bound(mean_w, beta, seenVotes[c][constiWinner] + seenVotes[c][k])
+			k_h = get_kl_upper_bound(mean_k, beta, seenVotes[c][constiWinner] + seenVotes[c][k])
+			winner_decided = winner_decided and (w_l > k_h)
+			if not winner_decided:
+				break
+		
 		leadingParty[indexC] = Parties.index(listParties[c][constiWinner])
 
-		if constiTerm > 0:
+		if winner_decided:
 
 			N = N - 1
 			
@@ -586,8 +696,27 @@ def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 				for ci in undecidedConstituencies:
 					if p in listPartyIDs[ci]:
 						pIndex = listPartyIDs[ci].index(p)
-						if Nu[ci][pIndex] >= max(Nl[ci]):
+						# if Nu[ci][pIndex] >= max(Nl[ci]):
+						# 	Cu[p] += 1
+
+						if seenVotes[ci][pIndex] == max(seenVotes[ci]):
 							Cu[p] += 1
+						else:
+							differentiated = False
+							num_parties = len(seenVotes[ci])
+							new_delta = solve_equation(alpha / ((num_parties - 1) * C))
+							for k in range(num_parties):
+								if k == pIndex: continue
+								mean_p = float((seenVotes[ci][pIndex] * 1.0) / (seenVotes[ci][pIndex] + seenVotes[ci][k]))
+								mean_k = 1.0 - mean_p
+								beta = exploration_rate(seenVotes[ci][pIndex] + seenVotes[ci][k], new_delta)
+								p_h = get_kl_upper_bound(mean_p, beta, seenVotes[ci][pIndex] + seenVotes[ci][k])
+								k_l = get_kl_lower_bound(mean_k, beta, seenVotes[ci][pIndex] + seenVotes[ci][k])
+								if (p_h < k_l):
+									differentiated = True
+									break
+							if not differentiated:
+								Cu[p] += 1
 
 			winner = np.argmax(Cl)
 
