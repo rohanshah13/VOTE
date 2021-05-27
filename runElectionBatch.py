@@ -9,7 +9,9 @@ from runDCBElection_PPR1 import *
 from runDCBElection_PPR2 import *
 from runDCBElection_SE import *
 from runDCBElection_GLR import *
+from runDCBElection_SEEVE import *
 from runUniformElection_SE import *
+from runUniformElection_SEEVE import *
 from runUniformElection_GLR import *
 from runUniformElection1 import *
 from runUniformElection_PPR2 import *
@@ -101,6 +103,8 @@ def main():
 			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t], totalLabelledVotesCounted[t] = runUniformElection_PPR2(data, alpha, tracefile, batch, init_batch)
 		elif algorithm == "USE":
 			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t], totalLabelledVotesCounted[t] = runUniformElection_SE(data, alpha, tracefile, batch, init_batch)
+		elif algorithm == "USEEVE":
+			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t], totalLabelledVotesCounted[t] = runUniformElection_SEEVE(data, alpha, tracefile, batch, init_batch)
 		elif algorithm == "UGLR":
 			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t], totalLabelledVotesCounted[t] = runUniformElection_GLR(data, alpha, tracefile, batch, init_batch)
 		elif algorithm == "TwoLevelOpinionSurvey":
@@ -115,6 +119,8 @@ def main():
 			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t], totalLabelledVotesCounted[t] = runDCBElection_PPR2(data, alpha, tracefile, batch, init_batch)
 		elif algorithm == "DCBSE":
 			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t], totalLabelledVotesCounted[t] = runDCBElection_SE(data, alpha, tracefile, batch, init_batch)
+		elif algorithm == "DCBSEEVE":
+			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t], totalLabelledVotesCounted[t] = runDCBElection_SEEVE(data, alpha, tracefile, batch, init_batch)
 		elif algorithm == "DCBGLR":
 			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t], totalLabelledVotesCounted[t] = runDCBElection_GLR(data, alpha, tracefile, batch, init_batch)	
 		# exit()
@@ -132,13 +138,13 @@ def main():
 
 	np.save('results/{}/{}/votesSeen_{}_{}_{}.npy'.format(data,algorithm,alpha,batch,T), constiVotes)
 
-	if algorithm in ['U1', 'U2', 'USE', 'UGLR', 'DCB1', 'DCB2', 'DCBSE', 'DCBGLR']:
+	if algorithm in ['U1', 'U2', 'USE', 'UGLR', 'DCB1', 'DCB2', 'DCBSE', 'DCBGLR', 'DCBSEEVE', 'USEEVE']:
 		np.save('results/{}/{}/totalLabelledVotesCounted_{}_{}_{}'.format(data,algorithm,alpha,batch,T), totalLabelledVotesCounted)		
 
 	print(f"Algorithm = {algorithm}, alpha = {alpha}, batch = {batch}, T = {T}")
 	print("Constituencies decided = ", np.mean(constituenciesDecided), " +- ", np.std(constituenciesDecided)/np.sqrt(T))
 	print("Votes counted (unlabelled)= ", np.mean(totalVotesCounted), " +- ", np.std(totalVotesCounted)/np.sqrt(T))
-	if algorithm in ['U1', 'U2', 'USE', 'UGLR', 'DCB1', 'DCB2', 'DCBSE', 'DCBGLR']:
+	if algorithm in ['U1', 'U2', 'USE', 'UGLR', 'DCB1', 'DCB2', 'DCBSE', 'DCBGLR', 'DCBSEEVE', 'USEEVE']:
 		print("Votes counted (labelled)= ", np.mean(totalLabelledVotesCounted), " +- ", np.std(totalLabelledVotesCounted)/np.sqrt(T))
 	
 if __name__ == "__main__":
