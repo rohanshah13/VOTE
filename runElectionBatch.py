@@ -15,6 +15,8 @@ from runUniformElection_SEEVE import *
 from runUniformElection_GLR import *
 from runUniformElection1 import *
 from runUniformElection_PPR2 import *
+from runUniformElection_KLSN import *
+from runDCBElection_KLSN import *
 import pickle
 import sys
 import argparse
@@ -105,6 +107,10 @@ def main():
 			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t], totalLabelledVotesCounted[t] = runUniformElection_SE(data, alpha, tracefile, batch, init_batch)
 		elif algorithm == "USEEVE":
 			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t], totalLabelledVotesCounted[t] = runUniformElection_SEEVE(data, alpha, tracefile, batch, init_batch)
+		elif algorithm == "UKLSN":
+			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t], totalLabelledVotesCounted[t] = runUniformElection_KLSN(data, alpha, tracefile, batch, init_batch)
+		elif algorithm == "DCBKLSN":
+			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t], totalLabelledVotesCounted[t] = runDCBElection_KLSN(data, alpha, tracefile, batch, init_batch)
 		elif algorithm == "UGLR":
 			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t], totalLabelledVotesCounted[t] = runUniformElection_GLR(data, alpha, tracefile, batch, init_batch)
 		elif algorithm == "TwoLevelOpinionSurvey":
@@ -138,13 +144,13 @@ def main():
 
 	np.save('results/{}/{}/votesSeen_{}_{}_{}.npy'.format(data,algorithm,alpha,batch,T), constiVotes)
 
-	if algorithm in ['U1', 'U2', 'USE', 'UGLR', 'DCB1', 'DCB2', 'DCBSE', 'DCBGLR', 'DCBSEEVE', 'USEEVE']:
+	if algorithm in ['U1', 'U2', 'USE', 'UGLR', 'DCB1', 'DCB2', 'DCBSE', 'DCBGLR', 'DCBSEEVE', 'USEEVE', 'UKLSN', 'DCBKLSN']:
 		np.save('results/{}/{}/totalLabelledVotesCounted_{}_{}_{}'.format(data,algorithm,alpha,batch,T), totalLabelledVotesCounted)		
 
 	print(f"Algorithm = {algorithm}, alpha = {alpha}, batch = {batch}, T = {T}")
 	print("Constituencies decided = ", np.mean(constituenciesDecided), " +- ", np.std(constituenciesDecided)/np.sqrt(T))
 	print("Votes counted (unlabelled)= ", np.mean(totalVotesCounted), " +- ", np.std(totalVotesCounted)/np.sqrt(T))
-	if algorithm in ['U1', 'U2', 'USE', 'UGLR', 'DCB1', 'DCB2', 'DCBSE', 'DCBGLR', 'DCBSEEVE', 'USEEVE']:
+	if algorithm in ['U1', 'U2', 'USE', 'UGLR', 'DCB1', 'DCB2', 'DCBSE', 'DCBGLR', 'DCBSEEVE', 'USEEVE', 'UKLSN', 'DCBKLSN']:
 		print("Votes counted (labelled)= ", np.mean(totalLabelledVotesCounted), " +- ", np.std(totalLabelledVotesCounted)/np.sqrt(T))
 	
 if __name__ == "__main__":

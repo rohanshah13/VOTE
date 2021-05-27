@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+from math import e
 from util_ppr2 import *
 import json
 
@@ -8,9 +9,45 @@ def randChoice(x):
 	
 	return np.random.choice(x)
 
+global_delta = -1
 
-def exploration_rate(time,delta):
-    return np.log(time*time*np.log2(1/delta)/delta)
+def eval_func(delta_val):
+	return 2*(e**2) * delta_val*np.exp(-1*delta_val)
+
+
+def solve_equation(delta):
+	left = 0
+	right = 100
+	mid = int((left+right)/2)
+
+	# if(global_delta != -1): 
+	# 	new_delta = global_delta
+	# 	rate = new_delta*(1+np.log(new_delta))*np.log(np.log(time))/((new_delta-1)*np.log(new_delta)) + new_delta
+	# 	return rate
+
+	# for i in range(a.shape[0]-1):
+	# 	if(a[i]<delta and a[i+1]>delta): break
+	itera = 0
+	while abs( eval_func(mid) - delta) > 1e-5:
+
+		if(abs(right - left)< 1e-7):
+			break
+		if(delta<eval_func(mid)):
+			left = mid
+		else:
+			right = mid
+		mid = (left+right)/2
+		itera += 1
+
+	return mid
+
+
+def exploration_rate(time,new_delta):
+
+	rate = new_delta*(1+np.log(new_delta))*np.log(np.log(time))/((new_delta-1)*np.log(new_delta)) + new_delta
+
+	return rate
+
 
 def get_kl_lower_bound(p,beta, time):
 		lo = 0
@@ -18,8 +55,8 @@ def get_kl_lower_bound(p,beta, time):
 		q = (lo+hi)/2
 		lhs = KL_div(p,q)*time
 
-		while abs(beta-lhs) > 1e-6:
-			if abs(hi-lo) < 1e-10:
+		while abs(beta-lhs) > 1e-5:
+			if abs(hi-lo) < 1e-7:
 				break
 			if lhs > beta:
 				lo = q
@@ -35,8 +72,8 @@ def get_kl_upper_bound(p,beta, time):
 		q = (lo+hi)/2
 		lhs = KL_div(p,q)*time
 
-		while abs(beta-lhs) > 1e-6:
-			if abs(hi-lo) < 1e-10:
+		while abs(beta-lhs) > 1e-5:
+			if abs(hi-lo) < 1e-7:
 				break
 			if lhs > beta:
 				hi = q
@@ -45,6 +82,22 @@ def get_kl_upper_bound(p,beta, time):
 			q = (lo+hi)/2
 			lhs = KL_div(p,q)*time
 		return q
+
+def checkConverged(confidence_bounds):
+		for comm in range(confidence_bounds.shape[0]):
+
+			flag = 0
+			for comm2 in range(confidence_bounds.shape[0]):
+				if(comm==comm2): continue
+
+				if(confidence_bounds[comm2, 1]> confidence_bounds[comm,0]):
+					flag = 1
+					break
+
+			if(flag==0): return True
+
+
+		return False
 
 def KL_div(a, b):
 		if a == 0:
@@ -63,9 +116,10 @@ def KL_div(a, b):
 			else:
 				return a*np.log(a/b) + (1-a)*np.log((1-a)/(1-b))
 
+
 ## LUCB inspired algorithm
 			
-def runDCBElection_KL(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1, b = 1):
+def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1, b = 1):
 	f = open(tracefile, 'w')
 	#Gets the names of all the constituencies
 	constituencies = getAllPlaces(f"data/{data}/")                              
@@ -190,20 +244,18 @@ def runDCBElection_KL(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1, 
 				votesLabelled += 1
 
 		#Updates the lower and upper bounds for each party in constituency c
-		# beta_vals[c] = betaValue(sum(seenVotes[c]), np.array(seenVotes[c]), K, alpha / C)
-		# Nl[c] = (np.array(seenVotes[c]) / np.sum(seenVotes[c])) - beta_vals[c]
-		# Nu[c] = (np.array(seenVotes[c]) / np.sum(seenVotes[c])) + beta_vals[c]
-		sum_samples = sum(seenVotes[c])
-		for k in range(K):
+		new_delta = solve_equation(alpha / (len(seenVotes[c]) * C))
+		sum_val = sum(seenVotes[c])
+		beta = exploration_rate(sum_val, new_delta)
+		for k in range(len(seenVotes[c])):
+			Nl[c][k] = get_kl_lower_bound(seenVotes[c][k] / sum_val, beta, sum_val)
+			Nu[c][k] = get_kl_upper_bound(seenVotes[c][k] / sum_val, beta, sum_val)
+		# for k in range(K):
 			
-			beta = exploration_rate(sum_samples, alpha / C)
-			Nl[c][k] = get_kl_lower_bound(seenVotes[c][k] / sum_samples, beta, sum_samples)
-			Nu[c][k] = get_kl_upper_bound(seenVotes[c][k] / sum_samples, beta, sum_samples)
+		# 	tempL, tempU = binBounds(alpha/(K*C), a, b, sum(seenVotes[c]), seenVotes[c][k])
 
-			# tempL, tempU = binBounds(alpha/(K*C), a, b, sum(seenVotes[c]), seenVotes[c][k])
-
-			# Nl[c][k] = max(Nl[c][k], tempL)
-			# Nu[c][k] = min(Nu[c][k], tempU)
+		# 	Nl[c][k] = max(Nl[c][k], tempL)
+		# 	Nu[c][k] = min(Nu[c][k], tempU)
 
 		
 		#Party with the most votes currently in constituency c
@@ -362,17 +414,18 @@ def runDCBElection_KL(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1, 
 				votesLabelled += 1
 
 		#update lower and upper bounds for each party in constituency
-		sum_samples = sum(seenVotes[c])
-		for k in range(K):
+		new_delta = solve_equation(alpha / (len(seenVotes[c]) * C))
+		sum_val = sum(seenVotes[c])
+		beta = exploration_rate(sum_val, new_delta)
+		for k in range(len(seenVotes[c])):
+			Nl[c][k] = get_kl_lower_bound(seenVotes[c][k] / sum_val, beta, sum_val)
+			Nu[c][k] = get_kl_upper_bound(seenVotes[c][k] / sum_val, beta, sum_val)
+		# for k in range(K):
 			
-			beta = exploration_rate(sum_samples, alpha / C)
-			Nl[c][k] = get_kl_lower_bound(seenVotes[c][k] / sum_samples, beta, sum_samples)
-			Nu[c][k] = get_kl_upper_bound(seenVotes[c][k] / sum_samples, beta, sum_samples)
-			
-			# tempL, tempU = binBounds(alpha/(K*C), a, b, sum(seenVotes[c]), seenVotes[c][k])
+		# 	tempL, tempU = binBounds(alpha/(K*C), a, b, sum(seenVotes[c]), seenVotes[c][k])
 
-			# Nl[c][k] = max(Nl[c][k], tempL)
-			# Nu[c][k] = min(Nu[c][k], tempU)
+		# 	Nl[c][k] = max(Nl[c][k], tempL)
+		# 	Nu[c][k] = min(Nu[c][k], tempU)
 
 
 		constiWinner = np.argmax(seenVotes[c])
@@ -495,15 +548,13 @@ def runDCBElection_KL(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1, 
 				labels[c][party_index].add(person_label)
 				votesLabelled += 1
 
-		# beta_vals[c] = betaValue(sum(seenVotes[c]), np.array(seenVotes[c]), K, alpha / C)
-		# Nl[c] = (np.array(seenVotes[c]) / np.sum(seenVotes[c])) - beta_vals[c]
-		# Nu[c] = (np.array(seenVotes[c]) / np.sum(seenVotes[c])) + beta_vals[c]
-		sum_samples = sum(seenVotes[c])
-		for k in range(K):
-			
-			beta = exploration_rate(sum_samples, alpha / C)
-			Nl[c][k] = get_kl_lower_bound(seenVotes[c][k] / sum_samples, beta, sum_samples)
-			Nu[c][k] = get_kl_upper_bound(seenVotes[c][k] / sum_samples, beta, sum_samples)
+		new_delta = solve_equation(alpha / (len(seenVotes[c]) * C))
+		sum_val = sum(seenVotes[c])
+		beta = exploration_rate(sum_val, new_delta)
+		for k in range(len(seenVotes[c])):
+			Nl[c][k] = get_kl_lower_bound(seenVotes[c][k] / sum_val, beta, sum_val)
+			Nu[c][k] = get_kl_upper_bound(seenVotes[c][k] / sum_val, beta, sum_val)
+		# for k in range(K):
 			
 		# 	tempL, tempU = binBounds(alpha/(K*C), a, b, sum(seenVotes[c]), seenVotes[c][k])
 
