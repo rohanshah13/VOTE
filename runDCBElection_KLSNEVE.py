@@ -348,6 +348,7 @@ def runDCBElection_KLSNEVE(data, alpha, tracefile, batch = 1, init_batch = 1, a 
 				print_data['winner'] = Parties[winner]
 				print_data['seats_won'] = str(seenWins[winner])
 				print_data['total_votes'] = str(totalVotesCounted)
+				print_data['votesLabelled'] = str(votesLabelled)
 				print('Election Complete')
 				print(print_data)
 				f.write(json.dumps(print_data) + '\n')
@@ -573,6 +574,7 @@ def runDCBElection_KLSNEVE(data, alpha, tracefile, batch = 1, init_batch = 1, a 
 				print_data['winner'] = Parties[winner]
 				print_data['seats_won'] = str(seenWins[winner])
 				print_data['total_votes'] = str(totalVotesCounted)
+				print_data['votesLabelled'] = str(votesLabelled)
 				print('Election Complete')
 				print(print_data)
 				f.write(json.dumps(print_data) + '\n')
@@ -754,6 +756,7 @@ def runDCBElection_KLSNEVE(data, alpha, tracefile, batch = 1, init_batch = 1, a 
 				print_data['winner'] = Parties[winner]
 				print_data['seats_won'] = str(seenWins[winner])
 				print_data['total_votes'] = str(totalVotesCounted)
+				print_data['votesLabelled'] = str(votesLabelled)
 				print('Election Complete')
 				print(print_data)
 				f.write(json.dumps(print_data) + '\n')
