@@ -92,10 +92,6 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 
 	#The total number of votes (population size) for each constituency
 	N0 = [sum(inner) for inner in listVotes]
-	#Initalizes votes to 0 for each candidate in each constituency - lower bound
-	# Nl = [[0] * len(inner) for inner in listVotes]
-	#Initializes votes to max possible for each candidate in each constituency - upper bound
-	# Nu = [[sum(inner)] * len(inner) for inner in listVotes]
 	
 	#This stores everything we need to sample according to the rule for the party A in DCB algo
 	Aval = [[0] * len(inner) for inner in listVotes]
@@ -132,7 +128,6 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 			# print(constituencies[c], unseenVotes[c], norm)
 			vote = np.random.multinomial(1, norm)
 			#Updates the seen and unseen votes accordingly
-			# unseenVotes[c] -= vote
 			seenVotes[c] += vote
 
 			# updating the labelled information
@@ -245,7 +240,6 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 			Cl[p] = seenWins[p]
 			Cu[p] = countContested[p] - seenLosses[p]
 
-##        pb, pa = np.argsort(countWinning + seenWins)[-2:]
 
 		#The winning party including both leads and decided constituencies
 		pa = np.argmax(countWinning + seenWins)
@@ -404,9 +398,6 @@ def runDCBElection_PPR2(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 
 				f.close()
 				return sum(seenWins), winner, totalVotesCounted, seenVotes, votesLabelled
-
-
-##        countWinning = np.array([np.count_nonzero(np.array(leadingParty) == p) for p in range(P)])
 
 		bLCB = np.ones(C)
 

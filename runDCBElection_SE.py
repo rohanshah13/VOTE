@@ -160,13 +160,6 @@ def runDCBElection_SE(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1, 
 		beta_vals[c] = betaValue(sum(seenVotes[c]), np.array(seenVotes[c]), K, alpha / C)
 		Nl[c] = (np.array(seenVotes[c]) / np.sum(seenVotes[c])) - beta_vals[c]
 		Nu[c] = (np.array(seenVotes[c]) / np.sum(seenVotes[c])) + beta_vals[c]
-		# for k in range(K):
-			
-		# 	tempL, tempU = binBounds(alpha/(K*C), a, b, sum(seenVotes[c]), seenVotes[c][k])
-
-		# 	Nl[c][k] = max(Nl[c][k], tempL)
-		# 	Nu[c][k] = min(Nu[c][k], tempU)
-
 		
 		#Party with the most votes currently in constituency c
 		constiWinner = np.argmax(seenVotes[c])
@@ -261,7 +254,6 @@ def runDCBElection_SE(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1, 
 						Cu[p] += 1
 			
 
-##        pb, pa = np.argsort(countWinning + seenWins)[-2:]
 
 		#The winning party including both leads and decided constituencies
 		pa = np.argmax(countWinning + seenWins)
@@ -327,12 +319,6 @@ def runDCBElection_SE(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1, 
 		beta_vals[c] = betaValue(sum(seenVotes[c]), np.array(seenVotes[c]), K, alpha / C)
 		Nl[c] = (np.array(seenVotes[c]) / np.sum(seenVotes[c])) - beta_vals[c]
 		Nu[c] = (np.array(seenVotes[c]) / np.sum(seenVotes[c])) + beta_vals[c]
-		# for k in range(K):
-			
-		# 	tempL, tempU = binBounds(alpha/(K*C), a, b, sum(seenVotes[c]), seenVotes[c][k])
-
-		# 	Nl[c][k] = max(Nl[c][k], tempL)
-		# 	Nu[c][k] = min(Nu[c][k], tempU)
 
 
 		constiWinner = np.argmax(seenVotes[c])
@@ -382,16 +368,6 @@ def runDCBElection_SE(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1, 
 			print_data['LCB of B'] = str(Cl[pb])
 			print(print_data)
 			f.write(json.dumps(print_data) + '\n')
-			
-			# if N % 5 == 0 and False:
-
-##                print("*")
-##                print(np.argsort(seenWins + countWinning)[-4:], sum(seenWins) + len(leadingParty))
-##                print("**")
-##                print(Cu[np.argsort(seenWins + countWinning)[-4:]], Cl[np.argsort(seenWins + countWinning)[-4:]])
-##                print("***")
-##                print(seenWins[np.argsort(seenWins + countWinning)[-4:]], countWinning[np.argsort(seenWins + countWinning)[-4:]])
-##
 
 			if term > 0:
 				totalVotesCounted = sum(map(sum, seenVotes))
@@ -458,12 +434,6 @@ def runDCBElection_SE(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1, 
 		beta_vals[c] = betaValue(sum(seenVotes[c]), np.array(seenVotes[c]), K, alpha / C)
 		Nl[c] = (np.array(seenVotes[c]) / np.sum(seenVotes[c])) - beta_vals[c]
 		Nu[c] = (np.array(seenVotes[c]) / np.sum(seenVotes[c])) + beta_vals[c]
-		# for k in range(K):
-			
-		# 	tempL, tempU = binBounds(alpha/(K*C), a, b, sum(seenVotes[c]), seenVotes[c][k])
-
-		# 	Nl[c][k] = max(Nl[c][k], tempL)
-		# 	Nu[c][k] = min(Nu[c][k], tempU)
 
 		constiWinner = np.argmax(seenVotes[c])
 

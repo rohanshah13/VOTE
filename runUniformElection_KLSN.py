@@ -21,13 +21,6 @@ def solve_equation(delta):
 	right = 100
 	mid = int((left+right)/2)
 
-	# if(global_delta != -1): 
-	# 	new_delta = global_delta
-	# 	rate = new_delta*(1+np.log(new_delta))*np.log(np.log(time))/((new_delta-1)*np.log(new_delta)) + new_delta
-	# 	return rate
-
-	# for i in range(a.shape[0]-1):
-	# 	if(a[i]<delta and a[i+1]>delta): break
 	itera = 0
 	while abs( eval_func(mid) - delta) > 1e-11:
 
@@ -250,14 +243,6 @@ def runUniformElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a
 			for k in range(len(seenVotes[c])):
 				Nl[c][k] = get_kl_lower_bound(seenVotes[c][k] / sum_val, beta, sum_val)
 				Nu[c][k] = get_kl_upper_bound(seenVotes[c][k] / sum_val, beta, sum_val)
-
-			# for k in range(K):
-
-			# 	tempL, tempU = binBounds(alpha/(K*C), N0[c], a, b, sum(seenVotes[c]), seenVotes[c][k])
-
-			# 	Nl[c][k] = max(Nl[c][k], tempL)
-			# 	Nu[c][k] = min(Nu[c][k], tempU)
-
 			
 			#Party with the most votes currently in constituency c
 			constiWinner = np.argmax(seenVotes[c])

@@ -1,4 +1,4 @@
-# Bandit Elections
+<!-- # Bandit Elections
 
 To run a full experiment, you only need run the command `python3 runElectionBatch.py --dataset [dataset] --algorithm [algorithm]`
 
@@ -24,4 +24,38 @@ This computes the minimum number of samples required to decide the winner of the
 
 Run using the command - `python3 real_ip.py --dataset [India2004/India2014/..]`
 
-Results are stored in the 'optimal/' directory
+Results are stored in the 'optimal/' directory -->
+
+# PAC Mode estimation using PPR Martingale Confidence Sequences (Election Experiments)
+Contains the implementation of various DCB and RR algorithm variants for estimating the winner of elections. In particular, we provide the implementation of DCB and RR variants of PPR-1VR, PPR-1V1, KLSN-1VR, KLSN-1V1, A1-1VR and A1-1V1.
+
+## Prerequisites
+Requires Python 3 for running the code. Install all the dependencies by running the following command:
+```
+$ pip install -r requirements.txt
+```
+
+## Datasets
+Explain from where the datasets are to be downloaded. Explain if any additional folders are to be created.
+
+## Reproducing the results
+The main command for running the code
+```
+$ python runElectionBatch.py --dataset <dataset_name> --algorithm <algorithm_name>
+```
+The results containing the sample complexity, winning party, number of seats resolved are logged after executing the above command. The experiments are performed for 10 random seeds and the mistake probability is set to 0.01. These statistics for each of the runs are also saved in `.npy` format at `results/<dataset_name>/<algorithm_name>`. Following flags for algorithm can be used
+
+| `<algorithm_name>`| 
+| :---        | 
+| RRPPR1VR      | 
+| RRPPR1V1   |
+| RRA11VR   |
+| RRA11V1   |
+| RRKLSN1VR   |
+| RRKLSN1V1   |
+| DCBPPR1VR      | 
+| DCBPPR1V1   |
+| DCBA11VR   |
+| DCBA11V1   |
+| DCBKLSN1VR   |
+| DCBKLSN1V1   |

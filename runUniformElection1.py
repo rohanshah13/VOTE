@@ -125,7 +125,6 @@ def runUniformElection1(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 				vote = np.random.multinomial(1, norm)
 
 				#Updates the seen and unseen votes accordingly
-				# unseenVotes[c] -= vote
 				seenVotes[c] += vote
 
 				# updating the labelled information

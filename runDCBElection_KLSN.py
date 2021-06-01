@@ -19,14 +19,6 @@ def solve_equation(delta):
 	left = 0
 	right = 100
 	mid = int((left+right)/2)
-
-	# if(global_delta != -1): 
-	# 	new_delta = global_delta
-	# 	rate = new_delta*(1+np.log(new_delta))*np.log(np.log(time))/((new_delta-1)*np.log(new_delta)) + new_delta
-	# 	return rate
-
-	# for i in range(a.shape[0]-1):
-	# 	if(a[i]<delta and a[i+1]>delta): break
 	itera = 0
 	while abs( eval_func(mid) - delta) > 1e-11:
 
@@ -250,24 +242,13 @@ def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 		for k in range(len(seenVotes[c])):
 			Nl[c][k] = get_kl_lower_bound(seenVotes[c][k] / sum_val, beta, sum_val)
 			Nu[c][k] = get_kl_upper_bound(seenVotes[c][k] / sum_val, beta, sum_val)
-		# for k in range(K):
-			
-		# 	tempL, tempU = binBounds(alpha/(K*C), a, b, sum(seenVotes[c]), seenVotes[c][k])
-
-		# 	Nl[c][k] = max(Nl[c][k], tempL)
-		# 	Nu[c][k] = min(Nu[c][k], tempU)
-
 		
 		#Party with the most votes currently in constituency c
 		constiWinner = np.argmax(seenVotes[c])
 
 		#Difference between lower bound of current constituency winner and the greatest of the upper bounds of the remaining
 		constiTerm = Nl[c][constiWinner] - max([x for i,x in enumerate(Nu[c]) if i!=constiWinner])
-		# for party in range(seenVotes[c]):
-			# if party == constiWinner:
-				# continue 
-			# lcb, ucb = binBounds(alpha/(K*C), N0[c], a, b, )
-
+		
 		#Sets the leading party of constituency c to the current winner
 		leadingParty[indexC] = Parties.index(listParties[c][constiWinner])
 
@@ -294,6 +275,7 @@ def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 				for ci in undecidedConstituencies:
 					if p in listPartyIDs[ci]:
 						pIndex = listPartyIDs[ci].index(p)
+						
 						#party may win a constiuency if its upper confidence bound is greater than the
 						#max of all lower confidence bounds
 						if Nu[ci][pIndex] >= max(Nl[ci]):
@@ -350,8 +332,6 @@ def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 					if Nu[ci][pIndex] >= max(Nl[ci]):
 						Cu[p] += 1
 			
-
-##        pb, pa = np.argsort(countWinning + seenWins)[-2:]
 
 		#The winning party including both leads and decided constituencies
 		pa = np.argmax(countWinning + seenWins)
@@ -420,12 +400,6 @@ def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 		for k in range(len(seenVotes[c])):
 			Nl[c][k] = get_kl_lower_bound(seenVotes[c][k] / sum_val, beta, sum_val)
 			Nu[c][k] = get_kl_upper_bound(seenVotes[c][k] / sum_val, beta, sum_val)
-		# for k in range(K):
-			
-		# 	tempL, tempU = binBounds(alpha/(K*C), a, b, sum(seenVotes[c]), seenVotes[c][k])
-
-		# 	Nl[c][k] = max(Nl[c][k], tempL)
-		# 	Nu[c][k] = min(Nu[c][k], tempU)
 
 
 		constiWinner = np.argmax(seenVotes[c])
@@ -475,16 +449,6 @@ def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 			print_data['LCB of B'] = str(Cl[pb])
 			print(print_data)
 			f.write(json.dumps(print_data) + '\n')
-			
-			# if N % 5 == 0 and False:
-
-##                print("*")
-##                print(np.argsort(seenWins + countWinning)[-4:], sum(seenWins) + len(leadingParty))
-##                print("**")
-##                print(Cu[np.argsort(seenWins + countWinning)[-4:]], Cl[np.argsort(seenWins + countWinning)[-4:]])
-##                print("***")
-##                print(seenWins[np.argsort(seenWins + countWinning)[-4:]], countWinning[np.argsort(seenWins + countWinning)[-4:]])
-##
 
 			if term > 0:
 				totalVotesCounted = sum(map(sum, seenVotes))
@@ -499,9 +463,6 @@ def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 
 				f.close()
 				return sum(seenWins), winner, totalVotesCounted, seenVotes, votesLabelled
-
-
-##        countWinning = np.array([np.count_nonzero(np.array(leadingParty) == p) for p in range(P)])
 
 		bLCB = np.ones(C)
 
@@ -554,12 +515,6 @@ def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 		for k in range(len(seenVotes[c])):
 			Nl[c][k] = get_kl_lower_bound(seenVotes[c][k] / sum_val, beta, sum_val)
 			Nu[c][k] = get_kl_upper_bound(seenVotes[c][k] / sum_val, beta, sum_val)
-		# for k in range(K):
-			
-		# 	tempL, tempU = binBounds(alpha/(K*C), a, b, sum(seenVotes[c]), seenVotes[c][k])
-
-		# 	Nl[c][k] = max(Nl[c][k], tempL)
-		# 	Nu[c][k] = min(Nu[c][k], tempU)
 
 		constiWinner = np.argmax(seenVotes[c])
 
@@ -608,15 +563,6 @@ def runDCBElection_KLSN(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 			print_data['LCB of B'] = str(Cl[pb])
 			print(print_data)
 			f.write(json.dumps(print_data) + '\n')
-
-			# if N % 5 == 0 and False:
-
-##                print("*")
-##                print(np.argsort(seenWins + countWinning)[-4:], sum(seenWins) + len(leadingParty))
-##                print("**")
-##                print(Cu[np.argsort(seenWins + countWinning)[-4:]], Cl[np.argsort(seenWins + countWinning)[-4:]])
-##                print("***")
-##                print(seenWins[np.argsort(seenWins + countWinning)[-4:]], countWinning[np.argsort(seenWins + countWinning)[-4:]])
 
 			if term > 0:
 				totalVotesCounted = sum(map(sum, seenVotes))

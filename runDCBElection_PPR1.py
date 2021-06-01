@@ -120,7 +120,6 @@ def runDCBElection_PPR1(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 			# print(constituencies[c], unseenVotes[c], norm)
 			vote = np.random.multinomial(1, norm)
 			#Updates the seen and unseen votes accordingly
-			# unseenVotes[c] -= vote
 			seenVotes[c] += vote
 
 			# updating the labelled information
@@ -144,10 +143,6 @@ def runDCBElection_PPR1(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 
 		#Difference between lower bound of current constituency winner and the greatest of the upper bounds of the remaining
 		constiTerm = Nl[c][constiWinner] - max([x for i,x in enumerate(Nu[c]) if i!=constiWinner])
-		# for party in range(seenVotes[c]):
-			# if party == constiWinner:
-				# continue 
-			# lcb, ucb = binBounds2(alpha/(K*C), N0[c], a, b, )
 
 		#Sets the leading party of constituency c to the current winner
 		leadingParty[indexC] = Parties.index(listParties[c][constiWinner])
@@ -232,7 +227,6 @@ def runDCBElection_PPR1(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 						Cu[p] += 1
 			
 
-##        pb, pa = np.argsort(countWinning + seenWins)[-2:]
 
 		#The winning party including both leads and decided constituencies
 		pa = np.argmax(countWinning + seenWins)
@@ -351,15 +345,6 @@ def runDCBElection_PPR1(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 			print(print_data)
 			f.write(json.dumps(print_data) + '\n')
 			
-			# if N % 5 == 0 and False:
-
-##                print("*")
-##                print(np.argsort(seenWins + countWinning)[-4:], sum(seenWins) + len(leadingParty))
-##                print("**")
-##                print(Cu[np.argsort(seenWins + countWinning)[-4:]], Cl[np.argsort(seenWins + countWinning)[-4:]])
-##                print("***")
-##                print(seenWins[np.argsort(seenWins + countWinning)[-4:]], countWinning[np.argsort(seenWins + countWinning)[-4:]])
-##
 
 			if term > 0:
 				totalVotesCounted = sum(map(sum, seenVotes))
@@ -374,9 +359,6 @@ def runDCBElection_PPR1(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 
 				f.close()
 				return sum(seenWins), winner, totalVotesCounted, seenVotes, votesLabelled
-
-
-##        countWinning = np.array([np.count_nonzero(np.array(leadingParty) == p) for p in range(P)])
 
 		bLCB = np.ones(C)
 
@@ -477,15 +459,6 @@ def runDCBElection_PPR1(data, alpha, tracefile, batch = 1, init_batch = 1, a = 1
 			print_data['LCB of B'] = str(Cl[pb])
 			print(print_data)
 			f.write(json.dumps(print_data) + '\n')
-
-			# if N % 5 == 0 and False:
-
-##                print("*")
-##                print(np.argsort(seenWins + countWinning)[-4:], sum(seenWins) + len(leadingParty))
-##                print("**")
-##                print(Cu[np.argsort(seenWins + countWinning)[-4:]], Cl[np.argsort(seenWins + countWinning)[-4:]])
-##                print("***")
-##                print(seenWins[np.argsort(seenWins + countWinning)[-4:]], countWinning[np.argsort(seenWins + countWinning)[-4:]])
 
 			if term > 0:
 				totalVotesCounted = sum(map(sum, seenVotes))

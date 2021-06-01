@@ -141,7 +141,6 @@ def runDCBElection_SEEVE(data, alpha, tracefile, batch = 1, init_batch = 1, a = 
 			# print(constituencies[c], unseenVotes[c], norm)
 			vote = np.random.multinomial(1, norm)
 			#Updates the seen and unseen votes accordingly
-			# unseenVotes[c] -= vote
 			seenVotes[c] += vote
 
 			# updating the labelled information
@@ -150,14 +149,6 @@ def runDCBElection_SEEVE(data, alpha, tracefile, batch = 1, init_batch = 1, a = 
 			if person_label not in labels[c][party_index]:
 				labels[c][party_index].add(person_label)
 				votesLabelled += 1
-
-		#Updates the lower and upper bounds for each party in constituency c
-		# for k in range(K):
-			
-		# 	tempL, tempU = binBounds(alpha/(K*C), a, b, sum(seenVotes[c]), seenVotes[c][k])
-
-		# 	Nl[c][k] = max(Nl[c][k], tempL)
-		# 	Nu[c][k] = min(Nu[c][k], tempU)
 
 		
 		#Party with the most votes currently in constituency c
@@ -174,13 +165,6 @@ def runDCBElection_SEEVE(data, alpha, tracefile, batch = 1, init_batch = 1, a = 
 			winner_decided = winner_decided and (mean_w - beta > mean_k + beta)
 			if not winner_decided:
 				break
-
-		
-		# constiTerm = Nl[c][constiWinner] - max([x for i,x in enumerate(Nu[c]) if i!=constiWinner])
-		# for party in range(seenVotes[c]):
-			# if party == constiWinner:
-				# continue 
-			# lcb, ucb = binBounds(alpha/(K*C), N0[c], a, b, )
 
 		#Sets the leading party of constituency c to the current winner
 		leadingParty[indexC] = Parties.index(listParties[c][constiWinner])
@@ -210,8 +194,6 @@ def runDCBElection_SEEVE(data, alpha, tracefile, batch = 1, init_batch = 1, a = 
 						pIndex = listPartyIDs[ci].index(p)
 						#party may win a constiuency if its upper confidence bound is greater than the
 						#max of all lower confidence bounds
-						# if Nu[ci][pIndex] >= max(Nl[ci]):
-						# 	Cu[p] += 1
 						if seenVotes[ci][pIndex] == max(seenVotes[ci]):
 							Cu[p] += 1
 						else:
@@ -278,8 +260,6 @@ def runDCBElection_SEEVE(data, alpha, tracefile, batch = 1, init_batch = 1, a = 
 					pIndex = listPartyIDs[ci].index(p)
 					#party may win a constituency if its upper bound is greater than
 					#the maximum of all lower bounds
-					# if Nu[ci][pIndex] >= max(Nl[ci]):
-					# 	Cu[p] += 1
 					if seenVotes[ci][pIndex] == max(seenVotes[ci]):
 						Cu[p] += 1
 					else:
@@ -296,9 +276,6 @@ def runDCBElection_SEEVE(data, alpha, tracefile, batch = 1, init_batch = 1, a = 
 						if not differentiated:
 							Cu[p] += 1
 			
-
-##        pb, pa = np.argsort(countWinning + seenWins)[-2:]
-
 		#The winning party including both leads and decided constituencies
 		pa = np.argmax(countWinning + seenWins)
 
@@ -321,10 +298,6 @@ def runDCBElection_SEEVE(data, alpha, tracefile, batch = 1, init_batch = 1, a = 
 			if pa in listPartyIDs[c]:
 
 				paIndex = listPartyIDs[c].index(pa)
-				
-				# aUCB[c] = Nu[c][paIndex]
-				# hLCB[c] = np.max(np.delete(Nl[c], paIndex))
-				# diff_a[c] = aUCB[c] - hLCB[c]
 				
 				min_diff = 1e18
 				num_parties = len(seenVotes[c])
@@ -359,7 +332,6 @@ def runDCBElection_SEEVE(data, alpha, tracefile, batch = 1, init_batch = 1, a = 
 			# print(constituencies[c], unseenVotes[c], norm)
 			vote = np.random.multinomial(1, norm)
 			
-			# unseenVotes[c] -= vote
 			seenVotes[c] += vote
 
 			# updating the labelled information
@@ -368,14 +340,6 @@ def runDCBElection_SEEVE(data, alpha, tracefile, batch = 1, init_batch = 1, a = 
 			if person_label not in labels[c][party_index]:
 				labels[c][party_index].add(person_label)
 				votesLabelled += 1
-
-		#update lower and upper bounds for each party in constituency
-		# for k in range(K):
-			
-		# 	tempL, tempU = binBounds(alpha/(K*C), a, b, sum(seenVotes[c]), seenVotes[c][k])
-
-		# 	Nl[c][k] = max(Nl[c][k], tempL)
-		# 	Nu[c][k] = min(Nu[c][k], tempU)
 
 
 		constiWinner = np.argmax(seenVotes[c])
@@ -450,16 +414,6 @@ def runDCBElection_SEEVE(data, alpha, tracefile, batch = 1, init_batch = 1, a = 
 			print_data['LCB of B'] = str(Cl[pb])
 			print(print_data)
 			f.write(json.dumps(print_data) + '\n')
-			
-			# if N % 5 == 0 and False:
-
-##                print("*")
-##                print(np.argsort(seenWins + countWinning)[-4:], sum(seenWins) + len(leadingParty))
-##                print("**")
-##                print(Cu[np.argsort(seenWins + countWinning)[-4:]], Cl[np.argsort(seenWins + countWinning)[-4:]])
-##                print("***")
-##                print(seenWins[np.argsort(seenWins + countWinning)[-4:]], countWinning[np.argsort(seenWins + countWinning)[-4:]])
-##
 
 			if term > 0:
 				totalVotesCounted = sum(map(sum, seenVotes))
@@ -477,7 +431,6 @@ def runDCBElection_SEEVE(data, alpha, tracefile, batch = 1, init_batch = 1, a = 
 				return sum(seenWins), winner, totalVotesCounted, seenVotes, votesLabelled
 
 
-##        countWinning = np.array([np.count_nonzero(np.array(leadingParty) == p) for p in range(P)])
 
 		bLCB = np.ones(C)
 
@@ -504,14 +457,6 @@ def runDCBElection_SEEVE(data, alpha, tracefile, batch = 1, init_batch = 1, a = 
 					
 				diff_b[c] = max_diff
 
-
-
-				# if Nu[c][pbIndex] >= max(Nl[c]):
-				# 	bLCB[c] = Nl[c][pbIndex] 
-
-				# 	hUCB[c] = np.max(np.delete(Nu[c], pbIndex))
-				# 	diff_b[c] = hUCB[c] - bLCB[c]
-
 		#In the (rare) event that party b has won all votes in the undecided constituencies choose at random
 		if max(diff_b) == -1e18:
 			print("Random B")
@@ -532,7 +477,6 @@ def runDCBElection_SEEVE(data, alpha, tracefile, batch = 1, init_batch = 1, a = 
 			norm = [float(i)/sum(unseenVotes[c]) for i in unseenVotes[c]]
 			# print(constituencies[c], unseenVotes[c], norm)
 			vote = np.random.multinomial(1, norm)
-			# unseenVotes[c] -= vote
 			seenVotes[c] += vote
 
 			# updating the labelled information
@@ -542,16 +486,8 @@ def runDCBElection_SEEVE(data, alpha, tracefile, batch = 1, init_batch = 1, a = 
 				labels[c][party_index].add(person_label)
 				votesLabelled += 1
 
-		# for k in range(K):
-			
-		# 	tempL, tempU = binBounds(alpha/(K*C), a, b, sum(seenVotes[c]), seenVotes[c][k])
-
-		# 	Nl[c][k] = max(Nl[c][k], tempL)
-		# 	Nu[c][k] = min(Nu[c][k], tempU)
-
 		constiWinner = np.argmax(seenVotes[c])
 
-		# constiTerm = Nl[c][constiWinner] - max([x for i,x in enumerate(Nu[c]) if i!=constiWinner])
 		winner_decided = True
 		num_parties = len(seenVotes[c])
 		for k in range(len(seenVotes[c])):
@@ -584,8 +520,6 @@ def runDCBElection_SEEVE(data, alpha, tracefile, batch = 1, init_batch = 1, a = 
 				for ci in undecidedConstituencies:
 					if p in listPartyIDs[ci]:
 						pIndex = listPartyIDs[ci].index(p)
-						# if Nu[ci][pIndex] >= max(Nl[ci]):
-						# 	Cu[p] += 1
 
 						if seenVotes[ci][pIndex] == max(seenVotes[ci]):
 							Cu[p] += 1
@@ -622,15 +556,6 @@ def runDCBElection_SEEVE(data, alpha, tracefile, batch = 1, init_batch = 1, a = 
 			print_data['LCB of B'] = str(Cl[pb])
 			print(print_data)
 			f.write(json.dumps(print_data) + '\n')
-
-			# if N % 5 == 0 and False:
-
-##                print("*")
-##                print(np.argsort(seenWins + countWinning)[-4:], sum(seenWins) + len(leadingParty))
-##                print("**")
-##                print(Cu[np.argsort(seenWins + countWinning)[-4:]], Cl[np.argsort(seenWins + countWinning)[-4:]])
-##                print("***")
-##                print(seenWins[np.argsort(seenWins + countWinning)[-4:]], countWinning[np.argsort(seenWins + countWinning)[-4:]])
 
 			if term > 0:
 				totalVotesCounted = sum(map(sum, seenVotes))
