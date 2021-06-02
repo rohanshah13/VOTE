@@ -16,3 +16,6 @@ test.py
 tmp.txt
 transform_data.py
 verify_optimal.py
+sample_data/
+optimal/
+prior_results/
