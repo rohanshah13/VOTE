@@ -36,7 +36,6 @@ $ pip install -r requirements.txt
 ```
 
 ## Datasets
-Explain from where the datasets are to be downloaded. Explain if any additional folders are to be created.
 
 Data from two Indian Elections was used to run experiments:
 1. Indian National Elections 2014 (source - https://www.indiavotes.com/pc/info?eid=16&state=0) - data/India2014
