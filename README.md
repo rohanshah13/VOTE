@@ -42,7 +42,7 @@ Data from two Indian Elections was used to run experiments:
 1. Indian National Elections 2014 (source - https://www.indiavotes.com/pc/info?eid=16&state=0) - data/India2014
 2. Bihar State Elections 2015 (source - https://www.indiavotes.com/ac/info?stateac=58&eid=245) - data/Bihar2015
 
-Cloning the repository will download the data in the necessary directory structure.
+Cloning the repository will download the data in the necessary directory structure and the code can then be run directly.
 
 ## Reproducing the results
 The main command for running the code
