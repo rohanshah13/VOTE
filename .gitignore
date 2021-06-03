@@ -7,3 +7,15 @@ temp2.txt
 __pycache__/
 plot_data.py
 test.py
+demographics.py
+prior.py
+priorN.py
+real_ip.py
+results.txt
+test.py
+tmp.txt
+transform_data.py
+verify_optimal.py
+sample_data/
+optimal/
+prior_results/
