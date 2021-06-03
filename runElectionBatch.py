@@ -19,6 +19,7 @@ from runUniformElection_KLSN import *
 from runDCBElection_KLSN import *
 from runUniformElection_KLSNEVE import *
 from runDCBElection_KLSNEVE import *
+import time
 import pickle
 import sys
 import argparse
@@ -80,6 +81,7 @@ def main():
 	winners = np.zeros(T)
 	totalVotesCounted = np.zeros(T)
 	totalLabelledVotesCounted = np.zeros(T)
+	time_elapsed = np.zeros(T)
 	seenVotes = [None for i in range(T)]
 	listVotes = [None for i in range(T)]
 
@@ -93,6 +95,7 @@ def main():
 		os.mkdir('results/{}/{}/trace'.format(data,algorithm))
 
 	for t in range(0,T):
+		tic = time.time()
 		np.random.seed(t)
 		print("Election  ", t)
 		tracefile = TRACEFILE.format(data,algorithm,alpha,batch,t)
@@ -136,6 +139,8 @@ def main():
 		elif algorithm == "DCBKLSN1V1":
 			constituenciesDecided[t], winners[t], totalVotesCounted[t], seenVotes[t], totalLabelledVotesCounted[t] = runDCBElection_KLSNEVE(data, alpha, tracefile, batch, init_batch)	
 		# exit()
+		toc = time.time()
+		time_elapsed[t] = toc - tic
 
 	C = len(seenVotes[0])
 	constiVotes = np.zeros((T,C))
@@ -159,6 +164,7 @@ def main():
 	if algorithm in ['RRPPR1VR', 'RRPPR1V1', 'RRA11VR', 'UGLR', 'DCBPPR1VR', 'DCBPPR1V1', 'DCBA11VR', 'DCBGLR', 'DCBA11V1', 'RRA11V1', 'RRKLSN1VR', 'DCBKLSN1VR', 'RRKLSN1V1', 'DCBKLSN1V1']:
 		print("Votes counted (labelled)= ", np.mean(totalLabelledVotesCounted), " +- ", np.std(totalLabelledVotesCounted)/np.sqrt(T))
 	
+	print("Time elapsed: {} +- {}".format(np.mean(time_elapsed), np.std(time_elapsed) / np.sqrt(T)))
 if __name__ == "__main__":
 
 	main()
